@@ -13,10 +13,15 @@ import OurTeam from "../components/OurTeam";
 import OurValues from "../components/OurValues";
 import BecomePartner from "../components/BecomePartner";
 import CurrentProjects from "../components/CurrentProjects";
+import { Helmet } from "../components/Helmet";
 
 export default function Home() {
   return (
     <div>
+      <Helmet
+        title="Mercy Chain"
+        description="Головне завдання благодійного фонду “UNFAILING CHARITY” — забезпечити допомогу та матеріальну підтримку найбільш потребуючого населення потребуючих країн. "
+      />
       {/* <Header/> */}
       <HeroSlider />
       <AboutUs />

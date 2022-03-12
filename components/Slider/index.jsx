@@ -1,14 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
 import styles from "./Slider.module.scss";
-import sliderImg01 from "../../public/images/slider/person.png";
-import ruin from "../../public/images/ruins.jpg";
-import ruin_2 from "../../public/images/ruins_2.jpg";
-import ruin_3 from "../../public/images/ruins_3.jpg";
-import ruin_4 from "../../public/images/ruins_4.jpg";
-import ruin_5 from "../../public/images/ruins_5.jpg";
-// import logo from "../../public/images/allLogo.png";
-import { PayPalButton } from "react-paypal-button-v2";
+import PaymentForm from "../PaymentForm";
 import Image from "next/image";
 
 import {
@@ -24,6 +17,7 @@ import ButtonBlue from "../ButtonBlue";
 import ButtonBlueBorder from "../ButtonBlueBorder";
 import PayPal from "../Paypal/Paypal";
 import Slide from "./Slide";
+import { useOpenHandlers } from "../../hooks/useOpenHandlers";
 
 const sliderPaths = [
   "images/ruins.jpg",
@@ -34,29 +28,8 @@ const sliderPaths = [
 ];
 
 export default function HeroSlider() {
-  const [checkout, setCheckOut] = useState(10);
   const [paypalShow, setPaypalShow] = useState(false);
-
-  // useEffect(() => {
-  //     var i = 0;
-  //     function move() {
-  //         if (i == 0) {
-  //             i = 1;
-  //             var elem = document.getElementById("myBar");
-  //             var width = 1;
-  //             var id = setInterval(frame, 10);
-  //             function frame() {
-  //                 if (width >= 100) {
-  //                     clearInterval(id);
-  //                     i = 0;
-  //                 } else {
-  //                     width++;
-  //                     elem.style.width = width + "%";
-  //                 }
-  //             }
-  //         }
-  //     }
-  // }, []);
+  const { open, onOpen, onClose } = useOpenHandlers(false);
 
   const SamplePrevArrow = (props) => {
     const { className, style, onClick } = props;
@@ -98,7 +71,8 @@ export default function HeroSlider() {
     nextArrow: <SampleNextvArrow />,
   };
   return (
-    <div className="">
+    <>
+      <PaymentForm open={open} onClose={onClose} />
       <div className={styles["slider-area"]}>
         <div className={styles["slider-activator"]}>
           <div className={styles["container-slider"]}>
@@ -139,60 +113,9 @@ export default function HeroSlider() {
               </div>
               <div className={styles["hero-buttons"]}>
                 <ButtonBlueBorder title="Детальніше" />
-                <ButtonBlue
-                  title="Допомогти зараз"
-                  click={() => setPaypalShow(!paypalShow)}
-                />
+                <ButtonBlue title="Допомогти зараз" click={onOpen} />
                 {/* <PayPal /> */}
               </div>
-
-              {paypalShow ? (
-                <div style={{ position: "relative" }}>
-                  <div
-                    style={{
-                      position: "absolute",
-                      marginLeft: "0rem",
-                      display: "flex",
-                      flexDirection: "column",
-                      alignItems: "center",
-                      marginTop: "1rem",
-                    }}
-                  >
-                    <span
-                      style={{
-                        fontSize: "10px",
-                        marginBottom: "0.2rem",
-                        maxWidth: "90%",
-                      }}
-                    >
-                      Сума яку ви готові пожертвувати (USD)
-                    </span>
-                    <input
-                      className={styles["inputPay"]}
-                      type="number"
-                      value={checkout}
-                      onChange={(e) => setCheckOut(e.target.value)}
-                      style={{ marginBottom: "0.5rem" }}
-                    />
-                    <PayPalButton
-                      options={{
-                        clientId:
-                          "AbvUBU_X7bbryvygGCuXucSTmWCPMsOixIshZb_jpjNcPTZ4QFQE_MGzd4Fval-vKeaftnQHYh7jpHqQ",
-                        currency: "USD",
-                      }}
-                      amount={checkout}
-                      shippingPreference={"NO_SHIPPING"}
-                      onSuccess={(details, data) => {
-                        alert("Transiction completed");
-
-                        console.log({ details, data });
-                      }}
-                    />
-                  </div>
-                </div>
-              ) : (
-                <></>
-              )}
             </div>
           </div>
           <div className={styles["hero-slider"]}>
@@ -204,6 +127,6 @@ export default function HeroSlider() {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }

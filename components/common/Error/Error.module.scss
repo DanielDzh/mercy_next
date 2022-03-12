@@ -1,0 +1,8 @@
+@import "../../styles/colors.scss";
+
+.error {
+  width: 100%;
+  text-align: center;
+  color: $errorColor;
+  margin-bottom: 1em;
+}

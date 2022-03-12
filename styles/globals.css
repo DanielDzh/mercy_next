@@ -1,28 +1,32 @@
 /* Deafult Margin & Padding */
 
 @font-face {
-  font-family: 'Montserrat800';
-  src: url('../public/fonts/Montserrat-VariableFont_wght.ttf') format('truetype');
+  font-family: "Montserrat800";
+  src: url("../public/fonts/Montserrat-VariableFont_wght.ttf")
+    format("truetype");
   font-weight: 800;
 }
 @font-face {
-  font-family: 'Montserrat700';
-  src: url('../public/fonts/Montserrat-VariableFont_wght.ttf') format('truetype');
+  font-family: "Montserrat700";
+  src: url("../public/fonts/Montserrat-VariableFont_wght.ttf")
+    format("truetype");
   font-weight: 700;
 }
 @font-face {
-  font-family: 'Montserrat400';
-  src: url('../public/fonts/Montserrat-VariableFont_wght.ttf') format('truetype');
+  font-family: "Montserrat400";
+  src: url("../public/fonts/Montserrat-VariableFont_wght.ttf")
+    format("truetype");
   font-weight: 400;
 }
 @font-face {
-  font-family: 'Montserrat600';
-  src: url('../public/fonts/Montserrat-VariableFont_wght.ttf') format('truetype');
+  font-family: "Montserrat600";
+  src: url("../public/fonts/Montserrat-VariableFont_wght.ttf")
+    format("truetype");
   font-weight: 600;
 }
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-weight: normal;
   font-style: normal;
   background-color: #0f1d2b;
@@ -1342,7 +1346,7 @@ body {
 
 [data-overlay]::before {
   background: #000 none repeat scroll 0 0;
-  content: '';
+  content: "";
   height: 100%;
   left: 0;
   position: absolute;
@@ -1351,30 +1355,39 @@ body {
   z-index: 1;
 }
 
-[data-overlay='3']::before {
+[data-overlay="3"]::before {
   opacity: 0.3;
 }
 
-[data-overlay='4']::before {
+[data-overlay="4"]::before {
   opacity: 0.4;
 }
 
-[data-overlay='5']::before {
+[data-overlay="5"]::before {
   opacity: 0.5;
 }
 
-[data-overlay='6']::before {
+[data-overlay="6"]::before {
   opacity: 0.6;
 }
 
-[data-overlay='7']::before {
+[data-overlay="7"]::before {
   opacity: 0.7;
 }
 
-[data-overlay='8']::before {
+[data-overlay="8"]::before {
   opacity: 0.8;
 }
 
-[data-overlay='9']::before {
+[data-overlay="9"]::before {
   opacity: 0.9;
+}
+
+.no-select {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
