@@ -5,7 +5,7 @@ import ButtonYellow from "../ButtonYellow";
 
 export default function BecomePartner() {
   return (
-    <div id={styles.becomePartner}>
+    <div id='becomePartner'>
       <div className={styles["becomePartner_container"]}>
         <div className={styles["becomePartner_wrapper"]}>
           <div className={styles["becomePartner_image"]}>

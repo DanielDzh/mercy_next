@@ -4,15 +4,15 @@ import SimpleReactLightbox from "simple-react-lightbox";
 import AboutUs from "../components/AboutUs";
 import SaveLife from "../components/SaveLife";
 import Portfolios from "../components/portfolios";
-import Blogs from "../components/blogs";
-import Contact from "../components/contact";
 import Header from "../components/header";
-import Footer from "../components/footer";
 import OurMission from "../components/OurMission";
 import OurTeam from "../components/OurTeam";
 import OurValues from "../components/OurValues";
 import BecomePartner from "../components/BecomePartner";
 import CurrentProjects from "../components/CurrentProjects";
+import OurPartners from "../components/OurPartners";
+import ContactUs from "../components/ContactUs";
+import Footer from "../components/Footer";
 import { Helmet } from "../components/Helmet";
 
 export default function Home() {
@@ -31,6 +31,9 @@ export default function Home() {
       <CurrentProjects />
       <BecomePartner />
       <OurTeam />
+      <OurPartners />
+      <ContactUs />
+      <Footer />
     </div>
   );
 }

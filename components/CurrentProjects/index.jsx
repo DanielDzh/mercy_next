@@ -16,7 +16,7 @@ export default function CurrentProjects() {
     },
   ];
   return (
-    <div id={styles.currentProject}>
+    <div id='currentProjects'>
       <div className={styles["currentProject_container"]}>
         <h1 className={styles["currentProject_title"]}>ДІЮЧІ ПРОЕКТИ</h1>
         <div className={styles["block-projects"]}>

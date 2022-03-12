@@ -1,6 +1,7 @@
 .customList {
   .list {
     margin-top: 2rem;
+    padding: 0;
 
     .point {
       position: relative;
@@ -14,7 +15,14 @@
       color: #ffffff;
 
       span {
+        // width: 30px;
+        // height: 30px;
         margin-right: 1rem;
+
+        img{
+          height: 25px;
+          width: 25px;
+        }
       }
     }
   }

@@ -10,7 +10,7 @@ import {
   FaLongArrowAltDown,
 } from "react-icons/fa";
 import { Link } from "react-scroll";
-import Header from "../header";
+import Header from "../Header/index";
 import useTrans from "../../hooks/useTrans";
 import Language from "../Language";
 import ButtonBlue from "../ButtonBlue";
@@ -76,7 +76,7 @@ export default function HeroSlider() {
       <div className={styles["slider-area"]}>
         <div className={styles["slider-activator"]}>
           <div className={styles["container-slider"]}>
-            {/* <Header /> */}
+            <Header />
             <div className={styles["content-hero"]}>
               <div className={styles["hero-logo"]}>
                 <Image

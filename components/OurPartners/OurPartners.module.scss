@@ -1,0 +1,26 @@
+.ourPartners_container{
+   padding: 1vw 0 7vw;
+
+   .ourPartners_title{
+      width: 100%;
+      margin: 4vw 0 5.5vw;
+      font-family: 'Montserrat800';
+      font-style: normal;
+      font-size: 60px;
+      line-height: 73px;
+      text-align: center;
+      text-transform: uppercase;
+      color: #FFFFFF;
+   }
+      .ourPartners_slider{
+         opacity: .6;
+
+         .image_wrapp{
+            .image{
+               height: 6vw;
+               margin: 0 4vw;
+            }
+         }
+      }
+   
+}
