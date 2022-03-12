@@ -1,0 +1,158 @@
+#ourMission{
+
+
+   .ourMission-container{
+      padding: 5vw 15vw;
+      width: 100%;
+      background: #0F1D2B;
+      display: flex;
+      justify-content: center;
+
+      .first-two-block{
+         margin-right: 1rem;
+         width: 100%;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         justify-content: space-between;
+
+         .ourMission-block{
+            position: relative;
+
+            img{
+               width: 100%;
+               height: 100%;  
+            }
+            .ourMissionText{
+                  position: absolute;
+                  bottom: 2.5rem;
+                  width: 80%;
+                  left: 2.5rem;
+
+               .ourMissionTitle{
+                  font-family: 'Montserrat800';
+                  font-size: 40px;
+                  line-height: 61px;
+                  text-align: start;
+                  text-transform: uppercase;
+                  color: #FFFFFF;
+               }
+               .ourMissionDesc{
+                  font-family: 'Montserrat400';
+                  font-style: normal;
+                  font-size: 18px;
+                  line-height: 160%;
+                  text-transform: capitalize;
+                  color: #FFFFFF;
+
+                  span{
+                     font-family: 'Montserrat700';
+                  }
+               }
+            }
+         }
+
+         .poem-block{
+            position: relative;
+            border: 2px solid #10A6F9;
+            border-radius: 25px;
+            width: 100%;
+            height: 100%;
+            margin-top: 2rem;
+            overflow: hidden;
+
+            .imageYellow{
+               // height: 100%;
+               // width: 100%;
+               position: relative;
+               left: -1px;
+            }
+            .triangle-right {
+               position: absolute;
+               width: 10vw;
+               z-index: 0;
+               height: 100%;
+               background: #FFBC15;
+               transform: skew(30deg) translate(-40px, 0px);
+               -webkit-transform: skew(30deg) translate(-40px, 0px);
+               -moz-transform: skew(30deg) translate(-40px, 0px);
+               -o-transform: skew(30deg) translate(-40px, 0px);
+            }
+            .imageBible{
+               z-index: 2;
+               position: absolute;
+               left: 0;
+               top: 18%;
+               width: 40%;
+
+               @media screen and (max-width: 1400px) {
+                  width: 35%;
+               }
+            }
+
+            .ourPoemText{
+               width: 55%;
+               position: absolute;
+               top: 15%;
+               right: .8rem;
+               font-family: 'Montserrat400';
+               font-style: normal;
+               font-size: 15px;
+               line-height: 160%;
+               color: #FFFFFF;
+
+               @media screen and (max-width: 1400px) {
+                  width: 60%;
+                  top: 10%;
+               }
+               @media screen and (max-width: 1300px) {
+                  font-size: 13px;
+               }
+            }
+         }
+      }
+
+      .second-block{
+         width: 100%;
+         height: 100%;
+         margin-left: 1rem;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+
+
+         .outAim{
+            position: relative;
+
+            img{
+               height: 100%;
+               width: 100%;
+            }
+
+            .ourAimText{
+                  position: absolute;
+                  bottom: 2.5rem;
+                  width: 80%;
+                  left: 3rem;
+               .ourAimTitle{
+                  font-family: 'Montserrat800';
+                  font-size: 40px;
+                  line-height: 61px;
+                  text-align: start;
+                  text-transform: uppercase;
+                  color: #FFFFFF;
+               }
+               .ourAimDesc{
+                  font-family: 'Montserrat400';
+                  font-style: normal;
+                  font-size: 18px;
+                  line-height: 160%;
+                  text-transform: capitalize;
+                  color: #FFFFFF;
+               }
+            }
+         }
+      }
+   }
+   
+}

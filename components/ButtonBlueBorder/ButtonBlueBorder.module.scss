@@ -1,0 +1,53 @@
+.hero-button{
+   display: flex;
+   font-family: 'Montserrat700';
+
+   .button-blue-border{
+      transition: all 300ms ease;
+      padding: 1rem 2.5rem;
+      height: auto;
+      width: auto;
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 22px;
+      letter-spacing: 0.03em;
+      text-transform: capitalize;
+      color: #FFFFFF;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 2px solid #10A6F9;
+      box-sizing: border-box;
+      border-radius: 16px;
+      margin-right: 1rem;
+      cursor: pointer;
+      position: relative;
+      transition: all 400ms ease;
+      text-align: center;
+
+      &:before{
+         border-radius: 13px;
+         position: absolute;
+         content: '';
+         width: 0%; height: 100%;
+         background: #10A6F9;
+         top: 0;  left: auto; right: 0;
+         z-index: -1;
+         transition: all 400ms ease;
+      }
+
+      &:hover{
+         border: 2px solid #FFBC15;
+         transform: scale(1.05);
+         color: black; 
+         &:before{
+         position: absolute;
+         content: '';
+         width: 100%; height: 101%;
+         background: #FFBC15;
+         top: 0; left: 0; right: 0;
+         z-index: -1;
+         }
+      }
+   }
+}

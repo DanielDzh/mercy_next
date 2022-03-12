@@ -1,0 +1,56 @@
+.hero-button{
+   display: flex;
+   font-family: 'Montserrat700';
+
+   .button-yellow{
+      position: relative;
+      cursor: pointer;
+      padding: 1rem 2.5rem;
+      height: auto;
+      width: auto;
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 22px;
+      letter-spacing: 0.03em;
+      text-transform: capitalize;
+      color: #000;
+      display: flex;
+      background: #FFBC15;
+      justify-content: center;
+      align-items: center;
+      border: 2px solid #FFBC15;
+      box-sizing: border-box;
+      border-radius: 16px;
+      box-shadow: 0px 5px 40px rgba(16, 166, 249, 0.3);
+      transition: all 400ms ease;
+      text-align: center;
+
+      &:after{
+         border-radius: 13px;
+         position: absolute;
+         content: '';
+         width: 0%; height: 100%;
+         background: #10A6F9;
+         top: 0;  left: auto; right: 0;
+         z-index: -1;
+         transition: all 400ms linear;
+      }
+
+      &:hover{
+         border: 2px solid #10A6F9;
+         transform: scale(1.05);
+         color: #fff; 
+         
+         &:after{
+            border-radius: 13px;
+            position: absolute;
+            content: '';
+            width: 100%; height: 100%;
+            background: #10A6F9;
+            top: 0;  left: 0; right: 0;
+            z-index: -1;
+            transition: all 400ms ease;
+         }
+      }
+   }
+}

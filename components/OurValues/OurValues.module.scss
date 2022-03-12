@@ -1,0 +1,233 @@
+#ourValues{
+
+
+   .ourValues-container{
+      padding: 5vw 15vw;
+      width: 100%;
+      background: #0F1D2B;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+
+      .ourValuesTitle{
+         margin-bottom: 3rem;
+
+         @media screen and (max-width: 1220px){
+            margin-bottom: 2rem;
+         }
+
+         h1{
+            display: flex;
+            justify-content: center;
+            font-family: 'Montserrat800';
+            font-style: normal;
+            font-size: 60px;
+            line-height: 73px;
+            text-align: center;
+            text-transform: uppercase;
+            color: #FFFFFF;
+
+            @media screen and (max-width: 1440px){
+               font-size: 54px;
+            }
+            @media screen and (max-width: 1220px){
+               font-size: 50px;
+            }
+         }
+      }
+
+      .ourValues-blocks{
+         width: 100%;
+         display: flex;
+         align-items: flex-start;
+         justify-content: space-between;
+
+         .block1{
+            width: 30%;
+
+            .desc{
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+
+            @media screen and (max-width: 1220px){
+               margin-bottom: .7rem;
+            }
+
+            img{
+               margin-right: 1rem;
+               width: 3vw;
+
+               @media screen and (max-width: 1220px){
+                  width: 2.5vw;
+                  margin-right: .7rem;
+               }
+            }
+
+            h2{
+               font-family: 'Montserrat800';
+               font-style: normal;
+               font-size: 30px;
+               line-height: 37px;
+               text-align: center;
+               text-transform: uppercase;
+               color: #FFFFFF;
+               margin-bottom: 0;
+
+               @media screen and (max-width: 1440px){
+                  font-size: 26px;
+                  line-height: 32px;
+               }
+               @media screen and (max-width: 1220px){
+                  font-size: 22px;
+                  line-height: 30px;
+               }
+            }
+            }
+
+            p{
+               font-family: 'Montserrat400';
+               font-style: normal;
+               font-size: 18px;
+               line-height: 163.9%;
+               text-transform: lowercase;
+               color: #FFFFFF;
+               opacity: 0.7;
+               
+               @media screen and (max-width: 1440px){
+                  font-size: 16px;
+                  line-height: 133.9%;
+               }
+               @media screen and (max-width: 1220px){
+                  font-size: 15px;
+               }
+            }
+         }
+
+         .block2{
+            width: 30%;
+
+            .desc{
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+
+            @media screen and (max-width: 1220px){
+               margin-bottom: .7rem;
+            }
+
+            img{
+               margin-right: 1rem;
+               width: 4vw;
+
+               @media screen and (max-width: 1220px){
+                  width: 3vw;
+                  margin-right: .7rem;
+               }
+            }
+
+            h2{
+               font-family: 'Montserrat800';
+               font-style: normal;
+               font-size: 30px;
+               line-height: 37px;
+               text-align: center;
+               text-transform: uppercase;
+               color: #FFFFFF;
+               margin-bottom: 0;
+
+               @media screen and (max-width: 1440px){
+                  font-size: 26px;
+                  line-height: 32px;
+               }
+               @media screen and (max-width: 1220px){
+                  font-size: 22px;
+                  line-height: 30px;
+               }
+            }
+            }
+
+            p{
+               font-family: 'Montserrat400';
+               font-style: normal;
+               font-size: 18px;
+               line-height: 163.9%;
+               text-transform: lowercase;
+               color: #FFFFFF;
+               opacity: 0.7;
+               
+               @media screen and (max-width: 1440px){
+                  font-size: 15px;
+                  line-height: 133.9%;
+               }
+               @media screen and (max-width: 1220px){
+                  font-size: 14px;
+               }
+            }
+         }
+
+         .block3{
+            width: 30%;
+
+            .desc{
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+
+            @media screen and (max-width: 1220px){
+               margin-bottom: .7rem;
+            }
+
+            img{
+               margin-right: 1rem;
+               width: 3vw;
+
+               @media screen and (max-width: 1220px){
+                  width: 2.5vw;
+                  margin-right: .7rem;
+               }
+            }
+
+            h2{
+               font-family: 'Montserrat800';
+               font-style: normal;
+               font-size: 30px;
+               line-height: 37px;
+               text-align: center;
+               text-transform: uppercase;
+               color: #FFFFFF;
+               margin-bottom: 0;
+
+               @media screen and (max-width: 1440px){
+                  font-size: 26px;
+                  line-height: 32px;
+               }
+               @media screen and (max-width: 1220px){
+                  font-size: 22px;
+                  line-height: 30px;
+               }
+            }
+            }
+
+            p{
+               font-family: 'Montserrat400';
+               font-style: normal;
+               font-size: 18px;
+               line-height: 163.9%;
+               text-transform: lowercase;
+               color: #FFFFFF;
+               opacity: 0.7;
+
+               @media screen and (max-width: 1440px){
+                  font-size: 16px;
+                  line-height: 133.9%;
+               }
+               @media screen and (max-width: 1220px){
+                  font-size: 15px;
+               }
+            }
+         }
+      }
+   }
+   
+}
