@@ -1,9 +1,5 @@
 import React from "react";
 import styles from "./OurMission.module.scss";
-import ourMission from "../../public/images/ourMissionImage.png";
-import ourAim from "../../public/images/ourAim.png";
-import vector6 from "../../public/images/Vector6.png";
-import imageBible from "../../public/images/imageBible.png";
 
 export default function OurMission() {
   return (

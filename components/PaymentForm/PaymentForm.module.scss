@@ -1,0 +1,60 @@
+$black: rgb(31, 31, 31);
+$blue: #10a6f9;
+$white: #fff;
+
+.inputPay {
+  background: unset;
+  font: inherit;
+  box-shadow: 0 6px 10px 0 rgb(0 0 0 / 10%);
+  border: 0;
+  border: 2px solid $blue;
+  outline: 0;
+  color: $black;
+  border-radius: 16px;
+  padding: 11px 15px;
+}
+
+.input {
+  display: flex;
+  flex-direction: column;
+  color: $black;
+  .label {
+    font-family: "Montserrat400";
+    font-size: 1.5vw;
+  }
+  .inputBase {
+    margin: 1vh 0;
+    .field {
+      border: 0;
+      border: 2px solid $blue;
+      outline: 0;
+      border-radius: 0 10px 10px 0;
+      height: 6vh;
+      width: calc(100% - 5vh);
+      padding: 0 1vh;
+      text-align: right;
+    }
+    .adornment {
+      background-color: $blue;
+      padding: 1.4vh 1.5vh;
+      border: 2px solid $blue;
+      border-radius: 10px 0 0 10px;
+      height: 5vh;
+      color: $white;
+      width: 4vh;
+    }
+  }
+}
+
+.header {
+  background-color: $blue;
+  font-size: 3.3vw;
+  text-align: center;
+  padding: 3vh;
+  color: $white;
+  font-family: "Montserrat600";
+}
+
+.body {
+  padding: 4vh;
+}

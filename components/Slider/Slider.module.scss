@@ -7,7 +7,7 @@
       z-index: 2;
       height: 100%;
       width: 100%;
-      // padding: 10vw; 
+      // padding: 10vw;
 
       .content-hero {
         justify-content: center;
@@ -33,8 +33,9 @@
           h1 {
             font-family: "Montserrat800";
             font-weight: 100;
-            font-size: 91.4373px;
-            line-height: 111px;
+            // font-size: 5.715rem;
+            font-size: 8vw;
+            line-height: 10vw;
             color: #ffffff;
           }
           h2 {
@@ -42,8 +43,8 @@
             max-width: 70%;
             margin: 0 auto;
             font-weight: bold;
-            font-size: 35.2123px;
-            line-height: 43px;
+            font-size: 2vw;
+            line-height: 4vw;
             color: #ffffff;
 
             span {
@@ -53,7 +54,7 @@
           p {
             font-family: "Montserrat400";
             margin-top: 1.5rem;
-            font-size: 19px;
+            font-size: 1.3vw;
             line-height: 23px;
             letter-spacing: 0.03em;
             color: #ffffff;
@@ -62,6 +63,18 @@
               font-family: "Montserrat700";
               font-weight: bold;
               color: #ffffff;
+            }
+          }
+
+          @media screen and (max-width: 900px) {
+            h1 {
+              font-size: 10vw;
+            }
+            h2 {
+              font-size: 3vw;
+            }
+            p {
+              font-size: 2vw;
             }
           }
         }
@@ -78,22 +91,27 @@
             position: relative;
 
             .thirty-circle {
-              width: 14px;
-              height: 15px;
+              width: 1.8vh;
+              height: 1.8vh;
               background: rgb(160, 157, 157);
               border-radius: 26px;
               position: absolute;
-              right: 0;
-              top: -6px;
+              right: -0.3vh;
+              top: -0.7vh;
             }
             .thirty-price {
               position: absolute;
-              top: -45px;
+              top: -6vh;
               right: -40px;
-              font-size: 20.2116px;
+              font-size: 2vw;
               line-height: 25px;
               text-align: center;
               color: #ffffff;
+            }
+          }
+          @media screen and (max-width: 900px) {
+            #myProgress {
+              width: 60%;
             }
           }
 
@@ -103,9 +121,15 @@
             background-color: #ffbc15;
             position: relative;
 
+            @media screen and (max-width: 900px) {
+              #myBar {
+                width: 80%;
+              }
+            }
+
             .first-price {
               position: absolute;
-              top: -45px;
+              top: -6vh;
               left: 0px;
               font-size: 20.2116px;
               line-height: 25px;
@@ -114,7 +138,7 @@
             }
             .second-price {
               position: absolute;
-              top: -45px;
+              top: -6vh;
               right: -30px;
               font-size: 20.2116px;
               line-height: 25px;
@@ -123,23 +147,23 @@
             }
 
             .first-circle {
-              width: 14px;
-              height: 15px;
+              width: 1.8vh;
+              height: 1.8vh;
               background: #ffbc15;
               border-radius: 26px;
               position: absolute;
-              left: 0;
-              top: -6px;
+              left: -0.3vh;
+              top: -0.7vh;
             }
 
             .second-circle {
-              width: 22px;
-              height: 23px;
+              width: 2.5vh;
+              height: 2.5vh;
               background: #ffbc15;
               border-radius: 26px;
               position: absolute;
               right: 0;
-              top: -10px;
+              top: -1.1vh;
               box-shadow: 0px 5px 30px #ffbc15;
             }
           }
@@ -149,22 +173,6 @@
           // margin-bottom: 10vw;
           margin-top: 9vh;
           display: flex;
-        }
-
-        div {
-          div {
-            .inputPay {
-              background: unset;
-              font: inherit;
-              box-shadow: 0 6px 10px 0 rgb(0 0 0 / 10%);
-              border: 0;
-              border: 2px solid #10a6f9;
-              outline: 0;
-              color: #fff;
-              border-radius: 16px;
-              padding: 11px 15px;
-            }
-          }
         }
       }
     }
