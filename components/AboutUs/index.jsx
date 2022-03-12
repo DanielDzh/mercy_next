@@ -6,7 +6,7 @@ import ButtonBlue from "../ButtonBlue";
 
 export default function AboutUs() {
   return (
-    <div className={styles["services-area"]} id={styles.aboutUs}>
+    <div id="aboutUs">
       <div className={styles["aboutUs-container"]}>
         <div className={styles["aboutUs-img"]}>
           <img src="images/we.png" alt="" loading="lazy" />

@@ -1,0 +1,57 @@
+.footer_container{
+   width: 100%;
+   padding: 3.2vw 15vw 3vw 13vw;
+   border-top: 1px solid rgba(16, 166, 249, 0.3);
+   box-shadow: 0px 0px 7px rgba(16, 166, 249, 0.3);
+
+   .footer_upper{
+      display: flex;
+      justify-content: center;
+
+      .footer_logo{
+         img{
+            width: 190px;
+         }
+      }
+      .footer_follow_us{
+         display: flex;
+         align-items: center;
+
+         h1{
+            font-family: 'Montserrat700';
+            font-style: normal;
+            font-size: 25px;
+            line-height: 106.2%;
+            letter-spacing: -0.03em;
+            color: #FFFFFF;
+            margin-bottom: 0;
+         }
+
+         img{
+            margin-left: 1vw;
+            height: 30px;
+         }
+      }
+   }
+   .footer_under{
+      display: flex;
+      flex-direction: column;
+
+      div{
+         width: 90%;
+         margin: 2vw auto 1.2vw;
+         display: flex;
+         justify-content: center;
+      }
+      span{
+         margin: 0 2vw;
+         font-family: 'Montserrat400';
+         font-style: normal;
+         font-size: 14px;
+         line-height: 139.2%;
+         color: #FFFFFF;
+         opacity: 0.5;
+         text-align: center;
+      }
+   }
+}

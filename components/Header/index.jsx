@@ -2,14 +2,14 @@ import React, { useState } from 'react';
 import { Link } from 'react-scroll';
 import Language from '../Language';
 import styles from './Header.module.scss';
-import useTrans from '../../hooks/useTrans';
+import { useTrans } from '../../hooks/useTrans';
 
 export default function Header() {
   const { trans } = useTrans();
 
   return (
-    <div id="header">
-      <div className={styles['header_container']}>
+    <div id={styles["header"]}>
+      <div className={styles["header_container"]}>
         <Link
           className={styles['header_link']}
           to="aboutUs"
@@ -24,7 +24,7 @@ export default function Header() {
         </Link>
         <Link
           className={styles['header_link']}
-          to="currentProject"
+          to="currentProjects"
           smooth={true}
           duration={2000}
           activeClass="active"
@@ -84,7 +84,7 @@ export default function Header() {
         </Link>
         <Link
           className={styles['header_link']}
-          to=""
+          to="contactUs"
           smooth={true}
           duration={2000}
           activeClass="active"
