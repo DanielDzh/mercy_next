@@ -1,24 +1,24 @@
-import React, { useRef, useState, useEffect } from 'react';
-import { Dropdown, DropdownButton } from 'react-bootstrap';
-import styles from './Language.module.scss';
-import useTrans from '../hooks/useTrans';
-import { useRouter } from 'next/router';
+import React, { useRef, useState, useEffect } from "react";
+import { Dropdown, DropdownButton } from "react-bootstrap";
+import styles from "./Language.module.scss";
+import { useTrans } from "../hooks/useTrans";
+import { useRouter } from "next/router";
 
 const languages = [
   {
-    code: 'ru',
-    name: 'Русский',
-    countryCode: 'ru',
+    code: "ru",
+    name: "Русский",
+    countryCode: "ru",
   },
   {
-    code: 'ua',
-    name: 'Українська',
-    countryCode: 'ua',
+    code: "ua",
+    name: "Українська",
+    countryCode: "ua",
   },
   {
-    code: 'en',
-    name: 'English',
-    countryCode: 'en',
+    code: "en",
+    name: "English",
+    countryCode: "en",
   },
 ];
 
@@ -30,7 +30,7 @@ const Language = ({ colorTitle }) => {
   const router = useRouter();
 
   useEffect(() => {
-    document.body.addEventListener('click', handleOutsideClick);
+    document.body.addEventListener("click", handleOutsideClick);
   }, []);
 
   const handleOutsideClick = (event) => {
@@ -53,9 +53,11 @@ const Language = ({ colorTitle }) => {
     <div className={styles.language}>
       <DropdownButton
         align="end"
-        id={styles['dropdown-variants-Secondary']}
-        title={trans('language')}
-        className={visiblePopup ? styles['dropArrowTop'] : styles['dropArrowDown']}
+        id={styles["dropdown-variants-Secondary"]}
+        title={trans("language")}
+        className={
+          visiblePopup ? styles["dropArrowTop"] : styles["dropArrowDown"]
+        }
         style={{ color: colorTitle }}
         ref={sortRef}
         onClick={toggleVisiblePopup}
@@ -65,7 +67,7 @@ const Language = ({ colorTitle }) => {
             href=""
             key={countryCode}
             onClick={() => changeLang(code)}
-            className={change === code ? styles['change'] : ''}
+            className={change === code ? styles["change"] : ""}
           >
             {name}
           </Dropdown.Item>

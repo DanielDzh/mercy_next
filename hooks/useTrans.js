@@ -1,4 +1,4 @@
-import * as IntlLib from 'react-intl';
+import * as IntlLib from "react-intl";
 
 export default function useTrans() {
   const { useIntl } = IntlLib;

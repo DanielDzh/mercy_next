@@ -6,10 +6,6 @@ import styles from "./PaymentForm.module.scss";
 
 export default function PaymentForm({ open, onClose }) {
   const [checkout, setCheckOut] = useState(10);
-  console.log(
-    "🚀 ~ process.env.NEXT_PUBLIC_PAYPAL_CLIENT_ID,",
-    process.env.NEXT_PUBLIC_PAYPAL_CLIENT_ID
-  );
 
   return (
     <Popup open={open} onClose={onClose} fullHeight noPadding>
