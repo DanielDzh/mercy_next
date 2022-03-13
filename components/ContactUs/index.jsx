@@ -47,8 +47,8 @@ const ContactUs = () => {
                </h1>
                <div className={styles["contactUs_content"]}>
                   <div className={styles["ourContacts"]}>
-                     {contacts.map((item) => (
-                        <div className={styles['contacts_wrapper']}>
+                     {contacts.map((item, index) => (
+                        <div className={styles['contacts_wrapper']} key={index}>
                            <a href={item.url && item.url}>
                               <img src={item.icon} alt="" />
                               <h3>{item.desc}</h3>
