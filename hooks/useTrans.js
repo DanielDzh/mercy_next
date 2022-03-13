@@ -1,6 +1,6 @@
 import * as IntlLib from "react-intl";
 
-export default function useTrans() {
+export function useTrans() {
   const { useIntl } = IntlLib;
   const { formatMessage, ...rest } = useIntl();
   return {

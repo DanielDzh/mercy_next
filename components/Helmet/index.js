@@ -13,11 +13,10 @@ export const Helmet = ({
   const tabTitle = `${customTitle ? customTitle : trans(title)} | ${trans(
     "project-title"
   )}`;
-  const descr = `${
-    customDescription
+  const descr = `${customDescription
       ? customDescription
       : trans(description ? description : "default-description")
-  }`;
+    }`;
   const imageSrc = image ? image : null;
 
   return (
