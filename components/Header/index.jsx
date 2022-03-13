@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import { Link } from 'react-scroll';
-import Language from '../Language';
-import styles from './Header.module.scss';
-import { useTrans } from '../../hooks/useTrans';
+import React, { useState } from "react";
+import { Link } from "react-scroll";
+import Language from "../Language";
+import styles from "./Header.module.scss";
+import { useTrans } from "../../hooks/useTrans";
 
 export default function Header() {
   const { trans } = useTrans();
@@ -11,7 +11,7 @@ export default function Header() {
     <div id={styles["header"]}>
       <div className={styles["header_container"]}>
         <Link
-          className={styles['header_link']}
+          className={styles["header_link"]}
           to="aboutUs"
           smooth={true}
           duration={2000}
@@ -23,7 +23,7 @@ export default function Header() {
           About Us
         </Link>
         <Link
-          className={styles['header_link']}
+          className={styles["header_link"]}
           to="currentProjects"
           smooth={true}
           duration={2000}
@@ -35,7 +35,7 @@ export default function Header() {
           Projects
         </Link>
         <Link
-          className={styles['header_link']}
+          className={styles["header_link"]}
           to=""
           smooth={true}
           duration={2000}
@@ -47,7 +47,7 @@ export default function Header() {
           Reviews
         </Link>
         <Link
-          className={styles['header_link']}
+          className={styles["header_link"]}
           to="becomePartner"
           smooth={true}
           duration={2000}
@@ -59,7 +59,7 @@ export default function Header() {
           join
         </Link>
         <Link
-          className={styles['header_link']}
+          className={styles["header_link"]}
           to="ourTeam"
           smooth={true}
           duration={2000}
@@ -71,7 +71,7 @@ export default function Header() {
           team
         </Link>
         <Link
-          className={styles['header_link']}
+          className={styles["header_link"]}
           to=""
           smooth={true}
           duration={2000}
@@ -83,7 +83,7 @@ export default function Header() {
           partners
         </Link>
         <Link
-          className={styles['header_link']}
+          className={styles["header_link"]}
           to="contactUs"
           smooth={true}
           duration={2000}

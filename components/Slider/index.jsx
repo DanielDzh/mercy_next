@@ -11,7 +11,7 @@ import {
 } from "react-icons/fa";
 import { Link } from "react-scroll";
 import Header from "../Header/index";
-import useTrans from "../../hooks/useTrans";
+import { useTrans } from "../../hooks/useTrans";
 import Language from "../Language";
 import ButtonBlue from "../ButtonBlue";
 import ButtonBlueBorder from "../ButtonBlueBorder";

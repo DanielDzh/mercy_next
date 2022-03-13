@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
-import logoImg from '../public/images/logo/logo.png';
-import { Navbar, NavDropdown, Nav } from 'react-bootstrap';
-import { FaLongArrowAltDown } from 'react-icons/fa';
-import { FaBars, FaSkype, FaFacebookF, FaTwitter } from 'react-icons/fa';
-import { Link } from 'react-scroll';
-import { Link as ReactLink } from 'react-router-dom';
-import Language from './Language';
-import useTrans from '../hooks/useTrans';
+import React, { useState } from "react";
+import logoImg from "../public/images/logo/logo.png";
+import { Navbar, NavDropdown, Nav } from "react-bootstrap";
+import { FaLongArrowAltDown } from "react-icons/fa";
+import { FaBars, FaSkype, FaFacebookF, FaTwitter } from "react-icons/fa";
+import { Link } from "react-scroll";
+import { Link as ReactLink } from "react-router-dom";
+import Language from "./Language";
+import { useTrans } from "../hooks/useTrans";
 
 export default function Header() {
   const { trans } = useTrans();
@@ -18,7 +18,14 @@ export default function Header() {
   );
 
   return (
-    <div className="header-area p-4" style={{ background: 'rgba(0, 0, 0, 0.2)', position: 'fixed', width: '100%' }}>
+    <div
+      className="header-area p-4"
+      style={{
+        background: "rgba(0, 0, 0, 0.2)",
+        position: "fixed",
+        width: "100%",
+      }}
+    >
       <div className="container">
         <div className="row justify-content-lg-between">
           <div className="col-lg-12 px-0">
@@ -49,9 +56,12 @@ export default function Header() {
                       spy={false}
                       offset={5}
                     >
-                      {t('header.navbar.portfolio')}
+                      {t("header.navbar.portfolio")}
                     </Link>
-                    <NavDropdown title={navDropdownTitle} id="basic-nav-dropdown">
+                    <NavDropdown
+                      title={navDropdownTitle}
+                      id="basic-nav-dropdown"
+                    >
                       <Link
                         className="dropdown-item"
                         to="blog"
@@ -61,8 +71,8 @@ export default function Header() {
                         spy={false}
                         offset={5}
                       >
-                        {' '}
-                        Latest Posts{' '}
+                        {" "}
+                        Latest Posts{" "}
                       </Link>
                     </NavDropdown>
                     <Link
@@ -74,8 +84,8 @@ export default function Header() {
                       spy={false}
                       offset={5}
                     >
-                      {' '}
-                      Contact{' '}
+                      {" "}
+                      Contact{" "}
                     </Link>
                     <ul className="mb-0 menu-social pl-15">
                       <li className="list-inline-item menu-border">
