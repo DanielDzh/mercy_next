@@ -1,0 +1,14 @@
+@import "../../../styles/colors.scss";
+
+.header {
+  background-color: $blue;
+  font-size: 3.3vw;
+  text-align: center;
+  padding: 3vh;
+  color: $white;
+  font-family: "Montserrat600";
+}
+
+.body {
+  padding: 4vh;
+}

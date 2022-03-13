@@ -28,7 +28,6 @@ const sliderPaths = [
 ];
 
 export default function HeroSlider() {
-  const [paypalShow, setPaypalShow] = useState(false);
   const { open, onOpen, onClose } = useOpenHandlers(false);
 
   const SamplePrevArrow = (props) => {
