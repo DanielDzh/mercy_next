@@ -25,7 +25,7 @@ const languages = [
 const Language = ({ colorTitle }) => {
   const { trans } = useTrans();
   const [visiblePopup, setVisiblePopup] = useState(false);
-  const [change, setChange] = useState(t("language"));
+  const [change, setChange] = useState(trans('language'));
   const sortRef = useRef();
   const router = useRouter();
 
