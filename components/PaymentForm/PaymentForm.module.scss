@@ -1,6 +1,4 @@
-$black: rgb(31, 31, 31);
-$blue: #10a6f9;
-$white: #fff;
+@import "../../styles/colors.scss";
 
 .inputPay {
   background: unset;
@@ -46,15 +44,32 @@ $white: #fff;
   }
 }
 
-.header {
-  background-color: $blue;
-  font-size: 3.3vw;
+.h3 {
+  color: $black;
   text-align: center;
-  padding: 3vh;
-  color: $white;
-  font-family: "Montserrat600";
+  font-family: "Montserrat400";
 }
 
-.body {
-  padding: 4vh;
+.quote {
+  padding: 3vh;
+  background-color: rgb(238, 238, 238);
+  color: $black;
+  border-radius: 3vh;
+  margin: 3vh 0;
+  font-family: "Montserrat400";
+
+  .origin {
+    text-align: right;
+    font-family: "Montserrat600";
+  }
+}
+
+.btn {
+  position: absolute;
+  width: 100%;
+  padding: auto;
+  bottom: 3vh;
+  display: flex;
+  left: 0vh;
+  justify-content: center;
 }
