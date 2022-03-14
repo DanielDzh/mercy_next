@@ -37,6 +37,10 @@
           margin-top: 2vh;
           text-align: center;
 
+          @media screen and (max-width: 375px){
+            margin-top: 4vh;
+          }
+
           h1 {
             font-family: "Montserrat800";
             font-weight: 100;
@@ -98,7 +102,7 @@
               line-height: 18px;
             }
             @media screen and (max-width: 375px){
-              font-size: 2.8vw;
+              font-size: 3vw;
               line-height: 14px;
             }
 
@@ -139,7 +143,7 @@
             }
             .thirty-price {
               position: absolute;
-              top: -6vh;
+              top: 3vh;
               right: -40px;
               font-size: 20px;
               line-height: 25px;
@@ -160,7 +164,7 @@
               @media screen and (max-width: 375px){
                 top: 1.5vh;
                 right: -25px;
-                font-size: 12px;
+                // font-size: 13px;
                 line-height: 19px;
               }
             }
@@ -172,7 +176,7 @@
           }
 
           #myBar {
-            width: 70%;
+            width: 20%;
             height: 3px;
             background-color: #ffbc15;
             position: relative;
@@ -183,7 +187,7 @@
 
             .first-price {
               position: absolute;
-              top: -6vh;
+              top: 3vh;
               left: 0px;
               font-size: 20px;
               line-height: 25px;
@@ -202,14 +206,14 @@
               }
               @media screen and (max-width: 375px){
                 top: 1.5vh;
-                left: 0;
-                font-size: 11px;
+                left: -1px;
+                // font-size: 11px;
                 line-height: 18px;
               }
             }
             .second-price {
               position: absolute;
-              top: -6vh;
+              top: -5vh;
               right: -30px;
               font-size: 20px;
               line-height: 25px;
@@ -229,8 +233,8 @@
               }
               @media screen and (max-width: 375px){
                 top: -3.5vh;
-                right: -14px;
-                font-size: 11px;
+                right: -17px;
+                // font-size: 11px;
                 line-height: 18px;
               }
             }
@@ -272,8 +276,21 @@
 
         .hero-buttons {
           // margin-bottom: 10vw;
-          margin-top: 9vh;
+          margin-top: 10vh;
           display: flex;
+
+          @media screen and (max-width: 375px){
+            flex-direction: column;
+            align-items: center;
+
+            div{
+              margin-bottom: 3vw;
+
+              a{
+                margin: 0;
+              }
+            }
+          }
         }
       }
     }

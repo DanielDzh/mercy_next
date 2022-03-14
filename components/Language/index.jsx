@@ -1,15 +1,15 @@
 import React, { useRef, useState, useEffect } from "react";
 import { Dropdown, DropdownButton } from "react-bootstrap";
 import styles from "./Language.module.scss";
-import { useTrans } from "../hooks/useTrans";
 import { useRouter } from "next/router";
+import { useTrans } from "../../hooks/useTrans";
 
 const languages = [
-  {
-    code: "ru",
-    name: "Русский",
-    countryCode: "ru",
-  },
+  // {
+  //   code: "ru",
+  //   name: "Русский",
+  //   countryCode: "ru",
+  // },
   {
     code: "ua",
     name: "Українська",

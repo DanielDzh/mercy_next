@@ -3,8 +3,10 @@ import styles from "./SaveLife.module.scss";
 import saveLife from "../../public/images/saveLife.png";
 import ButtonBlueBorder from "../ButtonBlueBorder";
 import ButtonBlue from "../ButtonBlue";
+import { useTrans } from "../../hooks/useTrans";
 
 export default function SaveLife() {
+  const { trans } = useTrans()
   return (
     <div id={styles.saveLife}>
       <div className={styles["saveLife-container"]}>
@@ -14,15 +16,16 @@ export default function SaveLife() {
             <div></div>
           </div>
           <div className={styles["save-content"]}>
-            <h1>ВРЯТУЙ</h1>
-            <h1>ЖИТТЯ</h1>
+            <div className={styles["mobile_flex"]}>
+              <h1>{trans("save_life_title_1")}</h1>
+              <h1>{trans("save_life_title_2")}</h1>
+            </div>
             <h2>
-              потребуючих українців — підтримай фінансово і поділись цією
-              інформацією з друзями!
+              {trans("save_life_desc")}
             </h2>
             <div className={styles["button-save"]}>
-              <ButtonBlueBorder title="Поширити" />
-              <ButtonBlue title="Допомогти" />
+              <ButtonBlueBorder title={trans("save_life_button_border")} />
+              <ButtonBlue title={trans("save_life_button")} />
             </div>
           </div>
         </div>

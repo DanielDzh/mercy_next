@@ -1,9 +1,11 @@
 import React from 'react'
 import styles from './OurPartners.module.scss';
 import Slider from "react-slick";
-
+import { useTrans } from '../../hooks/useTrans';
 
 const OurPartners = () => {
+
+   const { trans } = useTrans();
 
    const settings = {
       arrows: false,
@@ -21,7 +23,7 @@ const OurPartners = () => {
       <div id="ourPartners">
          <div className={styles["ourPartners_container"]}>
             <h1 className={styles["ourPartners_title"]}>
-               Наші партнери
+               {trans("our_partners")}
             </h1>
             <div className={styles["ourPartners_slider"]}>
                <Slider {...settings}>

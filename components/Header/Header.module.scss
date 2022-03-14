@@ -7,7 +7,10 @@
       
       display: flex;
       justify-content: center;
-      padding-top: 2vw;
+      padding-top: 1vw;
+      align-items: center;
+
+      
 
       .header_link{
          cursor: pointer;
@@ -22,11 +25,82 @@
          margin: 0 2vw;
          transition: all .5s ease;
 
+         @media screen and(max-width: 1024px){
+            display: none;
+         }
+
          &:hover{
             transform: scale(1.1);
             color: #FFBC15;
             text-decoration: none;
          }
       }
+
+      .burger{
+         display: none;
+         width: 50px;
+
+         @media screen and (max-width: 1024px) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+         }
+
+         .header_burger {
+            cursor: pointer;
+             display: block;
+             position: relative;
+             width: 30px;
+             height: 7px;
+             z-index: 20;
+         }
+         .header_burger::before,
+         .header_burger::after{
+             content: '';
+             background-color: #E34600;
+             position: absolute;
+             width: 23px;
+             height: 1px;
+             left: 0;
+             transition: all 0.3s ease 0s;
+         }
+         .header_burger::before{
+             top: 0;
+         }
+         .header_burger::after{
+             bottom: 0;
+             left: 11px;
+         }
+      }
+         .header_burger_active{
+            display: block;
+            cursor: pointer;
+         display: block;
+         position: relative;
+         width: 30px;
+         height: 7px;
+         z-index: 20;
+        }
+     .header_burger_active::before{
+         transform: rotate(-45deg);
+         top: 5px;
+         left: 5px;
+         width: 30px;
+     }
+     .header_burger_active::after{
+         transform: rotate(45deg);
+         bottom: 1px;
+         left: 5px;
+         width: 30px;
+     }
+     .header_menu{
+         display: block;
+     }
+   
+      .header_menu_active, .header_menu1_active, .header_menu2_active{
+         top: 0;
+         z-index: 3;
+      }
+      
+      }
    }
-}

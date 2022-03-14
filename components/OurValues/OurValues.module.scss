@@ -9,6 +9,10 @@
       justify-content: center;
       flex-direction: column;
 
+      @media screen and (max-width: 425px){
+         padding: 5vw 10vw;
+      }
+
       .ourValuesTitle{
          margin-bottom: 3rem;
 

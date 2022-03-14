@@ -1,6 +1,7 @@
 import React from "react";
 import ButtonBlue from "../ButtonBlue";
 import styles from "./ContactUs.module.scss";
+import { useTrans } from "../../hooks/useTrans";
 
 const contacts = [
    {
@@ -36,11 +37,13 @@ const contacts = [
 ];
 
 const ContactUs = () => {
+   const { trans } = useTrans();
+
    return (
       <div id="contactUs">
          <div className={styles["contactUs_container"]}>
             <div className={styles["contactUs_block"]}>
-               <h1 className={styles["contactUs_title"]}>Контакти</h1>
+               <h1 className={styles["contactUs_title"]}>{trans("contacts")}</h1>
                <div className={styles["contactUs_content"]}>
                   <div className={styles["ourContacts"]}>
                      {contacts.map((item) => (
@@ -57,20 +60,20 @@ const ContactUs = () => {
                         <div className={styles["data_user"]}>
                            <input
                               type="text"
-                              placeholder="Ім'я"
+                              placeholder={trans("contacts_name")}
                               className={styles["user_name"]}
                            />
                            <input
                               type="text"
-                              placeholder="Номер телефону"
+                              placeholder={trans("contacts_phone")}
                               className={styles["user_phone"]}
                            />
                         </div>
                         <div className={styles["quetion_user"]}>
-                           <textarea rows="4" type="" placeholder="Питання" />
+                           <textarea rows="4" type="" placeholder={trans("contacts_message")} />
                         </div>
                         <button>
-                           <ButtonBlue title="Відправити" />
+                           <ButtonBlue title={trans("button_send")} />
                         </button>
                      </form>
                   </div>

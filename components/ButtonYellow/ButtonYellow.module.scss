@@ -38,6 +38,11 @@
          padding: 0.4rem 1.5rem;
          font-size: 14px;
       }
+      @media screen and(max-width: 600px){
+         padding: 0.3rem 1.2rem;
+         font-size: 12px;
+         line-height: 18px;
+      }
 
 
       &:after{

@@ -3,47 +3,44 @@ import styles from "./OurValues.module.scss";
 import head from "../../public/images/head.png";
 import hands from "../../public/images/hands.png";
 import documents from "../../public/images/documents.png";
+import { useTrans } from "../../hooks/useTrans";
 
 export default function OurValues() {
+
+  const { trans } = useTrans();
+
   return (
     <div id={styles.ourValues}>
       <div className={styles["ourValues-container"]}>
         <div className={styles["ourValuesTitle"]}>
-          <h1>Наші цінності:</h1>
+          <h1>{trans("our_value_title")}</h1>
         </div>
         <div className={styles["ourValues-blocks"]}>
           <div className={styles["block1"]}>
             <div className={styles["desc"]}>
               <img src="images/head.png" alt="" />
-              <h2>Довіра</h2>
+              <h2>{trans("our_value_trust")}</h2>
             </div>
             <p>
-              Це основа міцних стосунків із партнерами, без якої наше
-              функціонування неможливе. Чесність, відкритість та підзвітність
-              дозволяють формувати довірчі стосунки та ефективно творити добро
-              разом.
+              {trans("our_value_trust_desc")}
             </p>
           </div>
           <div className={styles["block2"]}>
             <div className={styles["desc"]}>
               <img src="images/hands.png" alt="" />
-              <h2>Партнерство</h2>
+              <h2>{trans("our_value_partnership")}</h2>
             </div>
             <p>
-              Ми віримо, що разом ми зможемо значно більше, ніж кожен окремо.
-              Наша співпраця будується на християнських цінностях: взаємоповазі,
-              довірі, порядності, залученості та підтримці.
+              {trans("our_value_partnership_desc")}
             </p>
           </div>
           <div className={styles["block3"]}>
             <div className={styles["desc"]}>
               <img src="images/documents.png" alt="" />
-              <h2>Підзвітність</h2>
+              <h2>{trans("our_value_accountability")}</h2>
             </div>
             <p>
-              Ми орієнтовані на прозорість, публічність та підзвітність. Кожен
-              проєкт проходить ретельну перевірку. Кожен партнер отримує доступ
-              до документів та регулярних звітів про нашу діяльність.
+              {trans("our_value_accountability_desc")}
             </p>
           </div>
         </div>

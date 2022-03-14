@@ -6,8 +6,12 @@ import ButtonBlue from "../ButtonBlue";
 import photo1 from "../../public/images/project1.png";
 import photo2 from "../../public/images/project2.png";
 import Warning from "../Warning";
+import { useTrans } from "../../hooks/useTrans";
 
 export default function CurrentProjects() {
+
+  const { trans } = useTrans();
+
   const projects = [
     {
       name: "",
@@ -18,35 +22,34 @@ export default function CurrentProjects() {
   return (
     <div id='currentProjects'>
       <div className={styles["currentProject_container"]}>
-        <h1 className={styles["currentProject_title"]}>ДІЮЧІ ПРОЕКТИ</h1>
+        <h1 className={styles["currentProject_title"]}>{trans("current_proj_title")}</h1>
         <div className={styles["block-projects"]}>
           <div className={styles["background"]}>
             <img src={projects[0].gallery[0]} alt="" />
             <img src={projects[0].gallery[1]} alt="" />
           </div>
           <div className={styles["projects-content"]}>
-            <h1>ДОПОМОЖИ</h1>
+            <h1>{trans("current_proj_desc_title")}</h1>
             <h2>
-              <span>незахищеним українцям</span>, які страждають від нападу
-              російських окупантів
+              <span>{trans("current_proj_desc_1")}</span>{trans("current_proj_desc_2")}
             </h2>
             <p>
-              Ми взяли на себе відповідальність забезпечувати базові потреби
-              тисячі постраждалих людей у «гарячих точках» Київської області
-              кожні 6 днів.
+              {trans("current_proj_desc_3")}
             </p>
+            <div className={styles["background_mobile"]}>
+              <img src={projects[0].gallery[0]} alt="" />
+              <img src={projects[0].gallery[1]} alt="" />
+            </div>
             <div className={styles["button-projects"]}>
-              <ButtonBlueBorder title="Детальніше" />
-              <ButtonBlue title="Галерея" />
+              <ButtonBlueBorder title={trans("current_proj_button_border")} />
+              <ButtonBlue title={trans("current_proj_button")} />
             </div>
           </div>
         </div>
 
         <Warning
           color="#FF0000"
-          text="УВАГА! Зібрані кошти витрачаються тільки на матеріальну допомогу населенню «гарячих точок»: 
-               продукти, одяг і медикаменти. 
-               Логістику і функціонування команди фонд покриває за власний кошт засновників."
+          text={trans("warning")}
         />
       </div>
     </div>

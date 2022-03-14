@@ -1,7 +1,10 @@
 import React from "react";
 import styles from "./SectionTitle.module.scss";
+import { useTrans } from "../../hooks/useTrans";
 
 export default function SectionTitle(props) {
+
+
   const { title, subTitle, desc } = props;
   return (
     <div className={styles["section-title"]}>

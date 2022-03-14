@@ -1,11 +1,14 @@
 import React, { useState } from "react";
 import { Link } from "react-scroll";
-import Language from "../Language";
+import Language from "../Language/index";
 import styles from "./Header.module.scss";
 import { useTrans } from "../../hooks/useTrans";
+import Menu from "../Menu/Menu";
 
 export default function Header() {
   const { trans } = useTrans();
+  const [menuActive, setMenuActive] = useState(false);
+
 
   return (
     <div id={styles["header"]}>
@@ -19,8 +22,7 @@ export default function Header() {
           spy={false}
           offset={5}
         >
-          {/* {t('header.navbar.portfolio')} */}
-          About Us
+          {trans("header_aboutUs")}
         </Link>
         <Link
           className={styles["header_link"]}
@@ -31,8 +33,7 @@ export default function Header() {
           spy={false}
           offset={5}
         >
-          {/* {t('header.navbar.portfolio')} */}
-          Projects
+          {trans`header_project`}
         </Link>
         <Link
           className={styles["header_link"]}
@@ -43,8 +44,7 @@ export default function Header() {
           spy={false}
           offset={5}
         >
-          {/* {t('header.navbar.portfolio')} */}
-          Reviews
+          {trans('header_reviews')}
         </Link>
         <Link
           className={styles["header_link"]}
@@ -55,8 +55,7 @@ export default function Header() {
           spy={false}
           offset={5}
         >
-          {/* {t('header.navbar.portfolio')} */}
-          join
+          {trans('header_join')}
         </Link>
         <Link
           className={styles["header_link"]}
@@ -67,8 +66,7 @@ export default function Header() {
           spy={false}
           offset={5}
         >
-          {/* {t('header.navbar.portfolio')} */}
-          team
+          {trans('header_team')}
         </Link>
         <Link
           className={styles["header_link"]}
@@ -79,8 +77,7 @@ export default function Header() {
           spy={false}
           offset={5}
         >
-          {/* {t('header.navbar.portfolio')} */}
-          partners
+          {trans('header_partners')}
         </Link>
         <Link
           className={styles["header_link"]}
@@ -91,9 +88,16 @@ export default function Header() {
           spy={false}
           offset={5}
         >
-          {/* {t('header.navbar.portfolio')} */}
-          contact us
+          {trans('header_contactUs')}
         </Link>
+        <Language />
+
+        {/* <div className={styles["burger"]} >
+          <div className={menuActive ? styles["header_burger_active"] : styles["header_burger"]} onClick={() => setMenuActive(!menuActive)}>
+          </div>
+          <Menu active={menuActive} setActive={setMenuActive} />
+
+        </div> */}
       </div>
     </div>
   );
