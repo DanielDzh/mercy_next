@@ -10,6 +10,13 @@
          text-transform: uppercase;
          color: #FFFFFF;
          margin-bottom: 3vw;
+
+         @media screen and (max-width: 1024px){
+            font-size: 46px;
+          }
+          @media screen and (max-width: 900px){
+            font-size: 40px;
+          }
       }
 
       .block-projects{
@@ -20,6 +27,21 @@
          display: flex;
          overflow: hidden;
          margin-bottom: 3vw;
+         align-items: center;
+         padding: 40px;
+
+         @media screen and (max-width: 1400px){
+            font-size: 49px;
+            line-height: 58px;
+         }
+         @media screen and (max-width: 1024px){
+            padding: 35px;
+            border: 1.5px solid #10A6F9;
+            
+          }
+          @media screen and (max-width: 900px){
+             padding: 30px;
+          }
 
          .background{
             width: 100%;
@@ -28,12 +50,12 @@
             margin-right: 3vw;
 
             img:first-of-type{
-               width: 90%;
-               margin: 1.5vw;
+               width: 100%;
+               // margin: 1.5vw;
             }
 
             img:last-of-type{
-               width: 90%;
+               width: 95%;
                position: absolute;
                top: 10%;
                z-index: -1;
@@ -50,6 +72,10 @@
             justify-content: center;
             margin-right: 3vw;
 
+            @media screen and (max-width: 1300px){
+               margin-right: 1vw;
+            }
+
             h1{
                font-family: 'Montserrat800';
                font-style: normal;
@@ -57,6 +83,22 @@
                line-height: 50px;
                text-transform: uppercase;
                color: #FFFFFF;
+
+               @media screen and (max-width: 1400px){
+                  font-size: 49px;
+                  line-height: 48px;
+               }
+               @media screen and (max-width: 1300px){
+                  font-size: 47px;
+                  line-height: 46px;
+               }
+               @media screen and (max-width: 1024px){
+                  font-size: 40px;
+                  
+                }
+                @media screen and (max-width: 900px){
+                  font-size: 38px;
+                }
             }
 
             h2{
@@ -66,6 +108,23 @@
                line-height: 140%;
                color: #fff;
                margin-bottom: 1vw;
+
+               @media screen and (max-width: 1400px){
+                  font-size: 22px;
+                  line-height: 135%;
+               }
+               @media screen and (max-width: 1300px){
+                  font-size: 20px;
+                  line-height: 130%;
+               }
+               @media screen and (max-width: 1024px){
+                  font-size: 18px;
+                  line-height: 125%;
+                  
+                }
+                @media screen and (max-width: 900px){
+                   font-size: 16px;
+                }
 
                span{
                   color: #FFBC15;
@@ -79,11 +138,28 @@
                text-transform: lowercase;
                color: #FFFFFF;
                opacity: 0.7;
+
+               @media screen and (max-width: 1400px){
+                  margin-bottom: 0;
+               }
+               @media screen and (max-width: 1300px){
+                  font-size: 14px;
+               }
+               @media screen and (max-width: 1024px){
+                  font-size: 12px;
+               }
+               @media screen and (max-width: 900px){
+                  font-size: 11px;
+               }
             }
 
             .button-projects{
                display: flex;
                margin-top: 1.8rem;
+
+               @media screen and (max-width: 1400px){
+                  margin-top: 1.5;
+               }
             }
          }
 

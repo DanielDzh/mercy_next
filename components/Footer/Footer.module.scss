@@ -1,8 +1,12 @@
 .footer_container{
    width: 100%;
-   padding: 3.2vw 15vw 3vw 13vw;
+   padding: 3.5vw 15vw 3.5vw 13vw;
    border-top: 1px solid rgba(16, 166, 249, 0.3);
    box-shadow: 0px 0px 7px rgba(16, 166, 249, 0.3);
+
+   @media screen and (max-width: 800px){
+      padding: 35px 15vw 25px 13vw;
+   }
 
    .footer_upper{
       display: flex;
@@ -11,6 +15,14 @@
       .footer_logo{
          img{
             width: 190px;
+
+            @media screen and (max-width: 1200px){
+               width: 180px;
+            }
+            @media screen and (max-width: 1024px){
+               width: 150px;
+               margin-bottom: 5px;
+            }
          }
       }
       .footer_follow_us{
@@ -39,9 +51,13 @@
 
       div{
          width: 90%;
-         margin: 2vw auto 1.2vw;
+         margin: 2vw auto 1.5vw;
          display: flex;
          justify-content: center;
+
+         @media screen and (max-width: 850px){
+            flex-direction: column;
+         }
       }
       span{
          margin: 0 2vw;
@@ -52,6 +68,14 @@
          color: #FFFFFF;
          opacity: 0.5;
          text-align: center;
+
+         @media screen and (max-width: 1024px){
+            font-size: 12px;
+         }
+         @media screen and (max-width: 900px){
+            font-size: 12px;
+            margin-bottom: 8px;
+         }
       }
    }
 }

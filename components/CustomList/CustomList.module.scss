@@ -3,6 +3,9 @@
     margin-top: 2rem;
     padding: 0;
 
+    @media screen and (max-width: 768px){
+      text-align: start;
+    }
     .point {
       position: relative;
       display: flex;
@@ -14,14 +17,38 @@
       line-height: 130%;
       color: #ffffff;
 
+      @media screen and (max-width: 1250px){
+        font-size: 14px;
+      }
+      @media screen and (max-width: 1024px){
+        font-size: 12px;
+        margin-bottom: 1.1rem;
+      }
+      @media screen and (max-width: 600px){
+        font-size: 11px;
+        margin-bottom: .7rem;
+      }
+
       span {
-        // width: 30px;
-        // height: 30px;
         margin-right: 1rem;
+
+        @media screen and (max-width: 1024px){
+          margin-right: .8rem;
+        }
 
         img{
           height: 25px;
           width: 25px;
+
+          @media screen and (max-width: 1250px){
+            height: 20px;
+            width: 20px;
+          }
+
+          @media screen and (max-width: 1024px){
+            height: 17px;
+            width: 17px;
+          }
         }
       }
     }

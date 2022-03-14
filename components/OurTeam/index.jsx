@@ -5,7 +5,7 @@ const people = [
   {
     photo: "images/Danil.png",
     name: "Даниїл Богатюк",
-    profession: "Координатор, Логіст, Організатор",
+    profession: "кофаундер",
     telegram: "https://t-do.ru/@daniilbogatiuk",
     instagram: "https://www.instagram.com/daniil.bogatiuk/",
     facebook: "example",

@@ -1,6 +1,10 @@
    .ourTeam_container{
       padding: 4.5vw 11vw;
 
+      @media screen and(max-width: 1024px){
+         padding: 3vw 11vw;
+      }
+
       h1{
          font-family: 'Montserrat800';
          font-style: normal;
@@ -10,6 +14,17 @@
          text-transform: uppercase;
          color: #FFFFFF;
          margin-bottom: 7vw;
+
+         @media screen and(max-width: 1200px){
+            font-size: 55px;
+         }
+         @media screen and(max-width: 1024px){
+            font-size: 50px;
+         }
+         @media screen and(max-width: 900px){
+            font-size: 44px;
+            margin-bottom: 5vw;
+         }
       }
 
       .ourPeople{
@@ -27,6 +42,10 @@
             flex-direction: column;
             align-items: center;
 
+            @media screen and(max-width: 1024px){
+               margin: 0vw 0vw 4vw 0vw;
+            }
+
             .human_img{
                position: relative;
                margin-bottom: 2vw;
@@ -36,6 +55,11 @@
                overflow: hidden;
                border-radius: 100%;
                border-radius: 2px solid rgba(15, 29, 43, 0.75);
+
+               @media screen and(max-width: 1024px){
+                  width: 14vw;
+                  height: 14vw;
+               }
 
                img{
                   width: 100%;
@@ -80,6 +104,14 @@
                   line-height: 130%;
                   text-align: center;
                   color: #FFFFFF;
+
+                  @media screen and(max-width: 1024px){
+                     font-size: 19px;
+                  }
+                  @media screen and(max-width: 900px){
+                     font-size: 16px;
+                     line-height: 120%;
+                  }
                }
 
                p{
@@ -89,6 +121,14 @@
                   line-height: 130%;
                   text-align: center;
                   color: #FFFFFF;
+
+                  @media screen and(max-width: 1024px){
+                     font-size: 14px;
+                  }
+                  @media screen and(max-width: 900px){
+                     font-size: 11px;
+                     line-height: 120%;
+                  }
                }
             }
             
