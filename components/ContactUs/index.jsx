@@ -67,7 +67,7 @@ const ContactUs = () => {
                            />
                         </div>
                         <div className={styles["quetion_user"]}>
-                           <textarea type="" placeholder="Питання" />
+                           <textarea rows="4" type="" placeholder="Питання" />
                         </div>
                         <button>
                            <ButtonBlue title="Відправити" />

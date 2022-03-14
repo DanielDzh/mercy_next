@@ -8,6 +8,10 @@
       display: flex;
       justify-content: center;
 
+      @media screen and (max-width: 768px){
+         flex-direction: column;
+      }
+
       .first-two-block{
          margin-right: 1rem;
          width: 100%;
@@ -16,8 +20,14 @@
          align-items: center;
          justify-content: space-between;
 
+         @media screen and (max-width: 768px){
+            margin-right: 0;
+            margin-bottom: 4vw;
+         }
+
          .ourMission-block{
             position: relative;
+
 
             img{
                width: 100%;
@@ -29,6 +39,15 @@
                   width: 80%;
                   left: 2.5rem;
 
+                  @media screen and (max-width: 1400px){
+                     bottom: 1.8rem;
+                     left: 2rem;
+                  }
+                  @media screen and (max-width: 1024px){
+                     bottom: 1.2rem;
+                     left: 1.2rem;
+                  }
+
                .ourMissionTitle{
                   font-family: 'Montserrat800';
                   font-size: 40px;
@@ -36,6 +55,23 @@
                   text-align: start;
                   text-transform: uppercase;
                   color: #FFFFFF;
+
+                  @media screen and (max-width: 1300px) {
+                     font-size: 38px;
+                     line-height: 56px;
+                  }
+                  @media screen and (max-width: 1024px){
+                     font-size: 24px;
+                     line-height: 36px;
+                  }
+                  @media screen and (max-width: 768px){
+                     font-size: 34px;
+                     line-height: 44px;
+                  }
+                  @media screen and (max-width: 600px){
+                     font-size: 24px;
+                     line-height: 40px;
+                  }
                }
                .ourMissionDesc{
                   font-family: 'Montserrat400';
@@ -45,6 +81,20 @@
                   text-transform: capitalize;
                   color: #FFFFFF;
 
+                  @media screen and (max-width: 1300px) {
+                     font-size: 16px;
+                  }
+                  @media screen and (max-width: 1300px){
+                     font-size: 12px;
+                     line-height: 140%;
+                  }
+                  @media screen and (max-width: 768px){
+                     font-size: 14px;
+                  }
+                  @media screen and (max-width: 600px){
+                     font-size: 12px;
+                  }
+
                   span{
                      font-family: 'Montserrat700';
                   }
@@ -53,6 +103,8 @@
          }
 
          .poem-block{
+            display: flex;
+            align-items: center;
             position: relative;
             border: 2px solid #10A6F9;
             border-radius: 25px;
@@ -60,6 +112,11 @@
             height: 100%;
             margin-top: 2rem;
             overflow: hidden;
+
+            @media screen and (max-width: 768px){
+               display: none;
+               margin-top: 0;
+            }
 
             .imageYellow{
                // height: 100%;
@@ -88,12 +145,15 @@
                @media screen and (max-width: 1400px) {
                   width: 35%;
                }
+               @media screen and (max-width: 1024px){
+                  width: 30%;
+               }
             }
 
             .ourPoemText{
                width: 55%;
                position: absolute;
-               top: 15%;
+               // top: 15%;
                right: .8rem;
                font-family: 'Montserrat400';
                font-style: normal;
@@ -103,10 +163,14 @@
 
                @media screen and (max-width: 1400px) {
                   width: 60%;
-                  top: 10%;
+                  // top: 17%;
                }
                @media screen and (max-width: 1300px) {
-                  font-size: 13px;
+                  font-size: 12px;
+               }
+               @media screen and (max-width: 1024px){
+                  font-size: 1vw;
+                  width: 60%;
                }
             }
          }
@@ -119,6 +183,10 @@
          display: flex;
          align-items: center;
          justify-content: center;
+
+         @media screen and (max-width: 768px){
+            margin-left: 0;
+         }
 
 
          .outAim{
@@ -134,6 +202,16 @@
                   bottom: 2.5rem;
                   width: 80%;
                   left: 3rem;
+
+                  @media screen and (max-width: 1400px){
+                        bottom: 1.8rem;
+                        left: 2rem;
+                  }
+                  @media screen and (max-width: 1024px){
+                     bottom: 1.2rem;
+                     left: 1.2rem;
+               }
+
                .ourAimTitle{
                   font-family: 'Montserrat800';
                   font-size: 40px;
@@ -141,6 +219,23 @@
                   text-align: start;
                   text-transform: uppercase;
                   color: #FFFFFF;
+
+                  @media screen and (max-width: 1400px){
+                     font-size: 33px;
+                     line-height: 51px;
+                  }
+                  @media screen and (max-width: 1024px){
+                     font-size: 24px;
+                     line-height: 36px;
+                  }
+                  @media screen and (max-width: 768px){
+                     font-size: 34px;
+                     line-height: 44px;
+                  }
+                  @media screen and (max-width: 768px){
+                     font-size: 24px;
+                     line-height: 40px;
+                  }
                }
                .ourAimDesc{
                   font-family: 'Montserrat400';
@@ -149,6 +244,21 @@
                   line-height: 160%;
                   text-transform: capitalize;
                   color: #FFFFFF;
+
+                  @media screen and (max-width: 1300px){
+                     font-size: 16px;
+                     line-height: 150%;
+                  }
+                  @media screen and (max-width: 1024px){
+                     font-size: 12px;
+                     line-height: 140%;
+                  }
+                  @media screen and (max-width: 768px){
+                     font-size: 14px;
+                  }
+                  @media screen and (max-width: 600px){
+                     font-size: 12px;
+                  }
                }
             }
          }

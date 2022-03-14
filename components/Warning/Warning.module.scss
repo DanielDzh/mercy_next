@@ -6,6 +6,18 @@
   display: flex;
   align-items: center;
 
+  @media screen and (max-width: 1350px){
+    padding: 2vw 3vw;
+  }
+  @media screen and (max-width: 1024px){
+    border: 2px solid #ff0000;
+  }
+  img{
+    @media screen and (max-width: 1024px){
+      width: 5%;
+    }
+  }
+
   span {
     font-family: 'Montserrat400';
     font-style: normal;
@@ -13,5 +25,14 @@
     line-height: 163.9%;
     color: #ffffff;
     margin-left: 2vw;
+
+    @media screen and (max-width: 1350px){
+      font-size: 16px;
+      line-height: 153%;
+    }
+    @media screen and (max-width: 1024px){
+      font-size: 14px;
+      line-height: 145%;
+    }
   }
 }

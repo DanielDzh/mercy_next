@@ -1,5 +1,10 @@
 #header{
    .header_container{
+
+      @media screen and(max-width: 1024px){
+         display: none;
+      }
+      
       display: flex;
       justify-content: center;
       padding-top: 2vw;
