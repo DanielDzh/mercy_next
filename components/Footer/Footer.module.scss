@@ -23,6 +23,9 @@
                width: 150px;
                margin-bottom: 5px;
             }
+            @media screen and (max-width: 900px){
+               width: 140px;
+            }
          }
       }
       .footer_follow_us{
@@ -74,6 +77,10 @@
          }
          @media screen and (max-width: 900px){
             font-size: 12px;
+            margin-bottom: 8px;
+         }
+         @media screen and (max-width: 600px){
+            font-size: 10px;
             margin-bottom: 8px;
          }
       }

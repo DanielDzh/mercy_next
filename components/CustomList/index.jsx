@@ -1,12 +1,8 @@
 import React from "react";
+import { useTrans } from "../../hooks/useTrans";
 import styles from "./CustomList.module.scss";
 
-const needsList = [
-  "нагодувати голодних",
-  "одягнути замерзлих",
-  "забезпечити хворих медикаментами",
-  "матеріальна допомога і доставка необхідної продукції людям, які  знаходяться в «гарячих точках»",
-];
+
 
 const Point = ({ title }) => (
   <li className={styles.point}>
@@ -18,6 +14,15 @@ const Point = ({ title }) => (
 );
 
 export default function CustomList() {
+  const { trans } = useTrans();
+  const needsList = [
+    trans("aboutUs_list_1"),
+    trans("aboutUs_list_2"),
+    trans("aboutUs_list_3"),
+    trans("aboutUs_list_4"),
+  ];
+
+
   return (
     <div className={styles.customList}>
       <ul className={styles.list}>

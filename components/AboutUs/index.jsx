@@ -3,8 +3,12 @@ import SectionTitle from "../SectionTitle";
 import CustomList from "../CustomList";
 import styles from "./AboutUs.module.scss";
 import ButtonBlue from "../ButtonBlue";
+import { useTrans } from "../../hooks/useTrans";
 
 export default function AboutUs() {
+
+  const { trans } = useTrans();
+
   return (
     <div id="aboutUs">
       <div className={styles["aboutUs-container"]}>
@@ -12,9 +16,8 @@ export default function AboutUs() {
           <img src="images/we.png" alt="" loading="lazy" className={styles["aboutUs-img-img"]} />
           <div className={styles["aboutUs_desc_tablet"]}>
             <SectionTitle
-              title="ХТО МИ"
-              desc="Головне завдання благодійного фонду “MERCY CHAIN” — забезпечити допомогу та матеріальну підтримку найбільш потребуючого населення потребуючих країн. 
-                    Саме зараз фонд працює над вирішенням проблем українського населення, постраждалого від війни, і сфокусований на 4 основних напрямках діяльності:"
+              title={trans("aboutUs_title")}
+              desc={trans("aboutUs_desc_under_title")}
             />
             <CustomList />
           </div>
@@ -22,21 +25,17 @@ export default function AboutUs() {
         <div className={styles["aboutUs-info"]}>
           <div className={styles["aboutUs_desc_desktop"]}>
             <SectionTitle
-              title="ХТО МИ"
-              desc="Головне завдання благодійного фонду “MERCY CHAIN” — забезпечити допомогу та матеріальну підтримку найбільш потребуючого населення потребуючих країн. 
-                    Саме зараз фонд працює над вирішенням проблем українського населення, постраждалого від війни, і сфокусований на 4 основних напрямках діяльності:"
+              title={trans("aboutUs_title")}
+              desc={trans("aboutUs_desc_under_title")}
             />
             <CustomList />
           </div>
           <img src="images/we.png" alt="" loading="lazy" className={styles["aboutUs-img-mobile"]} />
           <p>
-            Приєднуйся до нас: твоя пожертва може стати якраз тією «останньою
-            краплею», якої не вистачає, щоб завівся мотор нашої вантажівки з
-            продуктами в Європі, і вирушити в сторону українського кордону, щоб
-            продовжити життя незахищених українців.
+            {trans("aboutUs_desc_under")}
           </p>
           <div style={{ display: 'flex', justifyContent: 'center' }}>
-            <ButtonBlue title="Допомогти зараз" />
+            <ButtonBlue title={trans("aboutUs_button")} />
           </div>
         </div>
       </div>

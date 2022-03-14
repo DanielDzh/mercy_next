@@ -11,6 +11,9 @@
       @media screen and (max-width: 768px){
          flex-direction: column;
       }
+      @media screen and (max-width: 425px){
+         padding: 5vw 10vw;
+      }
 
       .first-two-block{
          margin-right: 1rem;

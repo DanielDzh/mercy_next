@@ -17,22 +17,21 @@
    margin-right: 0;
 }
 
-
 .dropdown{
    background-color: unset;
 
    
-
-   .btn-primary{
+   button{
       color: inherit;
       background-color: unset;
-      border-color: #6a6a6a;
+      border-color: #10A6F9;
    }
+ 
    &.dropArrowDown{
-      background: url('../public/images/icons/arrowDown.png') no-repeat 90% 50%/15%;
+      background: url('/images/arrowDown.png') no-repeat 90% 50%/15%;
    }
    &.dropArrowTop{
-      background: url('../public/images/icons/arrowTop.png') no-repeat 90% 50%/15%;
+      background: url('/images/arrowTop.png') no-repeat 90% 50%/15%;
 
       .dropdown-menu.show{
          left: 0;

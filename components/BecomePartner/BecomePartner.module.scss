@@ -4,6 +4,9 @@
       @media screen and(max-width: 1300px){
          padding: 3vw 15vw;
       }
+      @media screen and(max-width: 425px){
+         padding: 3vw 10vw;
+      }
 
       .becomePartner_wrapper{
          display: flex;
@@ -28,6 +31,9 @@
 
             @media screen and(max-width: 1300px){
                padding: 4rem 0;
+            }
+            @media screen and(max-width: 425px){
+               padding: 2rem 0 4rem;
             }
 
             h2{
@@ -74,6 +80,10 @@
                      font-size: 24px;
                      line-height: 30px;
                   }
+                  @media screen and(max-width: 425px){
+                     font-size: 22px;
+                     line-height: 25px;
+                  }
                }
 
                h1:last-of-type{
@@ -117,6 +127,10 @@
                @media screen and(max-width: 600px){
                   font-size: 13px;
                   line-height: 22px;
+               }
+               @media screen and(max-width: 425px){
+                  font-size: 12px;
+                  line-height: 17px;
                }
             }
 

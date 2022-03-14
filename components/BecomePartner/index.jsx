@@ -2,8 +2,12 @@ import React from "react";
 import styles from "./BecomePartner.module.scss";
 import ButtonBlue from "../ButtonBlue";
 import ButtonYellow from "../ButtonYellow";
+import { useTrans } from "../../hooks/useTrans";
 
 export default function BecomePartner() {
+
+  const { trans } = useTrans();
+
   return (
     <div id='becomePartner'>
       <div className={styles["becomePartner_container"]}>
@@ -13,30 +17,27 @@ export default function BecomePartner() {
           </div>
           <div className={styles["becomePartner_block"]}>
             <div className={styles["becomePartner_title"]}>
-              <h1>СТАНЬ</h1>
-              <h1>ПАРТНЕРОМ</h1>
+              <h1>{trans("become_part_1")}</h1>
+              <h1>{trans("become_part_2")}</h1>
             </div>
-            <h2>Допомагай з нами людям, які цього справді потребують!</h2>
+            <h2>{trans("become_part_subtitle")}</h2>
             <div className={styles["cards"]}>
               <div className={styles["once_help"]}>
-                <h2>РАЗОВА ДОПОМОГА</h2>
+                <h2>{trans("one_assise_title")}</h2>
                 <div className={styles["once_help_text"]}>
                   <span>
-                    Ваша фінансова допомога продовжує життя незахищеного
-                    українського населення в «гарячих точок»!
+                    {trans("one_assise_desc")}
                   </span>
-                  <ButtonBlue title="Допомогти" />
+                  <ButtonBlue title={trans("button_help")} />
                 </div>
               </div>
               <div className={styles["regular_help"]}>
-                <h2>РЕГУЛЯРНА ДОПОМОГА</h2>
+                <h2>{trans("regul_assis_title")}</h2>
                 <div className={styles["regular_help_text"]}>
                   <span>
-                    Саме **Регулярна допомога** дозволяє тисячам українців
-                    отримувати допомогу вчасно, зберігаючи їхні життя якомога
-                    довше, а нам — планувати допомогу на місяці наперед.
+                    {trans("regul_assis_desc")}
                   </span>
-                  <ButtonYellow title="Оформити підписку" />
+                  <ButtonYellow title={trans("button_subscribe")} />
                 </div>
               </div>
             </div>

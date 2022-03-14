@@ -143,7 +143,7 @@
             }
             .thirty-price {
               position: absolute;
-              top: -6vh;
+              top: 3vh;
               right: -40px;
               font-size: 20px;
               line-height: 25px;
@@ -176,7 +176,7 @@
           }
 
           #myBar {
-            width: 70%;
+            width: 20%;
             height: 3px;
             background-color: #ffbc15;
             position: relative;
@@ -187,7 +187,7 @@
 
             .first-price {
               position: absolute;
-              top: -6vh;
+              top: 3vh;
               left: 0px;
               font-size: 20px;
               line-height: 25px;
@@ -213,7 +213,7 @@
             }
             .second-price {
               position: absolute;
-              top: -6vh;
+              top: -5vh;
               right: -30px;
               font-size: 20px;
               line-height: 25px;
@@ -276,7 +276,7 @@
 
         .hero-buttons {
           // margin-bottom: 10vw;
-          margin-top: 9vh;
+          margin-top: 10vh;
           display: flex;
 
           @media screen and (max-width: 375px){

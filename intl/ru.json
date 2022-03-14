@@ -1,3 +1,12 @@
 {
-  "project-title": "MERCY CHAIN"
+  "project-title": "MERCY CHAIN",
+  "language": "Русский",
+  "header_aboutUs": "Про нас",
+  "header_project": "Проекти",
+  "header_reviews": "Відгуки",
+  "header_join": "Приєднатись",
+  "header_team": "Команда",
+  "header_partners": "Партнери",
+  "header_contactUs": "Контакти",
+  "slider_title": "Помоги"
 }

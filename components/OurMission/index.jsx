@@ -1,7 +1,9 @@
 import React from "react";
 import styles from "./OurMission.module.scss";
+import { useTrans } from "../../hooks/useTrans";
 
 export default function OurMission() {
+  const { trans } = useTrans();
   return (
     <div id={styles.ourMission}>
       <div className={styles["ourMission-container"]}>
@@ -9,10 +11,9 @@ export default function OurMission() {
           <div className={styles["ourMission-block"]}>
             <img src="images/ourMissionImage.png" alt="" />
             <div className={styles.ourMissionText}>
-              <div className={styles.ourMissionTitle}>Наша місія:</div>
+              <div className={styles.ourMissionTitle}>{trans("our_mission")}</div>
               <div className={styles.ourMissionDesc}>
-                прославлення <span>Ісуса Христа</span> через допомогу
-                потребуючим.
+                {trans("our_mission_desc")}
               </div>
             </div>
           </div>
@@ -26,9 +27,7 @@ export default function OurMission() {
             />
             <span className={styles["triangle-right"]}></span>
             <div className={styles["ourPoemText"]}>
-              «Отак ваше світло нехай світить перед людьми, щоб вони бачили ваші
-              добрі діла, та прославляли Oтця вашого, що на небі» Від Матвія
-              5:16
+              {trans("poem")}
             </div>
           </div>
         </div>
@@ -40,11 +39,8 @@ export default function OurMission() {
               className={styles["imageYellow"]}
             />
             <div className={styles["ourAimText"]}>
-              <div className={styles["ourAimTitle"]}>Наша мета: </div>
-              <div className={styles["ourAimDesc"]}>
-                забезпечення матеріальної допомоги та підтримки найбільш
-                потребуючого населення України.
-              </div>
+              <div className={styles["ourAimTitle"]}>{trans("our_goil")}</div>
+              <div className={styles["ourAimDesc"]}>{trans("our_goil_desc")}</div>
             </div>
           </div>
         </div>

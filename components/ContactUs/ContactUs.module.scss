@@ -1,6 +1,10 @@
 .contactUs_container{
    padding: 7vw 15vw 9vw 13vw;
 
+   @media screen and(max-width: 600px){
+      padding: 7vw 10vw 9vw 10vw;
+   }
+
    .contactUs_block{
       border: 2px solid #10A6F9;
       box-sizing: border-box;
@@ -12,6 +16,10 @@
          padding: 2.5vw 7vw 2vw;
          border: 1.5px solid #10A6F9;
          padding: 4vw 6vw 2vw;
+      }
+      @media screen and(max-width: 600px){
+         border: 1px solid #10A6F9; 
+         padding: 5vw 5vw 3vw;
       }
 
       .contactUs_title{
@@ -34,6 +42,19 @@
             font-size: 42px;
             margin-bottom: 1vw;
          }
+         @media screen and(max-width: 600px){
+            font-size: 36px;
+            line-height: 40px;
+            margin-bottom: 3vw;
+         }
+         @media screen and(max-width: 450px){
+            font-size: 30px;
+            line-height: 30px;
+            margin-bottom: 2.3vw;
+         }
+         @media screen and(max-width: 375px){
+            font-size: 26px;
+         }
       }
 
       .contactUs_content{
@@ -54,6 +75,9 @@
             @media screen and(max-width: 1024px){
                margin-bottom: 30px;
             }
+            @media screen and(max-width: 600px){
+              margin-bottom: 20px;
+            }
 
             .contacts_wrapper:last-child a{
                margin-bottom: 0;
@@ -73,6 +97,14 @@
                   img{
                      width: 1.8vw;
                      margin-right: 1.5vw;
+
+                     @media screen and(max-width: 768px){
+                        width: 2.2vw;
+                     }
+                     @media screen and(max-width: 450px){
+                        width: 3vw;
+                        margin-right: 2vw;
+                     }
                   }
 
                   h3{
@@ -93,6 +125,13 @@
                      }
                      @media screen and(max-width: 900px){
                         font-size: 14px;
+                     }
+                     @media screen and(max-width: 768px){
+                        font-size: 12px;
+                     }
+                     @media screen and(max-width: 425px){
+                        font-size: 10px;
+                        line-height: 170%;
                      }
                   }
                }
@@ -127,6 +166,13 @@
                      font-size: 12px;
                      line-height: 130%;
                   }
+                  @media screen and(max-width: 700px){
+                     padding: 1.2vw 2vw;
+                  }
+                  @media screen and(max-width: 425px){
+                     font-size: 10px;
+                     padding: 5px 9px;
+                  }
 
                   &:focus-visible {
                      outline: black 0px;
@@ -158,6 +204,16 @@
                button{
                   background: none;
                   border: none;
+
+                  @media screen and(max-width: 375px){
+                     div{
+                        div{
+                        font-size: 10px;
+                        padding: 4px 15px;
+                        }
+                     }
+                  }
+                 
                }
             }
          }
