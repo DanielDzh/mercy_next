@@ -37,6 +37,10 @@
           margin-top: 2vh;
           text-align: center;
 
+          @media screen and (max-width: 375px){
+            margin-top: 4vh;
+          }
+
           h1 {
             font-family: "Montserrat800";
             font-weight: 100;
