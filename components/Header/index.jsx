@@ -35,7 +35,7 @@ export default function Header() {
         >
           {trans`header_project`}
         </Link>
-        <Link
+        {/* <Link
           className={styles["header_link"]}
           to=""
           smooth={true}
@@ -45,7 +45,7 @@ export default function Header() {
           offset={5}
         >
           {trans('header_reviews')}
-        </Link>
+        </Link> */}
         <Link
           className={styles["header_link"]}
           to="becomePartner"
@@ -70,7 +70,7 @@ export default function Header() {
         </Link>
         <Link
           className={styles["header_link"]}
-          to=""
+          to="ourPartners"
           smooth={true}
           duration={2000}
           activeClass="active"
@@ -90,14 +90,15 @@ export default function Header() {
         >
           {trans('header_contactUs')}
         </Link>
-        <Language />
-
-        {/* <div className={styles["burger"]} >
-          <div className={menuActive ? styles["header_burger_active"] : styles["header_burger"]} onClick={() => setMenuActive(!menuActive)}>
+        <div className={styles["lang"]}>
+          <Language />
+        </div>
+        <div className={styles["burger"]} >
+          <div className={menuActive ? `${styles.header_burger} ${styles.active}` : styles["header_burger"]} onClick={() => setMenuActive(!menuActive)}>
           </div>
           <Menu active={menuActive} setActive={setMenuActive} />
 
-        </div> */}
+        </div>
       </div>
     </div>
   );

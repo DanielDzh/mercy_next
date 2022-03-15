@@ -97,7 +97,7 @@ export default function HeroSlider() {
               <div className={styles["hero-progress"]}>
                 <div id={styles.myProgress}>
                   <span className={styles["thirty-circle"]}></span>
-                  <span className={styles["thirty-price"]}>$ 25 000</span>
+                  <span className={styles["thirty-price"]}>$ 30 000</span>
                   <div id={styles.myBar}>
                     <span className={styles["first-price"]}>0</span>
                     <span className={styles["second-price"]}>$ 3 000</span>

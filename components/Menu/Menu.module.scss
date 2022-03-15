@@ -15,7 +15,7 @@
    transform: translate(130%);
    transition: all .5s;
 }
-   .menu_active{
+   .menu.active{
       z-index: 15;
       position: fixed;
       width: 100vw;
@@ -51,18 +51,97 @@
 
       }
    }
-   .menu__content{
+   .menu_content{
+    background: linear-gradient(#c6deff, #ffd65c);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
       margin-left: auto;
       width: 50%;
       height: fit-content;
       min-height: 100%;
-      background-color: #FFFF;
       display: flex;
       flex-direction: column;
       align-items: center;
       transition: all .5s;
       box-shadow: 0px 1px 1px rgba(119, 119, 119, 0.06), 0px 3px 8px rgba(119, 119, 119, 0.15);
 
+      // a:first-child::before{
+      //    position: absolute;
+      //    content: "";
+      //    display: block;
+      //    width: 1px;
+      //    height: 30px;
+      //    background: white;
+      //    top: -10px;
+      //    left: -15px;
+      // }
+      // a:first-child::after{
+      //    position: absolute;
+      //    content: "";
+      //    display: block;
+      //    width: 30px;
+      //    height: 1px;
+      //    background: white;
+      //    top: -10px;
+      //    left: -15px;
+      // }
+      // a:last-of-type:before{
+      //    position: absolute;
+      //    content: "";
+      //    display: block;
+      //    width: 1px;
+      //    height: 30px;
+      //    background: black;
+      //    top: 10px;
+      //    right: -15px;
+      // }
+      // a:last-of-type::after{
+      //    position: absolute;
+      //    content: "";
+      //    display: block;
+      //    width: 30px;
+      //    height: 1px;
+      //    background: black;
+      //    top: 40px;
+      //    right: -15px;
+      // }
+      
+      a:not([href]):not([class]){
+         position: relative;
+         // color: #0053a8;
+         color: #fff;
+         cursor: pointer;
+         font-family: 'Montserrat600';
+         font-style: normal;
+         font-size: 22px;
+         line-height: 30px;
+         text-align: center;
+         letter-spacing: 0.03em;
+         text-transform: uppercase;
+         transition: all .5s ease;
+
+         @media screen and (max-width: 1024px){
+            margin-bottom: 2rem;
+            text-shadow: 2px 2px 4px #0f1d2b8c;
+
+         }
+         @media screen and (max-width: 600px){
+            margin-bottom: 1rem;
+         }
+
+         
+      }
+      a:not([href]):not([class]):last-of-type{
+         @media screen and (max-width: 1024px){
+            margin-bottom: 3rem;
+         }
+         @media screen and (max-width: 600px){
+            margin-bottom: 2rem;
+         }
+      }
 
       @media screen and (max-width: 768px){
          width: 100%;

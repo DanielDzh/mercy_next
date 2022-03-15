@@ -229,7 +229,8 @@
                @media screen and (max-width: 1400px){
                   margin-top: 1.5;
                }
-               @media screen and (max-width: 375px){
+               @media screen and (max-width: 425px){
+                  flex-direction: column;
                   flex-direction: column;
                   height: 70px;
                   justify-content: space-between;
@@ -237,7 +238,12 @@
                   width: 100%;
                   align-items: center;
 
+                  div{
+                     width: 100%
+                  }
+
                   a{
+                     width: 100%;
                      margin-right: 0;
                   }
 
