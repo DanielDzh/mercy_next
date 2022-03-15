@@ -13,8 +13,9 @@
 }
 .dropdown:checked + label,
 .dropdown:not(:checked) + label{
+   margin: 0;
   position: relative;
-  font-family: "Montserrat800";
+  font-family: "Montserrat600";
   font-size: 15px;
   padding: .2rem 1.6rem;
   line-height: 2;
@@ -37,7 +38,7 @@
   border: none;
 //   background-color: #10A6F9;
   cursor: pointer;
-  color: #fff;
+  color: #CFD2D5;
 //   box-shadow: 0 12px 35px 0 rgba(255,235,167,.15);
 }
 .dropdown:not(:checked) + label .uil {
