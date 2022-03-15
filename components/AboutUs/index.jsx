@@ -34,7 +34,7 @@ export default function AboutUs() {
           <p>
             {trans("aboutUs_desc_under")}
           </p>
-          <div style={{ display: 'flex', justifyContent: 'center' }}>
+          <div className={styles["aboutUs-buttons"]}>
             <ButtonBlue title={trans("aboutUs_button")} />
           </div>
         </div>

@@ -7,7 +7,6 @@
       z-index: 2;
       height: 100%;
       width: 100%;
-      // padding: 10vw;
 
       .content-hero {
         justify-content: center;
@@ -17,7 +16,6 @@
         height: 100%;
 
         .hero-logo {
-          // margin-top: 7vw;
           display: flex;
           justify-content: center;
 
@@ -279,14 +277,22 @@
           margin-top: 10vh;
           display: flex;
 
-          @media screen and (max-width: 375px){
+          @media screen and (max-width:425px){
             flex-direction: column;
             align-items: center;
+            width: 100%;
+            padding: 15vw;
 
             div{
-              margin-bottom: 3vw;
+              margin-bottom: 2vw;
+              width: 100%;
+              padding-top: .4rem;
+              padding-bottom: .4rem;
 
               a{
+                padding-top: .4rem;
+              padding-bottom: .4rem;
+                width: 100%;
                 margin: 0;
               }
             }

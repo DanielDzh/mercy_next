@@ -92,7 +92,27 @@
       margin: auto;
 
       @media screen and (max-width: 768px){
+        width: 75vw;
         display: block;
+      }
+      @media screen and (max-width: 425px){
+        display: block;
+        width: 85vw;
+      }
+    }
+
+    .aboutUs-buttons{
+      display: flex;
+
+      @media screen and (max-width: 425px){
+        width: 100%;
+        justify-content: center;
+
+        div{
+          width: 100%;
+          padding-top: .4rem;
+          padding-bottom: .4rem;
+        }
       }
     }
 

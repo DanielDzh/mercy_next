@@ -50,6 +50,9 @@
                @media screen and (max-width: 700px){
                   display: flex;
                }
+               @media screen and (max-width: 425px){
+                  display: block;
+               }
 
                h1{
                   font-family: 'Montserrat800';
@@ -80,12 +83,13 @@
                      line-height: 20px;
                   }
                   @media screen and (max-width: 425px){
-                     font-size: 24px;
-                     line-height: 10px;
+                     font-size: 30px;
+                     line-height: 20px;
                      margin-bottom: .7rem;
                   }
                   @media screen and (max-width: 375px){
-                     font-size: 20px;
+                     font-size: 25px;
+                     line-height: 13px;
                   }
                }
 
@@ -133,18 +137,16 @@
                   line-height: 16px;
                }
                 @media screen and (max-width: 425px){
-                  font-size: 10px;
+                  font-size: 12px;
                   line-height: 12px;
                   width: 90%;
                }
                @media screen and (max-width: 375px){
-                  font-size: 9px;
+                  font-size: 12px;
                   line-height: 12px;
                   width: 90%;
-               }
-               @media screen and (max-width: 375px){
                   margin-bottom: .2rem;
-                }
+               }
             }
 
             .button-save{
@@ -154,7 +156,8 @@
                @media screen and (max-width: 650px){
                   margin-top: 1rem;
                }
-               @media screen and (max-width: 425px){
+               @media screen and (max-width: 550px){
+                  display: none;
                   margin-top: .6rem;
                   flex-direction: column;
                   align-items: flex-end;
@@ -176,6 +179,27 @@
             }
          }
 
+      }
+
+      .button-save-mobile{
+         display: none;
+         @media screen and(max-width: 550px){
+            display: flex;
+            flex-direction: column;
+
+            a{
+               width: 100%;
+               margin: 0;
+               padding-top: .4rem;
+               padding-bottom: .4rem;
+            }
+            div:first-child{
+               width: 100%;
+               margin-top: .3rem;
+               padding-top: .4rem;
+               padding-bottom: .4rem;
+            }
+         }
       }
    }
 }

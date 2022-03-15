@@ -29,6 +29,10 @@ export default function SaveLife() {
             </div>
           </div>
         </div>
+        <div className={styles["button-save-mobile"]}>
+          <ButtonBlueBorder title={trans("save_life_button_border")} />
+          <ButtonBlue title={trans("save_life_button")} />
+        </div>
       </div>
     </div>
   );
