@@ -13,6 +13,7 @@
 }
 .dropdown:checked + label,
 .dropdown:not(:checked) + label{
+   margin: 0;
   position: relative;
   font-family: "Montserrat800";
   font-size: 15px;
