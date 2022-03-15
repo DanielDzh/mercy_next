@@ -40,9 +40,9 @@ const Language = ({ colorTitle }) => {
     }
   };
 
-  const toggleVisiblePopup = () => {
-    setVisiblePopup(!visiblePopup);
-  };
+  // const toggleVisiblePopup = () => {
+  //   setVisiblePopup(!visiblePopup);
+  // };
 
   const changeLang = (name) => {
     router.push(router.asPath, router.asPath, { locale: name });
@@ -50,7 +50,22 @@ const Language = ({ colorTitle }) => {
   };
 
   return (
-    <div className={styles.language}>
+    <div className={styles["sec_center"]}>
+      <input className={styles["dropdown"]} type="checkbox" id="dropdown" name="dropdown" />
+      <label className={styles["for_dropdown"]} htmlFor="dropdown">{trans("language")} <img src="images/icons/arrowDown.png" className={styles["uil"]} alt="" /></label>
+      <div className={styles["section_dropdown"]}>
+        {languages.map(({ code, name, countryCode }) => (
+          <a className={styles["a"]} href="#" key={countryCode} onClick={() => changeLang(code)}>{name}</a>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default Language;
+
+
+{/* <div className={styles.language}>
       <DropdownButton
         align="end"
         id={styles["dropdown-variants-Secondary"]}
@@ -73,8 +88,4 @@ const Language = ({ colorTitle }) => {
           </Dropdown.Item>
         ))}
       </DropdownButton>
-    </div>
-  );
-};
-
-export default Language;
+    </div> */}

@@ -89,14 +89,14 @@
          z-index: 20;
         }
      .header_burger.active::before{
-         background-color: #4f3800;
+         background-color: #10A6F9;
          transform: rotate(-45deg);
          top: 5px;
          left: 5px;
          width: 30px;
      }
      .header_burger.active::after{
-      background-color: #4f3800;
+      background-color: #10A6F9;
          transform: rotate(45deg);
          bottom: 1px;
          left: 5px;
