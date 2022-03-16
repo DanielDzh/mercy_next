@@ -38,6 +38,7 @@ export default function SaveLife() {
                   <ButtonBlueBorder title={trans("save_life_button_border")} />
                 </Example>
                 <ButtonBlue title={trans("save_life_button")} click={onOpen} />
+                <div></div>
               </div>
             </div>
           </div>
