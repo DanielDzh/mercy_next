@@ -104,7 +104,8 @@ export default function HeroSlider({ totalAmount }) {
                   {trans("slider_p_2")}
                   <span> {trans("slider_p_3")}</span>
                 </p>
-                <p>{trans("slider_p_renewal")}</p>
+                {/* <p>{trans('slider_p_renewal')}</p> */}
+
               </div>
               <div className={styles["hero-progress"]}>
                 <div id={styles.myProgress}>
