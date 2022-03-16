@@ -36,8 +36,8 @@
             flex-direction: column;
             align-items: flex-start;
             height: 100%;
-            padding-left: 33vw;
-            padding-right: 5vw;
+            padding-left: 29vw;
+            padding-right: 4vw;
 
             @media screen and (max-width: 1024px){
                align-items: flex-end;
@@ -161,14 +161,9 @@
                   margin-top: .6rem;
                   flex-direction: column;
                   align-items: flex-end;
-
-                  a{
-                     margin: 0;
-                     font-size: 10px;
-                     line-height: 12px;
-
-                  }
+                  
                   div{
+                     margin: 0;
                      font-size: 10px;
                      line-height: 12px;
                   }
@@ -187,13 +182,8 @@
             display: flex;
             flex-direction: column;
 
-            a{
-               width: 100%;
-               margin: 0;
-               padding-top: .4rem;
-               padding-bottom: .4rem;
-            }
             div:first-child{
+               margin: 0;
                width: 100%;
                margin-top: .3rem;
                padding-top: .4rem;
