@@ -15,7 +15,7 @@ import ContactUs from "../components/ContactUs";
 import Footer from "../components/Footer";
 import { Helmet } from "../components/Helmet";
 
-export default function Home() {
+export default function Home({ total }) {
   return (
     <div>
       <Helmet
@@ -23,7 +23,7 @@ export default function Home() {
         description="Головне завдання благодійного фонду “UNFAILING CHARITY” — забезпечити допомогу та матеріальну підтримку найбільш потребуючого населення потребуючих країн. "
       />
       {/* <Header/> */}
-      <HeroSlider />
+      <HeroSlider totalAmount={total} />
       <AboutUs />
       <OurMission />
       <OurValues />
@@ -36,4 +36,10 @@ export default function Home() {
       <Footer />
     </div>
   );
+}
+
+export async function getServerSideProps() {
+  const res = await fetch(process.env.NEXT_TOTAL_API_URL);
+  const data = await res.json();
+  return { props: { total: data || 3000 } };
 }

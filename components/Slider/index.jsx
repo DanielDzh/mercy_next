@@ -4,10 +4,7 @@ import styles from "./Slider.module.scss";
 import PaymentForm from "../PaymentForm";
 import Image from "next/image";
 
-import {
-  FaLongArrowAltLeft,
-  FaLongArrowAltRight,
-} from "react-icons/fa";
+import { FaLongArrowAltLeft, FaLongArrowAltRight } from "react-icons/fa";
 import Header from "../Header/index";
 import { useTrans } from "../../hooks/useTrans";
 import ButtonBlue from "../ButtonBlue";
@@ -15,6 +12,7 @@ import ButtonBlueBorder from "../ButtonBlueBorder";
 import Slide from "./Slide";
 import { useOpenHandlers } from "../../hooks/useOpenHandlers";
 import { Link } from "react-scroll";
+import { formatCurrency } from "../../utils/formatCurrency";
 
 const sliderPaths = [
   "images/ruins.jpg",
@@ -24,7 +22,16 @@ const sliderPaths = [
   "images/ruins_5.jpg",
 ];
 
-export default function HeroSlider() {
+const EXPECTED_AMOUNT = 30000;
+
+const getProgressPercent = (amount) => {
+  const value = (amount / EXPECTED_AMOUNT) * 100;
+  if (value > 100) return 100;
+  if (value < 0) return 0;
+  return value;
+};
+
+export default function HeroSlider({ totalAmount }) {
   const { trans } = useTrans();
 
   const { open, onOpen, onClose } = useOpenHandlers(false);
@@ -86,23 +93,35 @@ export default function HeroSlider() {
                 />
               </div>
               <div className={styles["hero-text"]}>
-                <h1>{trans('slider_title')}</h1>
+                <h1>{trans("slider_title")}</h1>
                 <h2>
-                  {trans('slider_desc_1')} <span>1000</span> {trans('slider_desc_2')} <span>6</span> {trans('slider_desc_3')}
+                  {trans("slider_desc_1")} <span>1000</span>{" "}
+                  {trans("slider_desc_2")} <span>6</span>{" "}
+                  {trans("slider_desc_3")}
                 </h2>
                 <p>
-                  {trans('slider_p_1')} <span>$30</span> {trans('slider_p_2')}
-                  <span> {trans('slider_p_3')}</span>
+                  {trans("slider_p_1")} <span>{formatCurrency(30)}</span>{" "}
+                  {trans("slider_p_2")}
+                  <span> {trans("slider_p_3")}</span>
                 </p>
-                <p>{trans('slider_p_renewal')}</p>
+                <p>{trans("slider_p_renewal")}</p>
               </div>
               <div className={styles["hero-progress"]}>
                 <div id={styles.myProgress}>
                   <span className={styles["thirty-circle"]}></span>
-                  <span className={styles["thirty-price"]}>$ 30 000</span>
-                  <div id={styles.myBar}>
+                  <span className={styles["thirty-price"]}>
+                    {formatCurrency(EXPECTED_AMOUNT)}
+                  </span>
+                  <div
+                    id={styles.myBar}
+                    style={{
+                      width: `${getProgressPercent(totalAmount)}%`,
+                    }}
+                  >
                     <span className={styles["first-price"]}>0</span>
-                    <span className={styles["second-price"]}>$ 3 000</span>
+                    <span className={styles["second-price"]}>
+                      {formatCurrency(Math.floor(totalAmount))}
+                    </span>
 
                     <span className={styles["first-circle"]}></span>
                     <span className={styles["second-circle"]}></span>
@@ -119,10 +138,15 @@ export default function HeroSlider() {
                   spy={false}
                   offset={5}
                 >
-                  <ButtonBlueBorder title={trans('slider_button_blue_border')} />
+                  <ButtonBlueBorder
+                    title={trans("slider_button_blue_border")}
+                  />
                 </Link>
 
-                <ButtonBlue title={trans('slider_button_blue')} click={onOpen} />
+                <ButtonBlue
+                  title={trans("slider_button_blue")}
+                  click={onOpen}
+                />
                 {/* <PayPal /> */}
               </div>
             </div>
