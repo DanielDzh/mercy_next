@@ -14,6 +14,7 @@ import ButtonBlue from "../ButtonBlue";
 import ButtonBlueBorder from "../ButtonBlueBorder";
 import Slide from "./Slide";
 import { useOpenHandlers } from "../../hooks/useOpenHandlers";
+import { Link } from "react-scroll";
 
 const sliderPaths = [
   "images/ruins.jpg",
@@ -93,6 +94,7 @@ export default function HeroSlider() {
                   {trans('slider_p_1')} <span>$30</span> {trans('slider_p_2')}
                   <span> {trans('slider_p_3')}</span>
                 </p>
+                <p>{trans('slider_p_renewal')}</p>
               </div>
               <div className={styles["hero-progress"]}>
                 <div id={styles.myProgress}>
@@ -108,7 +110,18 @@ export default function HeroSlider() {
                 </div>
               </div>
               <div className={styles["hero-buttons"]}>
-                <ButtonBlueBorder title={trans('slider_button_blue_border')} />
+                <Link
+                  className={styles["link"]}
+                  to="currentProjects"
+                  smooth={true}
+                  duration={2000}
+                  activeClass="active"
+                  spy={false}
+                  offset={5}
+                >
+                  <ButtonBlueBorder title={trans('slider_button_blue_border')} />
+                </Link>
+
                 <ButtonBlue title={trans('slider_button_blue')} click={onOpen} />
                 {/* <PayPal /> */}
               </div>

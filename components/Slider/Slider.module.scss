@@ -110,6 +110,10 @@
               color: #ffffff;
             }
           }
+          p:last-of-type{
+            letter-spacing: 0.02em;
+            color: #aaaaaa;
+          }
         }
 
         .hero-progress {
@@ -277,25 +281,33 @@
           margin-top: 10vh;
           display: flex;
 
+          
+
           @media screen and (max-width:425px){
             flex-direction: column;
             align-items: center;
             width: 100%;
             padding: 15vw;
 
+            .link{
+              padding-top: .4rem;
+            padding-bottom: .4rem;
+              width: 100%;
+              margin: 0;
+              text-decoration: none;
+            }
+
             div{
               margin-bottom: 2vw;
               width: 100%;
               padding-top: .4rem;
               padding-bottom: .4rem;
-
-              a{
-                padding-top: .4rem;
-              padding-bottom: .4rem;
-                width: 100%;
-                margin: 0;
-              }
+              margin: 0;
             }
+          }
+
+          .link{
+            text-decoration: none;
           }
         }
       }
