@@ -22,16 +22,14 @@ const sliderPaths = [
   "images/ruins_5.jpg",
 ];
 
-const EXPECTED_AMOUNT = 30000;
-
-const getProgressPercent = (amount) => {
-  const value = (amount / EXPECTED_AMOUNT) * 100;
+const getProgressPercent = (total, expected) => {
+  const value = (total / expected) * 100;
   if (value > 100) return 100;
   if (value < 0) return 0;
   return value;
 };
 
-export default function HeroSlider({ totalAmount }) {
+export default function HeroSlider({ totalAmount, expectedAmount }) {
   const { trans } = useTrans();
 
   const { open, onOpen, onClose } = useOpenHandlers(false);
@@ -110,12 +108,15 @@ export default function HeroSlider({ totalAmount }) {
                 <div id={styles.myProgress}>
                   <span className={styles["thirty-circle"]}></span>
                   <span className={styles["thirty-price"]}>
-                    {formatCurrency(EXPECTED_AMOUNT)}
+                    {formatCurrency(expectedAmount)}
                   </span>
                   <div
                     id={styles.myBar}
                     style={{
-                      width: `${getProgressPercent(totalAmount)}%`,
+                      width: `${getProgressPercent(
+                        totalAmount,
+                        expectedAmount
+                      )}%`,
                     }}
                   >
                     <span className={styles["first-price"]}>0</span>
