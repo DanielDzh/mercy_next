@@ -16,15 +16,15 @@ import Footer from "../components/Footer";
 import { Helmet } from "../components/Helmet";
 import Reviews from "../components/Reviews";
 
-export default function Home({ total }) {
+export default function Home({ total, expected }) {
   return (
     <div>
       <Helmet
-        title="Mercy Chain"
+        customTitle="Mercy Chain"
         description="Головне завдання благодійного фонду “UNFAILING CHARITY” — забезпечити допомогу та матеріальну підтримку найбільш потребуючого населення потребуючих країн. "
       />
       {/* <Header/> */}
-      <HeroSlider totalAmount={total} />
+      <HeroSlider totalAmount={total} expectedAmount={expected} />
       <AboutUs />
       <OurMission />
       <OurValues />
@@ -43,5 +43,7 @@ export default function Home({ total }) {
 export async function getServerSideProps() {
   const res = await fetch(process.env.NEXT_TOTAL_API_URL);
   const data = await res.json();
-  return { props: { total: data || 3000 } };
+  return {
+    props: { total: data.total || 3000, expected: data.expected || 30000 },
+  };
 }
