@@ -111,7 +111,7 @@ export default function Reviews() {
             <div className={styles["reviews_slider"]}>
                <Slider {...settings}>
                   {sliderPaths.map((p, index) => (
-                     <div className={styles["slider_wrapp"]}>
+                     <div className={styles["slider_wrapp"]} key={index}>
                         <img
                            className={`${styles['reviews_slide']} ${activeSlide === index ? styles["slide_center"] : styles["slide_not_center"]}`}
                            // className={`${styles['reviews_slide']} ${activeSlide === index ? styles["slide_center"] : activeSlide === index + 1 ? styles["slide_after_slide"] : index === count ? styles["slide_before_slide"] : styles["slide_not_center"]}`}
