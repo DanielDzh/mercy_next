@@ -10,6 +10,7 @@ export default function OurMission() {
         <div className={styles["first-two-block"]}>
           <div className={styles["ourMission-block"]}>
             <img src="images/ourMissionImage.png" alt="" />
+            <img src="images/ourMission_mobile.png" alt="" />
             <div className={styles.ourMissionText}>
               <div className={styles.ourMissionTitle}>{trans("our_mission")}</div>
               <div className={styles.ourMissionDesc}>

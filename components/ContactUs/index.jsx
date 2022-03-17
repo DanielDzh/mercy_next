@@ -16,18 +16,18 @@ const contacts = [
       url: "mailto:support@mercychain.org",
       desc: "support@mercychain.org",
    },
-   {
-      icon: "images/iconInstYellow.png",
-      name: "instagram",
-      url: "https://www.instagram.com/mercy_chain/",
-      desc: "@mercy_chain",
-   },
-   {
-      icon: "images/iconTelegramYellow.png",
-      name: "telegram",
-      url: "",
-      desc: "(684) 555-0102",
-   },
+   // {
+   //    icon: "images/iconInstYellow.png",
+   //    name: "instagram",
+   //    url: "https://www.instagram.com/mercy_chain",
+   //    desc: "@mercy_chain",
+   // },
+   // {
+   //    icon: "images/iconTelegramYellow.png",
+   //    name: "telegram",
+   //    url: "",
+   //    desc: "(684) 555-0102",
+   // },
    {
       icon: "images/iconLocation.png",
       name: "location",
@@ -70,6 +70,11 @@ const ContactUs = () => {
                            />
                         </div>
                         <div className={styles["quetion_user"]}>
+                           <input
+                              type="text"
+                              placeholder={trans("contacts_mail")}
+                              className={styles["user_mail"]}
+                           />
                            <textarea rows="4" type="" placeholder={trans("contacts_message")} />
                         </div>
                         <button>

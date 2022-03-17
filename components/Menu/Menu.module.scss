@@ -147,4 +147,23 @@
          width: 100%;
       }
 
+      .lang{
+         width: fit-content;
+         display: flex;
+         margin-bottom: 20px;
+
+         align-items: center;
+
+         a{
+            margin-left: 20px;
+
+            img{
+               height: 20px;
+            }  
+         }
+         a:first-of-type{
+               margin: 0;
+         }
+         }
+
    }

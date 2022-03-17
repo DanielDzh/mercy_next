@@ -1,8 +1,5 @@
-.hero-button{
-   display: flex;
-   font-family: 'Montserrat700';
-
    .button-blue{
+      font-family: 'Montserrat600';
       position: relative;
       text-align: center;
       cursor: pointer;
@@ -26,7 +23,7 @@
       transition: all 400ms ease;
 
       @media screen and (max-width: 1200px){
-         padding: 0.6rem 1.9rem;
+         padding: 0.8rem 1.9rem;
          font-size: 16px;
       }
       @media screen and(max-width: 1024px){
@@ -39,8 +36,13 @@
          font-size: 14px;
       }
       @media screen and(max-width: 600px){
-         padding: 0.3rem 1.2rem;
-         font-size: 12px;
+         padding: 0.8rem 1rem;
+         font-size: 16px;
+         line-height: 20px;
+      }
+      @media screen and(max-width: 374px){
+         padding: 0.6rem .8rem;
+         font-size: 15px;
          line-height: 18px;
       }
 
@@ -72,4 +74,3 @@
          }
       }
    }
-}

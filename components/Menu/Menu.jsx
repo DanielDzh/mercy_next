@@ -89,18 +89,7 @@ const Menu = ({ active, setActive }) => {
             >
                {trans`header_project`}
             </Link>
-            {/* <Link
-               className={styles["header_link"]}
-               to=""
-               smooth={true}
-               duration={2000}
-               activeClass="active"
-               spy={false}
-               offset={5}
-               onClick={() => setActive(false)}
-            >
-               {trans('header_reviews')}
-            </Link> */}
+
             <Link
                className={styles["header_link"]}
                to="becomePartner"
@@ -112,6 +101,18 @@ const Menu = ({ active, setActive }) => {
                onClick={() => setActive(false)}
             >
                {trans('header_join')}
+            </Link>
+            <Link
+               className={styles["header_link"]}
+               to="Reviews"
+               smooth={true}
+               duration={2000}
+               activeClass="active"
+               spy={false}
+               offset={5}
+               onClick={() => setActive(false)}
+            >
+               {trans('header_reviews')}
             </Link>
             <Link
                className={styles["header_link"]}
@@ -149,7 +150,19 @@ const Menu = ({ active, setActive }) => {
             >
                {trans('header_contactUs')}
             </Link>
+            <div className={styles["lang"]}>
+               <a href="https://www.instagram.com/mercy_chain">
+                  <img src="images/iconInstYellow.png" alt="" />
+               </a>
+               <a href="">
+                  <img src="images/iconFacebookYellow.png" alt="" />
+               </a>
+               <a href="">
+                  <img src="images/iconTelegramYellow.png" alt="" />
+               </a>
+            </div>
             <Language />
+
 
          </div>
       </div>

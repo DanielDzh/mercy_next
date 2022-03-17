@@ -7,6 +7,9 @@ export default function PopupWithTitle({ open, onClose, children, title }) {
     <Popup open={open} onClose={onClose} fullHeight noPadding>
       <div className={styles.header}>
         <h2>{title}</h2>
+        <div className={styles["popup_close"]} onClick={() => onClose()}>
+          <img src="images/icons/cancel.png" alt="" />
+        </div>
       </div>
       <div className={styles.body}>{children}</div>
     </Popup>

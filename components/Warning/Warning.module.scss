@@ -14,11 +14,10 @@
   }
   @media screen and (max-width: 768px){
     border: 1.5px solid #ff0000;
-    padding: 1.8vw 2vw;
+    padding: 15px 13px;
   }
   @media screen and (max-width: 425px){
     border: 1px solid #ff0000;
-    padding: 10px 10px;
   }
   img{
     @media screen and (max-width: 1024px){
@@ -46,12 +45,12 @@
       line-height: 145%;
     }
     @media screen and (max-width: 768px){
-      font-size: 12px;
+      font-size: 14px;
       line-height: 145%;
     }
-    @media screen and (max-width: 425px){
-      font-size: 10px;
-      line-height: 145%;
+    @media screen and (max-width: 600px){
+      font-size: 14px;
+      line-height: 160%;
     }
   }
 }

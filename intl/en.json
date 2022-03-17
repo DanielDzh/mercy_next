@@ -60,6 +60,7 @@
   "regul_assis_desc": "It is the “subscription” that allows thousands of Ukrainians to receive assistance on time, sustaining their lives for as long as possible, and helping us plan distribution of this assistance for the month ahead.",
   "button_subscribe": "Subscribe",
   "button_help": "Help",
+  "reviews_title": "Reviews",
   "our_team": "Our team",
   "Daniel_Bogatiuk": "Daniel Bogatiuk",
   "Daniel_Bogatiuk_spec": "Сo-founder",
@@ -95,6 +96,8 @@
   "contacts": "Contacts",
   "contacts_name": "Name",
   "contacts_phone": "Phone number",
+  "contacts_mail": "Mail",
   "contacts_message": "Your message",
-  "button_send": "Send"
+  "button_send": "Send",
+  "footer_join": "Join Us:"
 }

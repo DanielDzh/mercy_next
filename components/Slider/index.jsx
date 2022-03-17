@@ -159,6 +159,9 @@ export default function HeroSlider({ totalAmount, expectedAmount }) {
               ))}
             </Slider>
           </div>
+          <div className={styles["hero_photo_mobile"]}>
+            <img src="images/backHero.png" alt="" />
+          </div>
         </div>
       </div>
     </>
