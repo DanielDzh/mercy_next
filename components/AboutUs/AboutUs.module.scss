@@ -13,10 +13,10 @@
       text-align: center;
     }
     @media screen and (max-width: 600px){
-      padding: 3rem;
+      padding: 55px 40px;
     }
-    @media screen and (max-width: 425px){
-      padding: 2rem;
+    @media screen and (max-width: 450px){
+      padding: 35px 20px;
     }
 
     .aboutUs-img {
@@ -95,7 +95,8 @@
         width: 75vw;
         display: block;
       }
-      @media screen and (max-width: 425px){
+      @media screen and (max-width: 600px){
+        margin-top: 25px;
         display: block;
         width: 85vw;
       }
@@ -108,10 +109,11 @@
         width: 100%;
         justify-content: center;
 
-        div{
-          width: 100%;
-          padding-top: .4rem;
-          padding-bottom: .4rem;
+        div:first-child{
+          margin-top: 5px;
+          // width: 100%;
+        //   padding-top: .4rem;
+        //   padding-bottom: .4rem;
         }
       }
     }
@@ -133,11 +135,12 @@
           font-size: 14px;
         }
         @media screen and (max-width: 600px){
-          font-size: 14px;
-          line-height: 145%;
+          font-size: 15px;
+          line-height: 180%;
+          text-align: start;
+          margin-top: 8vw;
         }
         @media screen and (max-width: 425px){
-          margin-top: 7vw;
         }
       }
     }

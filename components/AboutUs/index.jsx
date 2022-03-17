@@ -36,7 +36,7 @@ export default function AboutUs() {
               />
               <CustomList />
             </div>
-            <img src="images/we.png" alt="" loading="lazy" className={styles["aboutUs-img-mobile"]} />
+            <img src="images/we_mobile.png" alt="" loading="lazy" className={styles["aboutUs-img-mobile"]} />
             <p>
               {trans("aboutUs_desc_under")}
             </p>

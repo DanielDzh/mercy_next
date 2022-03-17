@@ -1,8 +1,6 @@
-.hero-button{
-   display: flex;
-   font-family: 'Montserrat700';
 
    .button-yellow{
+      font-family: 'Montserrat700';
       position: relative;
       cursor: pointer;
       padding: 1rem 2.5rem;
@@ -39,8 +37,13 @@
          font-size: 14px;
       }
       @media screen and(max-width: 600px){
-         padding: 0.3rem 1.2rem;
-         font-size: 12px;
+         padding: 0.8rem 1rem;
+         font-size: 16px;
+         line-height: 20px;
+      }
+      @media screen and(max-width: 374px){
+         padding: 0.6rem .8rem;
+         font-size: 15px;
          line-height: 18px;
       }
 
@@ -73,4 +76,3 @@
          }
       }
    }
-}

@@ -8,6 +8,13 @@
       height: 100%;
       width: 100%;
 
+      @media screen and (max-width: 600px){
+        padding: 30px;
+      }
+      @media screen and (max-width: 450px){
+        padding: 15px;
+      }
+
       .content-hero {
         justify-content: center;
         display: flex;
@@ -23,7 +30,8 @@
             width: 25vw;
           }
           @media screen and (max-width: 600px){
-            width: 33vw;
+            width: 53vw;
+            margin-top: 10vw;
           }
 
           img {
@@ -34,7 +42,11 @@
         .hero-text {
           margin-top: 2vh;
           text-align: center;
+          max-width: 70%;
 
+          @media screen and (max-width: 600px){
+            max-width: 100%;
+          }
           @media screen and (max-width: 375px){
             margin-top: 4vh;
           }
@@ -43,7 +55,7 @@
             font-family: "Montserrat800";
             font-weight: 100;
             // font-size: 5.715rem;
-            font-size: 8vw;
+            font-size: 8.5vw;
             line-height: 10vw;
             color: #ffffff;
 
@@ -51,16 +63,17 @@
               font-size: 7vw;
             }
             @media screen and (max-width: 600px){
-              font-size: 11vw;
+              font-size: 45px;
+              line-height: 55px;
             }
 
           }
           h2 {
             font-family: "Montserrat700";
-            max-width: 70%;
+            // max-width: 70%;
             margin: 0 auto;
             font-weight: bold;
-            font-size: 2vw;
+            font-size: 2.5vw;
             line-height: 43px;
             color: #ffffff;
 
@@ -74,12 +87,12 @@
             }
             @media screen and (max-width: 600px){
               font-size: 20px;
-              line-height: 30px;
+              line-height: 130%;
             }
-            @media screen and (max-width: 375px){
-              font-size: 16px;
-              line-height: 21px;
-            }
+            // @media screen and (max-width: 375px){
+            //   font-size: 16px;
+            //   line-height: 21px;
+            // }
 
             span {
               color: #ffbc15;
@@ -88,21 +101,20 @@
           p {
             font-family: "Montserrat400";
             margin-top: 1.5rem;
-            font-size: 1.3vw;
+            font-size: 1.6vw;
             line-height: 23px;
             letter-spacing: 0.03em;
             color: #ffffff;
 
             @media screen and (max-width: 600px){
-              font-size: 2.5vw;
-              max-width: 70%;
+              font-size: 14px;
               margin: 3.5vw auto;
-              line-height: 18px;
+              line-height: 154%;
             }
-            @media screen and (max-width: 375px){
-              font-size: 3vw;
-              line-height: 14px;
-            }
+            // @media screen and (max-width: 375px){
+            //   font-size: 3vw;
+            //   line-height: 14px;
+            // }
 
             span {
               font-family: "Montserrat700";
@@ -127,6 +139,10 @@
             margin: 0 auto;
             position: relative;
 
+            @media screen and (max-width: 600px){
+              width: 95%;
+            }
+
             .thirty-circle {
               width: 1.8vh;
               height: 1.8vh;
@@ -145,8 +161,8 @@
             }
             .thirty-price {
               position: absolute;
-              top: 3vh;
-              right: -40px;
+              top: 2vh;
+              right: -30px;
               font-size: 20px;
               line-height: 25px;
               text-align: center;
@@ -156,24 +172,17 @@
                 font-size: 18px;
               }
               @media screen and (max-width: 768px){
-                top: -5vh;
-                right: -30px;
                 font-size: 14px;
               }
               @media screen and (max-width: 600px){
                 font-size: 13px;
+                right: -5px;
               }
               @media screen and (max-width: 375px){
                 top: 1.5vh;
-                right: -25px;
                 // font-size: 13px;
                 line-height: 19px;
               }
-            }
-          }
-          @media screen and (max-width: 900px) {
-            #myProgress {
-              width: 60%;
             }
           }
 
@@ -189,7 +198,7 @@
 
             .first-price {
               position: absolute;
-              top: 3vh;
+              top: 2vh;
               left: 0px;
               font-size: 20px;
               line-height: 25px;
@@ -200,7 +209,6 @@
                 font-size: 18px;
               }
               @media screen and (max-width: 768px){
-                top: -5vh;
                 font-size: 14px;
               }
               @media screen and (max-width: 600px){
@@ -281,34 +289,40 @@
           margin-top: 10vh;
           display: flex;
 
-          
+          .link{
+            text-decoration: none;
+            margin-right: 15px;
+          }
 
-          @media screen and (max-width:425px){
+          @media screen and (max-width:600px){
+            align-items: center;
+            width: 100%;
+            justify-content: center;
+
+            .link{
+              margin-right: 10px;
+            }
+          }
+
+          @media screen and (max-width: 374px){
             flex-direction: column;
             align-items: center;
             width: 100%;
-            padding: 15vw;
 
-            .link{
-              padding-top: .4rem;
-            padding-bottom: .4rem;
+            a{
+              margin-bottom: 10px;
+              margin-right: 0;
               width: 100%;
-              margin: 0;
-              text-decoration: none;
             }
-
             div{
-              margin-bottom: 2vw;
               width: 100%;
-              padding-top: .4rem;
-              padding-bottom: .4rem;
-              margin: 0;
+            }
+            .link{
+              margin-right: 0;
             }
           }
 
-          .link{
-            text-decoration: none;
-          }
+          
         }
       }
     }
@@ -319,6 +333,10 @@
       position: absolute;
       top: 0;
       z-index: -2;
+
+      @media screen and (max-width:600px){
+        display: none;
+      }
 
       div {
         height: 100%;
@@ -350,6 +368,18 @@
             width: 100%;
           }
         }
+      }
+    }
+    .hero_photo_mobile{
+      height: 100vh;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      z-index: -2;
+      img{
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
       }
     }
   }

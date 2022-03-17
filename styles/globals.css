@@ -24,6 +24,12 @@
     format("truetype");
   font-weight: 600;
 }
+@font-face {
+  font-family: "Montserrat500";
+  src: url("../public/fonts/Montserrat-VariableFont_wght.ttf")
+    format("truetype");
+  font-weight: 500;
+}
 
 body {
   font-family: "Open Sans", sans-serif;

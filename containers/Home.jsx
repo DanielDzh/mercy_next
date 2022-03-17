@@ -14,6 +14,7 @@ import OurPartners from "../components/OurPartners";
 import ContactUs from "../components/ContactUs";
 import Footer from "../components/Footer";
 import { Helmet } from "../components/Helmet";
+import Reviews from "../components/Reviews";
 
 export default function Home({ total }) {
   return (
@@ -30,6 +31,7 @@ export default function Home({ total }) {
       <SaveLife />
       <CurrentProjects />
       <BecomePartner />
+      <Reviews />
       <OurTeam />
       <OurPartners />
       <ContactUs />

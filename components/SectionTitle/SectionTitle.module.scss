@@ -16,11 +16,12 @@
       line-height: 67px;
     }
     @media screen and (max-width: 600px){
-      font-size: 44px;
-      line-height: 57px;
+      font-size: 45px;
+      line-height: 55px;
+      text-align: start;
     }
     @media screen and (max-width: 375px){
-      font-size: 40px;
+      // font-size: 40px;
     }
   }
 
@@ -40,8 +41,10 @@
       font-size: 12px;
     }
     @media screen and (max-width: 600px){
-      font-size: 11px;
-      line-height: 150%;
+      margin-top: 15px;
+      text-align: start;
+      font-size: 15px;
+      line-height: 130%;
     }
   }
 }

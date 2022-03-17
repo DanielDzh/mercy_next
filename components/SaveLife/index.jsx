@@ -24,6 +24,12 @@ export default function SaveLife() {
               <img src="images/saveLife.png" alt="" />
               <div></div>
             </div>
+            <img src="images/saveLife_mobile.png" alt="" />
+            <div className={styles["mobile_flex_mobile"]}>
+              <h1>{trans("save_life_title_1")}</h1>
+              <h1>{trans("save_life_title_2")}</h1>
+              <h2> {trans("save_life_desc")}</h2>
+            </div>
             <div className={styles["save-content"]}>
               <div className={styles["mobile_flex"]}>
                 <h1>{trans("save_life_title_1")}</h1>

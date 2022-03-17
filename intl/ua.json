@@ -60,6 +60,7 @@
   "regul_assis_desc": "Саме підписка дозволяє тисячам українців отримувати допомогу вчасно, зберігаючи їхні життя якомога довше, а нам — планувати допомогу на місяці наперед.",
   "button_subscribe": "Оформити підписку",
   "button_help": "Допомогти",
+  "reviews_title": "Відгуки",
   "our_team": "Наша команда",
   "Daniel_Bogatiuk": "Даниїл Богатюк",
   "Daniel_Bogatiuk_spec": "Кофаундер",
@@ -95,6 +96,8 @@
   "contacts": "Контакти",
   "contacts_name": "Ім'я",
   "contacts_phone": "Номер телефону",
+  "contacts_mail": "Пошта",
   "contacts_message": "Ваше повідомлення",
-  "button_send": "Відправити"
+  "button_send": "Відправити",
+  "footer_join": "Приєднуйся до нас:"
 }

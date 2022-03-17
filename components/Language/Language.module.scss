@@ -4,15 +4,31 @@
   text-align: center;
   z-index: 200;
 }
+
 .dropdown:checked,
-.dropdown:not(:checked){
+.dropdown:not(:checked),
+.dropdown_mobile:checked,
+.dropdown_mobile:not(:checked){
   position: absolute;
   left: -9999px;
   opacity: 0;
   pointer-events: none;
+
+ 
 }
+
+// .dropdown_mobile:checked,
+// .dropdown_mobile:not(:checked){
+
+//   display: none;
+//   @media screen and(max-width: 1024px){
+//     display: block;
+//   }
+// }
 .dropdown:checked + label,
-.dropdown:not(:checked) + label{
+.dropdown:not(:checked) + label,
+.dropdown_mobile:checked + label,
+.dropdown_mobile:not(:checked) + label{
    margin: 0;
   position: relative;
   font-family: "Montserrat600";
@@ -40,14 +56,17 @@
   cursor: pointer;
   color: #CFD2D5;
 //   box-shadow: 0 12px 35px 0 rgba(255,235,167,.15);
+
 }
-.dropdown:not(:checked) + label .uil {
+.dropdown:not(:checked) + label .uil ,
+.dropdown_mobile:not(:checked) + label .uil_mobile {
    width: 1rem;
   font-size: 24px;
   margin-left: 7px;
   transition: transform 200ms linear;
 }
-.dropdown:checked + label .uil {
+.dropdown:checked + label .uil,
+.dropdown_mobile:checked + label .uil_mobile {
    width: 1rem;
   transform: rotate(180deg);
   font-size: 24px;
@@ -60,7 +79,7 @@
   padding: 5px;
   background-color: #111;
   top: 50px;
-  left: 0;
+  right: 0;
   border-radius: 16px;
   display: block;
   box-shadow: 0 14px 35px 0 rgba(9,9,12,0.4);
@@ -70,7 +89,8 @@
   transform: translateY(20px);
   transition: all 200ms linear;
 }
-.dropdown:checked ~ .section_dropdown{
+.dropdown:checked ~ .section_dropdown,
+.dropdown_mobile:checked ~ .section_dropdown{
   opacity: 1;
   pointer-events: auto;
   transform: translateY(0);
@@ -78,7 +98,7 @@
 .section_dropdown:after {
   position: absolute;
   top: -7px;
-  left: 30px;
+  right: 30px;
   width: 0; 
   height: 0; 
   border-left: 8px solid transparent;

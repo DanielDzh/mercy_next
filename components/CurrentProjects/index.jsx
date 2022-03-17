@@ -16,7 +16,7 @@ export default function CurrentProjects() {
     {
       name: "",
       desc: "",
-      gallery: ["images/project1.png", "images/project2.png"],
+      gallery: ["images/project1.png", "images/project1.png"],
     },
   ];
   return (
@@ -36,10 +36,7 @@ export default function CurrentProjects() {
             <p>
               {trans("current_proj_desc_3")}
             </p>
-            <div className={styles["background_mobile"]}>
-              <img src={projects[0].gallery[0]} alt="" />
-              <img src={projects[0].gallery[1]} alt="" />
-            </div>
+
             <div className={styles["button-projects"]}>
               <ButtonBlueBorder title={trans("current_proj_button_border")} />
               <ButtonBlue title={trans("current_proj_button")} />
