@@ -6,6 +6,8 @@ import ButtonBlue from "../ButtonBlue";
 import { useTrans } from "../../hooks/useTrans";
 import PaymentForm from "../PaymentForm";
 import { useOpenHandlers } from "../../hooks/useOpenHandlers";
+import { RWebShare } from "react-web-share";
+import Example from "../Example";
 
 export default function SaveLife() {
 
@@ -30,14 +32,21 @@ export default function SaveLife() {
               <h2>
                 {trans("save_life_desc")}
               </h2>
+
               <div className={styles["button-save"]}>
-                <ButtonBlueBorder title={trans("save_life_button_border")} />
+                <Example>
+                  <ButtonBlueBorder title={trans("save_life_button_border")} />
+                </Example>
                 <ButtonBlue title={trans("save_life_button")} click={onOpen} />
+                <div></div>
               </div>
             </div>
           </div>
+
           <div className={styles["button-save-mobile"]}>
-            <ButtonBlueBorder title={trans("save_life_button_border")} />
+            <Example>
+              <ButtonBlueBorder title={trans("save_life_button_border")} />
+            </Example>
             <ButtonBlue title={trans("save_life_button")} click={onOpen} />
           </div>
         </div>
