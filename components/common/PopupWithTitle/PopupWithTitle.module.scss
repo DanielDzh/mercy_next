@@ -17,7 +17,13 @@
   }
   .popup_close{
     display: flex;
+    cursor: pointer;
+    transition: transform .3s ease;
 
+    &:hover{
+      transition: transform .3s ease;
+      transform: scale(1.1);
+    }
       img{
         width: 2vw;
         height: 2vw;
