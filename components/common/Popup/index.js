@@ -15,7 +15,7 @@ export const Popup = ({ children, open, onClose, fullHeight, noPadding }) => {
         e.target.className === styles.wrapper ? onClose() : null
       }
     >
-      <div
+      <div onClick={() => onClose}
         className={generateClasses(
           styles.popup,
           open ? styles.opened : styles.closed,
