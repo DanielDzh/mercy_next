@@ -4,6 +4,7 @@ import { useEffect } from 'react'
 import { Link } from "react-scroll";
 import { useTrans } from "../../hooks/useTrans";
 import Language from '../Language';
+import LanguageMobile from '../LanguageMobile';
 
 const Menu = ({ active, setActive }) => {
 
@@ -62,7 +63,7 @@ const Menu = ({ active, setActive }) => {
    }, [active]);
 
    return (
-      <div className={active ? `${styles.menu} ${styles.active}` : styles["menu"]} >
+      <div className={active ? `${styles.menu} ${styles.active}` : styles["menu"]}>
          <div className={styles["blur"]} onClick={() => setActive(false)}></div>
          <div className={styles["menu_content"]}>
             <Link
@@ -152,16 +153,16 @@ const Menu = ({ active, setActive }) => {
             </Link>
             <div className={styles["lang"]}>
                <a href="https://www.instagram.com/mercy_chain">
-                  <img src="images/iconInstYellow.png" alt="" />
+                  <img loading="lazy" src="images/iconInstYellow.png" alt="" />
                </a>
                <a href="">
-                  <img src="images/iconFacebookYellow.png" alt="" />
+                  <img loading="lazy" src="images/iconFacebookYellow.png" alt="" />
                </a>
                <a href="">
-                  <img src="images/iconTelegramYellow.png" alt="" />
+                  <img loading="lazy" src="images/iconTelegramYellow.png" alt="" />
                </a>
             </div>
-            <Language />
+            <LanguageMobile />
 
 
          </div>

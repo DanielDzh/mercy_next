@@ -8,7 +8,7 @@ export default function PopupWithTitle({ open, onClose, children, title }) {
       <div className={styles.header}>
         <h2>{title}</h2>
         <div className={styles["popup_close"]} onClick={() => onClose()}>
-          <img src="images/icons/cancel.png" alt="" />
+          <img loading="lazy" src="images/icons/cancel.png" alt="" />
         </div>
       </div>
       <div className={styles.body}>{children}</div>

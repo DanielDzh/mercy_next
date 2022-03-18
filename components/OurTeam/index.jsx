@@ -7,7 +7,7 @@ import { useTrans } from "../../hooks/useTrans";
 
 const SocialMedia = ({ url, icon }) => (
   <a href={url}>
-    <img src={icon} alt="" />
+    <img loading="lazy" src={icon} alt="" />
   </a>
 );
 
@@ -156,7 +156,7 @@ export default function OurTeam() {
           {people.map((item, index) => (
             <div className={styles.human} key={index}>
               <div className={styles["human_img"]}>
-                <img src={item.photo} alt="" />
+                <img loading="lazy" src={item.photo} alt="" />
                 <div className={styles["hover"]}>
                   {item.telegram && <Telegram url={item.telegram} />}
                   {item.facebook && <Facebook url={item.facebook} />}

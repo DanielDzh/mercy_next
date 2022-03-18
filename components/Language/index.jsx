@@ -50,15 +50,26 @@ const Language = ({ colorTitle }) => {
   };
 
   return (
-    <div className={styles["sec_center"]}>
-      <input className={styles["dropdown"]} type="checkbox" id="dropdown" name="dropdown" />
-      <label className={styles["for_dropdown"]} htmlFor="dropdown">{trans("language")} <img src="images/icons/arrowDown.png" className={styles["uil"]} alt="" /></label>
-      <div className={styles["section_dropdown"]}>
-        {languages.map(({ code, name, countryCode }) => (
-          <a className={styles["a"]} href="#" key={countryCode} onClick={() => changeLang(code)}>{name}</a>
-        ))}
+    <>
+      <div className={styles["sec_center"]}>
+        <input className={styles["dropdown"]} type="checkbox" id="dropdown" name="dropdown" />
+        <label className={styles["for_dropdown"]} htmlFor="dropdown">{trans("language")} <img loading="lazy" src="images/icons/arrowDown.png" className={styles["uil"]} alt="" /></label>
+        <div className={styles["section_dropdown"]}>
+          {languages.map(({ code, name, countryCode }) => (
+            <a className={styles["a"]} href="#" key={countryCode} onClick={() => changeLang(code)}>{name}</a>
+          ))}
+        </div>
       </div>
-    </div>
+      {/* <div className={styles["sec_center_mobile"]}>
+        <input className={styles["dropdown_mobile"]} type="checkbox" id="dropdown" name="dropdown" />
+        <label className={styles["for_dropdown_mobile"]} htmlFor="dropdown">{trans("language")} <img loading="lazy" src="images/icons/arrowDown.png" className={styles["uil"]} alt="" /></label>
+        <div className={styles["section_dropdown_mobile"]}>
+          {languages.map(({ code, name, countryCode }) => (
+            <a className={styles["a"]} href="#" key={countryCode} onClick={() => changeLang(code)}>{name}</a>
+          ))}
+        </div>
+      </div> */}
+    </>
   );
 };
 

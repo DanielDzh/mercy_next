@@ -1,12 +1,12 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import logoImg from "../public/images/logo/logo.png";
 import { Navbar, NavDropdown, Nav } from "react-bootstrap";
 import { FaLongArrowAltDown } from "react-icons/fa";
-import { FaBars, FaSkype, FaFacebookF, FaTwitter  } from "react-icons/fa";
+import { FaBars, FaSkype, FaFacebookF, FaTwitter } from "react-icons/fa";
 import { Link as ReactLink } from "react-router-dom";
 export default function HeaderTwo() {
 
-    const navDropdownTitle = (<>Blog <FaLongArrowAltDown/></>);
+    const navDropdownTitle = (<>Blog <FaLongArrowAltDown /></>);
 
     return (
         <div className="header-area">
@@ -17,7 +17,7 @@ export default function HeaderTwo() {
                             <Navbar collapseOnSelect expand="lg" className="p-0">
                                 <div className="logo-area">
                                     <ReactLink to="/">
-                                        <img className="img-fluid" src={logoImg} />
+                                        <img loading="lazy" className="img-fluid" src={logoImg} />
                                     </ReactLink>
                                 </div>
                                 <Navbar.Toggle aria-controls="responsive-navbar-nav">
@@ -55,9 +55,9 @@ export default function HeaderTwo() {
                                 </Navbar.Collapse>
                             </Navbar>
                         </div>
-                      </div>
                     </div>
                 </div>
             </div>
+        </div>
     )
 }

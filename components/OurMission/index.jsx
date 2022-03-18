@@ -9,8 +9,8 @@ export default function OurMission() {
       <div className={styles["ourMission-container"]}>
         <div className={styles["first-two-block"]}>
           <div className={styles["ourMission-block"]}>
-            <img src="images/ourMissionImage.png" alt="" />
-            <img src="images/ourMission_mobile.png" alt="" />
+            <img loading="lazy" src="images/ourMissionImage.png" alt="" />
+            <img loading="lazy" src="images/ourMission_mobile.png" alt="" />
             <div className={styles.ourMissionText}>
               <div className={styles.ourMissionTitle}>{trans("our_mission")}</div>
               <div className={styles.ourMissionDesc}>
@@ -20,8 +20,8 @@ export default function OurMission() {
           </div>
           {/* style={{ background: `url(${vector6}) no-repeat left` }} */}
           <div className={styles["poem-block"]}>
-            {/* <img src={vector6} alt="" className='imageYellow' /> */}
-            <img
+            {/* <img loading="lazy" src={vector6} alt="" className='imageYellow' /> */}
+            <img loading="lazy"
               src="images/imageBible.png"
               alt=""
               className={styles["imageBible"]}
@@ -34,7 +34,7 @@ export default function OurMission() {
         </div>
         <div className={styles["second-block"]}>
           <div className={styles["outAim"]}>
-            <img
+            <img loading="lazy"
               src="images/ourAim.png"
               alt=""
               className={styles["imageYellow"]}

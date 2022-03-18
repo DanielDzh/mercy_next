@@ -21,8 +21,8 @@ export default function CurrentProjects() {
         <h1 className={styles['currentProject_title']}>ДІЮЧІ ПРОЕКТИ</h1>
         <div className={styles['block-projects']}>
           <div className={styles['background']}>
-            <img src={projects[0].gallery[0]} alt="" />
-            <img src={projects[0].gallery[1]} alt="" />
+            <img loading="lazy" src={projects[0].gallery[0]} alt="" />
+            <img loading="lazy" src={projects[0].gallery[1]} alt="" />
           </div>
           <div className={styles['projects-content']}>
             <h1>ДОПОМОЖИ</h1>

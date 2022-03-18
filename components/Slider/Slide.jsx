@@ -8,7 +8,7 @@ const Slide = ({ src }) => {
     >
       <div className={styles["wrapp_back_photo"]}>
         <div className={styles["under_back_photo"]}></div>
-        <img className={styles["back_photo"]} src={src} alt="" />
+        <img loading="lazy" className={styles["back_photo"]} src={src} alt="" />
       </div>
     </div>
   );

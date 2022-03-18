@@ -34,7 +34,17 @@
          .ourMission-block{
             position: relative;
             border: 2px solid #10A6F9;
-            border-radius: 25px;
+            border-radius: 7.5%;
+
+            @media screen and (max-width: 425px){
+               border-radius: 9%;
+         }
+
+            &:hover{
+               // overflow: hidden;
+            }
+
+            
 
             img:first-of-type, img:last-of-type{
                width: 100%;
@@ -52,6 +62,12 @@
                display: none;
                @media screen and (max-width: 768px){
                   display: block;
+               }
+            }
+            img{
+               &:hover{
+                  transition: all .5s ease;
+                  transform: scale(1.1);
                }
             }
             .ourMissionText{
@@ -222,7 +238,12 @@
             img{
                height: 100%;
                width: 100%;
-               border-radius: 24px;
+               border-radius: 4%;
+
+               @media screen and (max-width: 425px){
+                  bottom: 1.8rem;
+                  border-radius: 8%;
+               }
             }
 
             .ourAimText{
