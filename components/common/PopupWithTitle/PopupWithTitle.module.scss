@@ -10,10 +10,21 @@
   justify-content: center;
   align-items: center;
   
-  h2{
-  font-size: 3.3vw;
-  margin-bottom: 0;
-  flex-grow: 1;
+  .h2{
+    font-size: 50px;
+    margin-bottom: 0;
+    flex-grow: 1;
+    font-family: 'Montserrat600';
+
+    @media screen and(max-width: 1024px){
+    font-size: 30px;
+    }
+    @media screen and(max-width: 768px){
+      font-size: 26px;
+      }
+      @media screen and(max-width: 768px){
+        // font-size: 44px;
+        }
   }
   .popup_close{
     display: flex;
@@ -43,5 +54,5 @@
 }
 
 .body {
-  padding: 4vh;
+  padding: 3vw;
 }
