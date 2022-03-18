@@ -14,11 +14,17 @@
       height: 1vw;
       margin: 0 5px;
       border-radius: 50px;
+      cursor: pointer;
+      transition: transform .4s ease;
+
+      &:hover{
+         transition: transform .4s ease;
+         transform: scale(1.2);
+      }
 
       @media screen and(max-width: 600px){
          width: 2vw;
          height: 2vw;
-         // margin-top: 20px;
       }
    }
    .reviews_title{
