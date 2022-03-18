@@ -19,7 +19,7 @@ export default function AboutUs() {
       <div id="aboutUs">
         <div className={styles["aboutUs-container"]}>
           <div className={styles["aboutUs-img"]}>
-            <img loading="lazy" src="images/we.png" alt="" loading="lazy" className={styles["aboutUs-img-img"]} />
+            <img loading="lazy" src="images/we.png" alt="" className={styles["aboutUs-img-img"]} />
             <div className={styles["aboutUs_desc_tablet"]}>
               <SectionTitle
                 title={trans("aboutUs_title")}
@@ -36,7 +36,7 @@ export default function AboutUs() {
               />
               <CustomList />
             </div>
-            <img loading="lazy" src="images/we_mobile.png" alt="" loading="lazy" className={styles["aboutUs-img-mobile"]} />
+            <img loading="lazy" src="images/we_mobile.png" alt="" className={styles["aboutUs-img-mobile"]} />
             <p>
               {trans("aboutUs_desc_under")}
             </p>
