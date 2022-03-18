@@ -59,6 +59,12 @@
          img{
             height: 20px;
             margin-left: 20px;
+            transition: transform .5s ease;
+
+            &:hover{
+               transition: transform .5s ease;
+               transform: scale(1.13);
+            }
          }
          label{
             img{

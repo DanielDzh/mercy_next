@@ -75,9 +75,16 @@
             }
 
             img{
+               cursor: pointer;
                width: 25px;
                // height: 20px;
                margin-left: 20px;
+               transition: transform .4s ease;
+
+               &:hover{
+                  // transform: scale(1.1);
+                  transition: transform .4s ease;
+               }
 
                @media screen and (max-width: 425px){
                   width: 20px;
@@ -130,6 +137,13 @@
          // width: 20px;
          height: 20px;
          margin-left: 20px;
+         cursor: pointer;
+         transition: transform .4s ease;
+
+         &:hover{
+            transition: transform .4s ease;
+            transform: scale(1.2);
+         }
       }
    }
 }
