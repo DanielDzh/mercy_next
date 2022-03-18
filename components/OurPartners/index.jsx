@@ -28,22 +28,22 @@ const OurPartners = () => {
             <div className={styles["ourPartners_slider"]}>
                <Slider {...settings}>
                   <div className={styles["image_wrapp"]}>
-                     <img src="images/partner1.png" alt="" className={styles["image"]} />
+                     <img loading="lazy" src="images/partner1.png" alt="" className={styles["image"]} />
                   </div>
                   <div className={styles["image_wrapp"]}>
-                     <img src="images/partner2.png" alt="" className={styles["image"]} />
+                     <img loading="lazy" src="images/partner2.png" alt="" className={styles["image"]} />
                   </div>
                   <div className={styles["image_wrapp"]}>
-                     <img src="images/partner3.png" alt="" className={styles["image"]} />
+                     <img loading="lazy" src="images/partner3.png" alt="" className={styles["image"]} />
                   </div>
                   <div className={styles["image_wrapp"]}>
-                     <img src="images/partner1.png" alt="" className={styles["image"]} />
+                     <img loading="lazy" src="images/partner1.png" alt="" className={styles["image"]} />
                   </div>
                   <div className={styles["image_wrapp"]}>
-                     <img src="images/partner2.png" alt="" className={styles["image"]} />
+                     <img loading="lazy" src="images/partner2.png" alt="" className={styles["image"]} />
                   </div>
                   <div className={styles["image_wrapp"]}>
-                     <img src="images/partner3.png" alt="" className={styles["image"]} />
+                     <img loading="lazy" src="images/partner3.png" alt="" className={styles["image"]} />
                   </div>
                </Slider>
             </div>

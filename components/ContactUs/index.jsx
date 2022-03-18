@@ -49,7 +49,7 @@ const ContactUs = () => {
                      {contacts.map((item) => (
                         <div key={item.name} className={styles["contacts_wrapper"]}>
                            <a href={item.url && item.url}>
-                              <img src={item.icon} alt="" />
+                              <img loading="lazy" src={item.icon} alt="" />
                               <h3>{item.desc}</h3>
                            </a>
                         </div>

@@ -19,7 +19,7 @@ export default function BecomePartner() {
         <div className={styles["becomePartner_container"]}>
           <div className={styles["becomePartner_wrapper"]}>
             <div className={styles["becomePartner_image"]}>
-              <img src="images/becomePartner.png" alt="" />
+              <img loading="lazy" src="images/becomePartner.png" alt="" />
             </div>
             <div className={styles["becomePartner_block"]}>
               <div className={styles["becomePartner_title"]}>

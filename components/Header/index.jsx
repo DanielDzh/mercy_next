@@ -94,13 +94,13 @@ export default function Header() {
         </div>
         <div className={styles["lang"]}>
           <a href="https://www.instagram.com/mercy_chain">
-            <img src="images/iconInstYellow.png" alt="" />
+            <img loading="lazy" src="images/iconInstYellow.png" alt="" />
           </a>
           <a href="">
-            <img src="images/iconFacebookYellow.png" alt="" />
+            <img loading="lazy" src="images/iconFacebookYellow.png" alt="" />
           </a>
           <a href="">
-            <img src="images/iconTelegramYellow.png" alt="" />
+            <img loading="lazy" src="images/iconTelegramYellow.png" alt="" />
           </a>
           <span></span>
           <Language />

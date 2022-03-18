@@ -18,7 +18,7 @@ export default function OurValues() {
         <div className={styles["ourValues-blocks"]}>
           <div className={styles["block1"]}>
             <div className={styles["desc"]}>
-              <img src="images/head.png" alt="" />
+              <img loading="lazy" src="images/head.png" alt="" />
               <h2>{trans("our_value_trust")}</h2>
             </div>
             <p>
@@ -27,7 +27,7 @@ export default function OurValues() {
           </div>
           <div className={styles["block2"]}>
             <div className={styles["desc"]}>
-              <img src="images/hands.png" alt="" />
+              <img loading="lazy" src="images/hands.png" alt="" />
               <h2>{trans("our_value_partnership")}</h2>
             </div>
             <p>
@@ -36,7 +36,7 @@ export default function OurValues() {
           </div>
           <div className={styles["block3"]}>
             <div className={styles["desc"]}>
-              <img src="images/documents.png" alt="" />
+              <img loading="lazy" src="images/documents.png" alt="" />
               <h2>{trans("our_value_accountability")}</h2>
             </div>
             <p>

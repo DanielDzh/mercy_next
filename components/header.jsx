@@ -33,7 +33,7 @@ export default function Header() {
               <Navbar collapseOnSelect expand="lg" className="p-0">
                 <div className="logo-area">
                   {/* <ReactLink to="/" className="nav-link">
-                                        <img className="img-fluid" src={logoImg} />
+                                        <img loading="lazy" className="img-fluid" src={logoImg} />
                                     </ReactLink> */}
                   <div>helpUA</div>
                 </div>

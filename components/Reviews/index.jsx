@@ -24,7 +24,7 @@ export default function Reviews() {
             style={{ ...style, display: "flex", justifyContent: 'center', alignItems: 'center', position: 'absolute', left: '40%', bottom: '0%', width: '3vw', height: '3vw', padding: '.8vw', borderRadius: '50px', backgroundColor: 'unset', opacity: .5, zIndex: 2 }}
             onClick={onClick}
          >
-            <img style={{ width: '100%', height: '100%' }} src="images/icons/back.png" alt="" />
+            <img loading="lazy" style={{ width: '100%', height: '100%' }} src="images/icons/back.png" alt="" />
          </div>
       );
    };
@@ -36,7 +36,7 @@ export default function Reviews() {
             style={{ ...style, display: "flex", justifyContent: 'center', alignItems: 'center', position: 'absolute', right: '40%', bottom: '0%', width: '3vw', height: '3vw', padding: '.8vw', borderRadius: '50px', backgroundColor: 'unset', opacity: .5 }}
             onClick={onClick}
          >
-            <img style={{ width: '100%', height: '100%' }} src="images/icons/next.png" alt="" />
+            <img loading="lazy" style={{ width: '100%', height: '100%' }} src="images/icons/next.png" alt="" />
          </div>
       );
    };
@@ -112,7 +112,7 @@ export default function Reviews() {
                <Slider {...settings}>
                   {sliderPaths.map((p, index) => (
                      <div className={styles["slider_wrapp"]} key={index + 1}>
-                        <img
+                        <img loading="lazy"
                            className={`${styles['reviews_slide']} ${activeSlide === index ? styles["slide_center"] : styles["slide_not_center"]}`}
                            // className={`${styles['reviews_slide']} ${activeSlide === index ? styles["slide_center"] : activeSlide === index + 1 ? styles["slide_after_slide"] : index === count ? styles["slide_before_slide"] : styles["slide_not_center"]}`}
                            src={p}

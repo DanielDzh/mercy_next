@@ -7,7 +7,7 @@ import styles from "./CustomList.module.scss";
 const Point = ({ title }) => (
   <li className={styles.point}>
     <span>
-      <img src="images/Vector.png" alt="" />
+      <img loading="lazy" src="images/Vector.png" alt="" />
     </span>
     {title}
   </li>

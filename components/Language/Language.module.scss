@@ -3,6 +3,22 @@
   max-width: 100%;
   text-align: center;
   z-index: 200;
+  display: block;
+
+  // @media screen and(max-width: 1024px){
+  //   display: none;
+  // }
+}
+.sec_center_mobile {
+  position: relative;
+  max-width: 100%;
+  text-align: center;
+  z-index: 200;
+  display: none;
+
+  @media screen and(max-width: 1024px){
+    display: block;
+  }
 }
 
 .dropdown:checked,
@@ -13,22 +29,14 @@
   left: -9999px;
   opacity: 0;
   pointer-events: none;
-
- 
 }
 
-// .dropdown_mobile:checked,
-// .dropdown_mobile:not(:checked){
 
-//   display: none;
-//   @media screen and(max-width: 1024px){
-//     display: block;
-//   }
-// }
-.dropdown:checked + label,
-.dropdown:not(:checked) + label,
-.dropdown_mobile:checked + label,
-.dropdown_mobile:not(:checked) + label{
+
+.dropdown:checked + .for_dropdown,
+.dropdown:not(:checked) + .for_dropdown,
+.dropdown_mobile:checked + .for_dropdown_mobile,
+.dropdown_mobile:not(:checked) + .for_dropdown_mobile{
    margin: 0;
   position: relative;
   font-family: "Montserrat600";
@@ -52,28 +60,27 @@
   -ms-flex-pack: center;
   text-align: center;
   border: none;
-//   background-color: #10A6F9;
   cursor: pointer;
   color: #CFD2D5;
-//   box-shadow: 0 12px 35px 0 rgba(255,235,167,.15);
 
 }
-.dropdown:not(:checked) + label .uil ,
-.dropdown_mobile:not(:checked) + label .uil_mobile {
+.dropdown:not(:checked) + .for_dropdown .uil,
+.dropdown_mobile:not(:checked) + .for_dropdown_mobile .uil {
    width: 1rem;
   font-size: 24px;
   margin-left: 7px;
   transition: transform 200ms linear;
 }
-.dropdown:checked + label .uil,
-.dropdown_mobile:checked + label .uil_mobile {
+.dropdown:checked + .for_dropdown .uil,
+.dropdown_mobile:checked + .for_dropdown_mobile .uil{
    width: 1rem;
   transform: rotate(180deg);
   font-size: 24px;
   margin-left: 7px;
   transition: transform 200ms linear;
 }
-.section_dropdown {
+.section_dropdown,
+.section_dropdown_mobile {
    width: fit-content;
   position: absolute;
   padding: 5px;
@@ -90,12 +97,13 @@
   transition: all 200ms linear;
 }
 .dropdown:checked ~ .section_dropdown,
-.dropdown_mobile:checked ~ .section_dropdown{
+.dropdown_mobile:checked ~ .section_dropdown_mobile{
   opacity: 1;
   pointer-events: auto;
   transform: translateY(0);
 }
-.section_dropdown:after {
+.section_dropdown:after,
+.section_dropdown_mobile:after {
   position: absolute;
   top: -7px;
   right: 30px;
