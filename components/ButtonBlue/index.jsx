@@ -3,22 +3,24 @@ import { Link } from "react-scroll";
 import { generateClasses } from "../../utils/generateClassName";
 import styles from "./ButtonBlue.module.scss";
 
-export default function ButtonBlue({ title, click, className }) {
-
-
+export default function ButtonBlue({
+  title,
+  click,
+  className,
+  loading,
+  ...rest
+}) {
   return (
     <div
-      className={generateClasses(styles["hero-button"], className)}
+      className={generateClasses(styles.heroButton, className)}
       onClick={click}
     >
       <div
-        // to="contact"
-        className={styles["button-blue"]}
-      // smooth={true}
-      // duration={2000}
-      // activeClass="active"
-      // spy={false}
-      // offset={5}
+        className={generateClasses(
+          styles.buttonBlue,
+          loading ? styles.loading : ""
+        )}
+        {...rest}
       >
         {title}
       </div>

@@ -15,6 +15,7 @@ import ContactUs from "../components/ContactUs";
 import Footer from "../components/Footer";
 import { Helmet } from "../components/Helmet";
 import Reviews from "../components/Reviews";
+import { Api } from "../services/api";
 
 export default function Home({ total, expected }) {
   return (
@@ -41,8 +42,7 @@ export default function Home({ total, expected }) {
 }
 
 export async function getServerSideProps() {
-  const res = await fetch(process.env.NEXT_TOTAL_API_URL);
-  const data = await res.json();
+  const data = await Api.get("/total");
   return {
     props: { total: data.total || 3000, expected: data.expected || 30000 },
   };

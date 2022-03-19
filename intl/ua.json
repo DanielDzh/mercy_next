@@ -99,5 +99,9 @@
   "contacts_mail": "Пошта",
   "contacts_message": "Ваше повідомлення",
   "button_send": "Відправити",
-  "footer_join": "Приєднуйся до нас:"
+  "footer_join": "Приєднуйся до нас:",
+  "required-field": "Обов'язкове поле",
+  "wrong-email": "Неправильна пошта",
+  "email-sent": "Відправка успішна",
+  "send-another-email": "Відправити ще одного листа"
 }

@@ -1,76 +1,97 @@
-   .button-blue{
-      font-family: 'Montserrat600';
-      position: relative;
-      text-align: center;
-      cursor: pointer;
-      padding: 1rem 2.5rem;
-      height: auto;
-      width: auto;
-      font-weight: bold;
-      font-size: 18px;
-      line-height: 22px;
-      letter-spacing: 0.03em;
-      text-transform: capitalize;
-      color: #FFFFFF;
-      display: flex;
-      background: #10A6F9;
-      justify-content: center;
-      align-items: center;
-      border: 2px solid #10A6F9;
-      box-sizing: border-box;
-      border-radius: 16px;
-      box-shadow: 0px 5px 40px rgba(16, 166, 249, 0.3);
+@keyframes loadingAnimation {
+  to {
+    border: 2px solid #ffbc15;
+    color: black;
+    background: #ffbc15;
+  }
+}
+
+.buttonBlue {
+  font-family: "Montserrat600";
+  position: relative;
+  text-align: center;
+  cursor: pointer;
+  padding: 1rem 2.5rem;
+  height: auto;
+  width: auto;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.03em;
+  text-transform: capitalize;
+  color: #ffffff;
+  display: flex;
+  background: #10a6f9;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #10a6f9;
+  box-sizing: border-box;
+  border-radius: 16px;
+  box-shadow: 0px 5px 40px rgba(16, 166, 249, 0.3);
+  transition: all 400ms ease;
+
+  @media screen and (max-width: 1200px) {
+    padding: 0.8rem 1.9rem;
+    font-size: 16px;
+  }
+  @media screen and(max-width: 1024px) {
+    padding: 0.5rem 1.6rem;
+    font-size: 15px;
+    border: 1.5px solid #10a6f9;
+  }
+  @media screen and(max-width: 900px) {
+    padding: 0.4rem 1.5rem;
+    font-size: 14px;
+  }
+  @media screen and(max-width: 600px) {
+    padding: 0.8rem 1rem;
+    font-size: 16px;
+    line-height: 20px;
+  }
+  @media screen and(max-width: 374px) {
+    padding: 0.6rem 0.8rem;
+    font-size: 15px;
+    line-height: 18px;
+  }
+
+  &:after {
+    border-radius: 13px;
+    position: absolute;
+    content: "";
+    width: 0%;
+    height: 100%;
+    background: #ffbc15;
+    top: 0;
+    left: auto;
+    right: 0;
+    z-index: -1;
+    transition: all 400ms linear;
+  }
+
+  &:hover {
+    border: 2px solid #ffbc15;
+    transform: scale(1.05);
+    color: black;
+
+    &:after {
+      border-radius: 13px;
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 100%;
+      background: #ffbc15;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: -1;
       transition: all 400ms ease;
+    }
+  }
+}
 
-      @media screen and (max-width: 1200px){
-         padding: 0.8rem 1.9rem;
-         font-size: 16px;
-      }
-      @media screen and(max-width: 1024px){
-         padding: .5rem 1.6rem;
-         font-size: 15px;
-         border: 1.5px solid #10A6F9;
-      }
-      @media screen and(max-width: 900px){
-         padding: 0.4rem 1.5rem;
-         font-size: 14px;
-      }
-      @media screen and(max-width: 600px){
-         padding: 0.8rem 1rem;
-         font-size: 16px;
-         line-height: 20px;
-      }
-      @media screen and(max-width: 374px){
-         padding: 0.6rem .8rem;
-         font-size: 15px;
-         line-height: 18px;
-      }
-
-      &:after{
-         border-radius: 13px;
-         position: absolute;
-         content: '';
-         width: 0%; height: 100%;
-         background: #FFBC15;
-         top: 0;  left: auto; right: 0;
-         z-index: -1;
-         transition: all 400ms linear;
-      }
-
-      &:hover{
-         border: 2px solid #FFBC15;
-         transform: scale(1.05);
-         color: black; 
-         
-         &:after{
-            border-radius: 13px;
-            position: absolute;
-            content: '';
-            width: 100%; height: 100%;
-            background: #FFBC15;
-            top: 0;  left: 0; right: 0;
-            z-index: -1;
-            transition: all 400ms ease;
-         }
-      }
-   }
+.loading {
+  animation-duration: 1s;
+  animation-name: loadingAnimation;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
