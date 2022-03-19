@@ -99,5 +99,9 @@
   "contacts_mail": "Mail",
   "contacts_message": "Your message",
   "button_send": "Send",
-  "footer_join": "Join Us:"
+  "footer_join": "Join Us:",
+  "required-field": "Reqired field",
+  "wrong-email": "Wrong email",
+  "email-sent": "Email sent succesfully",
+  "send-another-email": "Send another email"
 }
