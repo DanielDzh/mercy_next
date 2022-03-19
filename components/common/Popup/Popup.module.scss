@@ -19,9 +19,9 @@
     left: 0;
     background-color: #fff;
     display: flex;
-    margin-bottom: 15em;
+    // margin-bottom: 15em;
     border-radius: 10px;
-    max-width: 40%;
+    max-width: 50%;
     height: auto;
 
     border: 2px solid #10a6f9;
@@ -52,6 +52,7 @@
       position: relative;
       overflow: scroll;
       padding: 2em 2em;
+      border-radius: 10px;
 
       @media screen and (max-width: 570px) {
         // max-width: 90%;
