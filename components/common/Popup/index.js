@@ -23,6 +23,8 @@ export const Popup = ({ children, open, onClose, fullHeight, noPadding }) => {
         )}
         id="click"
       >
+        <div className={styles["wrapper_back"]} style={{ marginBottom: 0 }}></div>
+
         <div
           className={generateClasses(
             styles.content,
