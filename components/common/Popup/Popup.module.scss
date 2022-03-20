@@ -47,6 +47,7 @@
       position: absolute;
       z-index: 1000;
       border-radius: 0px 0px 10px 10px;
+      pointer-events: none;
     }
     .opened {
       display: flex;
