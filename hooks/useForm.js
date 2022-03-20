@@ -7,7 +7,7 @@ const emptyObjectForErrors = (obj) =>
 export const useForm = ({
   initialValues = {},
   submit,
-  validate = () => {},
+  validate = () => { },
 }) => {
   const { trans } = useTrans();
   const [form, setForm] = useState(initialValues);

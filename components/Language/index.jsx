@@ -23,30 +23,17 @@ const languages = [
 
 const Language = ({ colorTitle }) => {
   const { trans } = useTrans();
-  const [visiblePopup, setVisiblePopup] = useState(false);
   const [change, setChange] = useState(trans('language'));
-  const sortRef = useRef();
   const router = useRouter();
-  // const textInput = useRef(true);
-  // const textInputCheck = useRef(true);
+  const textInput = useRef(true);
+  const textInputCheck = useRef(true);
   useEffect(() => {
     document.body.addEventListener("click", handleOutsideClick);
   }, []);
 
   const handleOutsideClick = (event) => {
-    const path = event.path || (event.composedPath && event.composedPath());
-    if (!path.includes(sortRef.current)) {
-      setVisiblePopup(false);
-      // if (textInput === true) {
-      // textInput.current.click();
-      // textInputCheck.current.checked(false);
-      // }
-    }
+    textInput.current.click();
   };
-
-  // const toggleVisiblePopup = () => {
-  //   setVisiblePopup(!visiblePopup);
-  // };
 
   const changeLang = (name) => {
     router.push(router.asPath, router.asPath, { locale: name });
@@ -56,8 +43,8 @@ const Language = ({ colorTitle }) => {
   return (
     <>
       <div className={styles["sec_center"]}>
-        <input className={styles["dropdown"]} type="checkbox" id="dropdown" name="dropdown" />
-        <label className={styles["for_dropdown"]} htmlFor="dropdown">{trans("language")} <img loading="lazy" src="images/icons/arrowDown.png" className={styles["uil"]} alt="" /></label>
+        <input className={styles["dropdown"]} type="checkbox" id="dropdown" name="dropdown" ref={textInputCheck} />
+        <label className={styles["for_dropdown"]} htmlFor="dropdown" ref={textInput} onClick={() => handleOutsideClick()}>{trans("language")} <img loading="lazy" src="images/icons/arrowDown.png" className={styles["uil"]} alt="" /></label>
         <div className={styles["section_dropdown"]}>
           {languages.map(({ code, name, countryCode }) => (
             <a className={styles["a"]} href="#" key={countryCode} onClick={() => changeLang(code)}>{name}</a>
