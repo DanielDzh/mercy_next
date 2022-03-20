@@ -62,7 +62,7 @@ export default function ContactForm({ onSubmit }) {
               type="text"
               placeholder={trans("contacts_mail")}
             />
-            <ErrorBase value={errors.phone} />
+            <ErrorBase value={errors.email} />
           </div>
           <div className={styles.field}>
             <textarea
