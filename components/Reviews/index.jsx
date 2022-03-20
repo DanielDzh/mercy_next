@@ -47,7 +47,7 @@ export default function Reviews() {
       infinite: true,
       centerPadding: "60px",
       slidesToShow: 3,
-      speed: 500,
+      speed: 300,
       arrows: true,
       dots: true,
       cssEase: "linear",
