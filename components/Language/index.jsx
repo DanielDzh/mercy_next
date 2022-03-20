@@ -1,5 +1,4 @@
 import React, { useRef, useState, useEffect } from "react";
-import { Dropdown, DropdownButton } from "react-bootstrap";
 import styles from "./Language.module.scss";
 import { useRouter } from "next/router";
 import { useTrans } from "../../hooks/useTrans";
@@ -28,7 +27,8 @@ const Language = ({ colorTitle }) => {
   const [change, setChange] = useState(trans('language'));
   const sortRef = useRef();
   const router = useRouter();
-
+  // const textInput = useRef(true);
+  // const textInputCheck = useRef(true);
   useEffect(() => {
     document.body.addEventListener("click", handleOutsideClick);
   }, []);
@@ -37,6 +37,10 @@ const Language = ({ colorTitle }) => {
     const path = event.path || (event.composedPath && event.composedPath());
     if (!path.includes(sortRef.current)) {
       setVisiblePopup(false);
+      // if (textInput === true) {
+      // textInput.current.click();
+      // textInputCheck.current.checked(false);
+      // }
     }
   };
 
