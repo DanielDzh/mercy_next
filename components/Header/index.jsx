@@ -96,7 +96,7 @@ export default function Header() {
           <a href="https://www.instagram.com/mercy_chain">
             <img loading="lazy" src="images/iconInstYellow.png" alt="" />
           </a>
-          <a href="">
+          <a href="https://www.facebook.com/Mercy-Chain-108789655101913/">
             <img loading="lazy" src="images/iconFacebookYellow.png" alt="" />
           </a>
           <a href="">
