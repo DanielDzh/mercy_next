@@ -42,8 +42,11 @@ const contacts = [
 const ContactUs = () => {
   const { trans } = useTrans();
   const [success, setSucess] = useState(false);
-  const onSubmit = (form) =>
+  const onSubmit = (form) => {
     Api.post("/support", form).then(() => setSucess(true));
+    console.log(form);
+
+  }
 
   return (
     <div id="contactUs">

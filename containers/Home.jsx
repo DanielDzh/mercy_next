@@ -30,7 +30,7 @@ export default function Home({ total, expected }) {
       <OurMission />
       <OurValues />
       <SaveLife />
-      <CurrentProjects />
+      <CurrentProjects totalAmount={total} expectedAmount={expected} />
       <BecomePartner />
       <Reviews />
       <OurTeam />

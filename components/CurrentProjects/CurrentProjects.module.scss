@@ -367,11 +367,15 @@
                    }
                   .detail_under_text{
                      text-transform: none;
-                     font-family: 'Montserrat500';
+                     font-family: 'Montserrat700';
                      font-style: normal;
                      font-size: 16px;
                      line-height: 28.8px;
                      color: #000;
+
+                     span{
+                     font-family: 'Montserrat500';
+                     }
 
                      @media screen and (max-width: 768px){
                         font-size: 13px;
