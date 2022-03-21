@@ -11,12 +11,13 @@ import { useOpenHandlers } from "../../hooks/useOpenHandlers";
 import PopupWithTitle from "../common/PopupWithTitle";
 import { Popup } from "../common/Popup";
 
-export default function CurrentProjects() {
+export default function CurrentProjects({ totalAmount, expectedAmount }) {
+  const price = Math.floor(expectedAmount - totalAmount);
 
   const { open, onOpen, onClose } = useOpenHandlers(false);
 
   const [galleryPopup, setGalleryPopup] = useState(false);
-  const [detailPopup, setDetailPopup] = useState(false)
+  const [detailPopup, setDetailPopup] = useState(false);
 
   const { trans } = useTrans();
 
@@ -94,7 +95,7 @@ export default function CurrentProjects() {
                       <li className="">
                         <p>
                           <img src="images/icons/circle.png" alt="" className={styles["list_circle"]} />
-                          <span>Ціль: </span>**зберегти життя** 1000 українців на наступні 6 днів</p>
+                          <span>Ціль: </span>зберегти життя 1000 українців на наступні 6 днів</p>
                       </li>
                       <li className="">
                         <p>
@@ -114,13 +115,13 @@ export default function CurrentProjects() {
                       <li>
                         <p>
                           <img src="images/icons/circle.png" alt="" className={styles["list_circle"]} />
-                          <span>Залишилось зібрати: </span>*** грн</p>
+                          <span> Залишилось зібрати: </span>{price} $</p>
                       </li>
                     </ul>
-                    <p className={styles["detail_under_text"]}>**Кожні $30 продовжують життя однієї людини на 6 днів.**</p>
-                    <p className={styles["detail_under_text"]}>**УВАГА!** Зібрані кошти витрачаються тільки на матеріальну допомогу
+                    <p className={styles["detail_under_text"]}>Кожні $30 продовжують життя однієї людини на 6 днів.</p>
+                    <p className={styles["detail_under_text"]}>УВАГА! <span>Зібрані кошти витрачаються тільки на матеріальну допомогу
                       населенню «гарячих точок»: продукти, одяг і медикаменти.
-                      Логістику і функціонування команди фонд покриває за власний кошт засновників.
+                      Логістику і функціонування команди фонд покриває за власний кошт засновників.</span>
                     </p>
                   </div>
                 </PopupWithTitle>

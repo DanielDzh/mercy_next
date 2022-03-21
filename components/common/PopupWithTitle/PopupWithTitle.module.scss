@@ -39,6 +39,11 @@
         width: 2vw;
         height: 2vw;
 
+        @media screen and(max-width: 768px){
+          width: 3vw;
+          height: 3vw;
+        }
+
         @media screen and(max-width: 425px){
           width: 4vw;
           height: 4vw;
