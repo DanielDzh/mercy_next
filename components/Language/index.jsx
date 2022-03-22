@@ -32,7 +32,9 @@ const Language = ({ colorTitle }) => {
   }, []);
 
   const handleOutsideClick = (event) => {
-    textInput.current.click();
+    if (textInputCheck.current.checked === true) {
+      textInput.current.click();
+    }
   };
 
   const changeLang = (name) => {
