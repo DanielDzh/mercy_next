@@ -74,15 +74,15 @@
                display: block;
             }
 
+            a{
+               margin-left: 20px;
+               width: 25px;
+            }
             img{
                cursor: pointer;
-               width: 25px;
-               // height: 20px;
-               margin-left: 20px;
                transition: transform .4s ease;
 
                &:hover{
-                  // transform: scale(1.1);
                   transition: transform .4s ease;
                }
 
@@ -90,10 +90,9 @@
                   width: 20px;
                }
             }
-
-            img:first-of-type{
-               width: 17px;
+            a:first-of-type{
                margin-left: 0;
+               width: 17px;
 
                @media screen and (max-width: 425px){
                   width: 14px;

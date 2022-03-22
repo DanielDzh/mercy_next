@@ -11,20 +11,23 @@
   align-items: center;
   
   .h2{
-    font-size: 50px;
+    font-size: 3vw;
     margin-bottom: 0;
     flex-grow: 1;
     font-family: 'Montserrat600';
 
-    @media screen and(max-width: 1024px){
-    font-size: 30px;
+    @media screen and(max-width: 650px){
+      font-size: 3.5vw;
     }
-    @media screen and(max-width: 768px){
-      font-size: 26px;
-      }
-      @media screen and(max-width: 768px){
-        // font-size: 44px;
-        }
+    @media screen and(max-width: 575px){
+      font-size: 4.5vw;
+    }
+    @media screen and(max-width: 425px){
+      font-size: 5vw;
+    }
+    @media screen and(max-width: 375px){
+      font-size: 6vw;
+    }
   }
   .popup_close{
     display: flex;
@@ -49,12 +52,6 @@
           height: 4vw;
         }
       }
-  }
-
-  @media screen and(max-width: 768px){
-    h2{
-    font-size: 1.1rem;
-    }
   }
 }
 
