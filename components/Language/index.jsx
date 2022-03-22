@@ -31,10 +31,10 @@ const Language = ({ colorTitle }) => {
     document.body.addEventListener("click", handleOutsideClick);
   }, []);
 
-  const handleOutsideClick = (event) => {
-    if (textInputCheck.current.checked === true) {
-      textInput.current.click();
-    }
+  const handleOutsideClick = () => {
+    // if (textInputCheck.current.checked === true) {
+    //   textInput.current.click();
+    // }
   };
 
   const changeLang = (name) => {
@@ -46,7 +46,7 @@ const Language = ({ colorTitle }) => {
     <>
       <div className={styles["sec_center"]}>
         <input className={styles["dropdown"]} type="checkbox" id="dropdown" name="dropdown" ref={textInputCheck} />
-        <label className={styles["for_dropdown"]} htmlFor="dropdown" ref={textInput} onClick={() => handleOutsideClick()}>{trans("language")} <img loading="lazy" src="images/icons/arrowDown.png" className={styles["uil"]} alt="" /></label>
+        <label className={styles["for_dropdown"]} htmlFor="dropdown" ref={textInput} >{trans("language")} <img loading="lazy" src="images/icons/arrowDown.png" className={styles["uil"]} alt="" /></label>
         <div className={styles["section_dropdown"]}>
           {languages.map(({ code, name, countryCode }) => (
             <a className={styles["a"]} href="#" key={countryCode} onClick={() => changeLang(code)}>{name}</a>
