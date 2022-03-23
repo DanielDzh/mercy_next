@@ -5,7 +5,9 @@
     background: #ffbc15;
   }
 }
-
+[type=button], [type=reset], [type=submit], button{
+  -webkit-appearance: none;
+}
 .buttonBlue {
   font-family: "Montserrat600";
   position: relative;
