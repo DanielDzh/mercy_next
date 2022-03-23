@@ -31,11 +31,11 @@ const Language = ({ colorTitle }) => {
     document.body.addEventListener("click", handleOutsideClick);
   }, []);
 
-  // const handleOutsideClick = () => {
-  //   if (textInputCheck.current.checked != true) {
-  //     textInput.current.click();
-  //   }
-  // };
+  const handleOutsideClick = () => {
+    if (textInputCheck.current.checked != true) {
+      // textInput.current.click();
+    }
+  };
 
   const changeLang = (name) => {
     router.push(router.asPath, router.asPath, { locale: name });
