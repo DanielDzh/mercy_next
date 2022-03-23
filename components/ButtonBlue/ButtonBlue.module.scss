@@ -5,10 +5,11 @@
     background: #ffbc15;
   }
 }
-[type=button], [type=reset], [type=submit], button{
-  -webkit-appearance: none;
+button{
 }
 .buttonBlue {
+  -webkit-appearance: none;
+
   font-family: "Montserrat600";
   position: relative;
   text-align: center;
