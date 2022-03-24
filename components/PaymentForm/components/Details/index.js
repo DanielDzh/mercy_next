@@ -33,7 +33,7 @@ export default function StripeButton({ disabled, onClick }) {
          <button
             className={generateClasses(
                styles.accordion,
-               active ? styles.active : ""
+               active && styles.active
             )}
             // disabled={disabled}
             onClick={() => setActive(!active)}
@@ -42,7 +42,7 @@ export default function StripeButton({ disabled, onClick }) {
             {active ? <img className={styles.imgArrow} src="images/icons/arrowTop.png" /> : <img className={styles.imgArrow} src="images/icons/arrowDown.png" />}
          </button>
 
-         <div className={generateClasses(styles.panel, active ? styles.activePanel : "")}>
+         <div className={generateClasses(styles.panel, active && styles.activePanel)}>
             <p className={styles.fat}>Назва підприємства/company Name</p>
             <p style={{ marginBottom: '10px' }} >
                <input ref={clipboardNAME.target} value={NAME} type="hidden" />
@@ -62,7 +62,7 @@ export default function StripeButton({ disabled, onClick }) {
             <p style={{ marginBottom: '10px' }}>
                <input ref={clipboardADRESS.target} value={ADRESS} type="hidden" />
                <button onClick={clipboardADRESS.copy}>
-                  JSC CB "PRIVATBANK", 1D HRUSHEVSKOHO STR., KYIV, 01001, UKRAINE
+                  JSC CB &quot;PRIVATBANK&quot;, 1D HRUSHEVSKOHO STR., KYIV, 01001, UKRAINE
                   <img className={styles.imgCopy} src="images/icons/copy.png" />
                </button>
             </p>
