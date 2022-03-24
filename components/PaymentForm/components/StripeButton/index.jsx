@@ -1,11 +1,12 @@
 import Image from "next/image";
-import React, { useCallback } from "react";
+import React, { useCallback, useState } from "react";
 import { useTrans } from "../../../../hooks/useTrans";
 import { generateClasses } from "../../../../utils/generateClassName";
 import styles from "./StripeButton.module.scss";
 
 export default function StripeButton({ disabled, onClick }) {
   const { trans } = useTrans();
+
 
   const handleClick = useCallback(
     (e) => {
@@ -14,7 +15,7 @@ export default function StripeButton({ disabled, onClick }) {
     },
     [onClick]
   );
-  
+
   return (
     <button
       className={generateClasses(
