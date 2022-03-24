@@ -6,6 +6,7 @@ import Form from "./components/Form";
 import PaymentSuccess from "./components/PaymentSuccess";
 
 export const PAYMENT_POPUP = "p";
+export const PAYMENT_RESULT = "r";
 export const ONE_TIME_MODE = "one-time";
 export const ONGOING_MODE = "ongoing";
 export const RESULT_FLAG = "r";
@@ -17,7 +18,7 @@ export default function PaymentForm({ open, onClose }) {
 
   const success =
     checkQueryValue(PAYMENT_POPUP, ONE_TIME_MODE) &&
-    checkQueryValue(PAYMENT_POPUP, SUCESSFUL_PAYMENT);
+    checkQueryValue(PAYMENT_RESULT, SUCESSFUL_PAYMENT);
   const title = success ? trans("payment-success") : trans("help-now");
 
   return (
