@@ -103,5 +103,11 @@
   "required-field": "Reqired field",
   "wrong-email": "Wrong email",
   "email-sent": "Email sent succesfully",
-  "send-another-email": "Send another email"
+  "send-another-email": "Send another email",
+  "payment-success": "Payment Succesful",
+  "help-now": "Help now",
+  "custom-price": "Custom Price",
+  "pay-with": "Pay with ",
+  "make-it-ongoing": "Make an ongoing payment",
+  "": ""
 }

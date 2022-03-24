@@ -1,7 +1,7 @@
 import React from "react";
 import Slider from "react-slick";
 import styles from "./Slider.module.scss";
-import PaymentForm from "../PaymentForm";
+import PaymentForm, { ONE_TIME_MODE, PAYMENT_POPUP } from "../PaymentForm";
 import Image from "next/image";
 
 import { FaLongArrowAltLeft, FaLongArrowAltRight } from "react-icons/fa";
@@ -11,6 +11,7 @@ import ButtonBlue from "../ButtonBlue";
 import ButtonBlueBorder from "../ButtonBlueBorder";
 import Slide from "./Slide";
 import { useOpenHandlers } from "../../hooks/useOpenHandlers";
+import { useQuery } from "../../hooks/useQuery";
 import { Link } from "react-scroll";
 import { formatCurrency } from "../../utils/formatCurrency";
 import Language from "../Language";
@@ -34,6 +35,11 @@ export default function HeroSlider({ totalAmount, expectedAmount }) {
   const { trans } = useTrans();
 
   const { open, onOpen, onClose } = useOpenHandlers(false);
+  const { query, setQuery, delQuery, checkQueryValue } = useQuery();
+
+  const oneTimePayment = checkQueryValue(PAYMENT_POPUP, ONE_TIME_MODE);
+  const onOpenPayment = () => setQuery({ [PAYMENT_POPUP]: ONE_TIME_MODE });
+  const onClosePayment = () => delQuery();
 
   const SamplePrevArrow = (props) => {
     const { className, style, onClick } = props;
@@ -76,7 +82,10 @@ export default function HeroSlider({ totalAmount, expectedAmount }) {
   };
   return (
     <>
-      <PaymentForm open={open} onClose={onClose} />
+      {oneTimePayment ? (
+        <PaymentForm open={oneTimePayment} onClose={onClosePayment} />
+      ) : null}
+      {query.s ? <PaymentForm open={open} onClose={onClose} /> : null}
       <div className={styles["slider-area"]}>
         <div className={styles["slider-activator"]}>
           <div className={styles["container-slider"]}>
@@ -147,7 +156,7 @@ export default function HeroSlider({ totalAmount, expectedAmount }) {
 
                 <ButtonBlue
                   title={trans("slider_button_blue")}
-                  click={onOpen}
+                  click={onOpenPayment}
                 />
                 {/* <PayPal /> */}
               </div>

@@ -103,5 +103,11 @@
   "required-field": "Обов'язкове поле",
   "wrong-email": "Неправильна пошта",
   "email-sent": "Відправка успішна",
-  "send-another-email": "Відправити ще одного листа"
+  "send-another-email": "Відправити ще одного листа",
+  "payment-success": "Оплата успішна",
+  "help-now": "Допоможи зараз",
+  "custom-price": "Інша сума",
+  "select-donate-price": "Оберіть суму пожертви",
+  "pay-with": "Оплата з ",
+  "make-it-ongoing": "Зробити платіж регулярним"
 }

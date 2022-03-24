@@ -1,0 +1,30 @@
+@import "../../../../styles/colors.scss";
+
+.stripeButton {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $white;
+  border: none;
+  color: $yellow;
+  font-family: "Montserrat600";
+  margin: 2vh auto;
+  border-radius: 10px;
+  border: 2px solid $yellow;
+  min-height: 6vh;
+
+
+  .label {
+    margin-right: 0.4em;
+  }
+}
+.disabled {
+  background-color: rgb(197, 197, 197);
+  color: #6b3e2e;
+  border: 2px solid #6b3e2e;
+
+  img {
+    fill: #6b3e2e;
+  }
+}

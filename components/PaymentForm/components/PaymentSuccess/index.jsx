@@ -1,6 +1,6 @@
 import React from "react";
-import ButtonBlue from "../../ButtonBlue";
-import styles from "../PaymentForm.module.scss";
+import ButtonBlue from "../../../ButtonBlue";
+import styles from "../../PaymentForm.module.scss";
 
 export default function PaymentSuccess({ onClose }) {
   return (

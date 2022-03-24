@@ -1,0 +1,83 @@
+@import "../../styles/colors.scss";
+
+.wrapper {
+  font-family: "Montserrat400";
+
+  h4 {
+    width: 100%;
+    font-size: 2.3vh;
+    color: $black;
+  }
+
+  .products {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: auto -1vh auto -1vh;
+
+    .item {
+      border: 2px solid $blue;
+      width: calc(50% - 2vh);
+      color: $blue;
+      cursor: pointer;
+      padding: 1vh;
+      margin: 1vh;
+      text-align: center;
+      border-radius: 10px;
+    }
+
+    .active {
+      background-color: $blue-trarnsparent;
+    }
+  }
+  .customValue {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%;
+
+    .adorment {
+      width: 20vh;
+      padding: 1.5vh;
+      background: $blue;
+      border-radius: 10px 0 0 10px;
+      color: $white;
+    }
+    .customInput {
+      border: 2px solid $blue;
+      color: $blue;
+      padding: 1vh;
+      border-radius: 10px;
+      display: flex;
+      width: inherit;
+      border-radius: 0 10px 10px 0;
+      display: flex;
+      text-align: right;
+
+      &::-webkit-input-placeholder {
+        /* Chrome/Opera/Safari */
+        color: $blue-trarnsparent;
+        font-style: italic;
+      }
+      & ::-moz-placeholder {
+        /* Firefox 19+ */
+        color: $blue-trarnsparent;
+        font-style: italic;
+      }
+      &:-ms-input-placeholder {
+        /* IE 10+ */
+        color: $blue-trarnsparent;
+        font-style: italic;
+      }
+      &:-moz-placeholder {
+        /* Firefox 18- */
+        color: $blue-trarnsparent;
+        font-style: italic;
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+}

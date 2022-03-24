@@ -27,13 +27,13 @@ const Language = ({ colorTitle }) => {
   const router = useRouter();
   const textInput = useRef(true);
   const textInputCheck = useRef(true);
-  useEffect(() => {
-    document.body.addEventListener("click", handleOutsideClick);
-  }, []);
+  // useEffect(() => {
+  //   document.body.addEventListener("click", handleOutsideClick);
+  // }, []);
 
-  const handleOutsideClick = (event) => {
-    textInput.current.click();
-  };
+  // const handleOutsideClick = (event) => {
+  //   textInput.current.click();
+  // };
 
   const changeLang = (name) => {
     router.push(router.asPath, router.asPath, { locale: name });

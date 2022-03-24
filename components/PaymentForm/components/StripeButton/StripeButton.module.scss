@@ -1,0 +1,22 @@
+@import "../../../../styles/colors.scss";
+
+.stripeButton {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $black;
+  border: none;
+  color: $white;
+  font-family: "Montserrat600";
+  margin: 2vh auto;
+  border-radius: 10px;
+  min-height: 6vh;
+
+  .label {
+    margin-right: 0.4em;
+  }
+}
+.disabled {
+  background-color: $dark-grey;
+}
