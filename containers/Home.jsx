@@ -1,10 +1,7 @@
 import React from "react";
 import HeroSlider from "../components/Slider";
-import SimpleReactLightbox from "simple-react-lightbox";
 import AboutUs from "../components/AboutUs";
 import SaveLife from "../components/SaveLife";
-import Portfolios from "../components/portfolios";
-import Header from "../components/header";
 import OurMission from "../components/OurMission";
 import OurTeam from "../components/OurTeam";
 import OurValues from "../components/OurValues";
@@ -24,7 +21,6 @@ export default function Home({ total, expected }) {
         customTitle="Mercy Chain"
         description="Головне завдання благодійного фонду “UNFAILING CHARITY” — забезпечити допомогу та матеріальну підтримку найбільш потребуючого населення потребуючих країн. "
       />
-      {/* <Header/> */}
       <HeroSlider totalAmount={total} expectedAmount={expected} />
       <AboutUs />
       <OurMission />

@@ -7,6 +7,8 @@ import ProductsList from "../../../ProductsList";
 import styles from "../../PaymentForm.module.scss";
 import CryptoButton from "../CryptoButton";
 import StripeButton from "../StripeButton";
+import Details from "../Details";
+
 
 const PRODUCTS = [
   { value: "item_25", label: "$25" },
@@ -31,6 +33,7 @@ export default function Form({ onSuccess }) {
       />
       <StripeButton />
       <CryptoButton />
+      <Details />
     </>
   );
 }
