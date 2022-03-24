@@ -40,7 +40,7 @@ export default function StripeButton({ disabled, onClick }) {
             )}
             onClick={() => setActive(!active)}
          >
-            Реквізити
+            SWIFT
             {active ? <img className={styles.imgArrow} src="images/icons/arrowTop.png" /> : <img className={styles.imgArrow} src="images/icons/arrowDown.png" />}
          </button>
 
@@ -59,7 +59,7 @@ export default function StripeButton({ disabled, onClick }) {
             <p style={{ marginBottom: '10px' }}>
                <input ref={clipboardADRESS.target} value={ADRESS} type="hidden" />
                <button onClick={clipboardADRESS.copy}>
-                  {clipboardADRESS.copied ? 'Copied' : 'JSC CB &quot;PRIVATBANK&quot;, 1D HRUSHEVSKOHO STR., KYIV, 01001, UKRAINE'}
+                  {clipboardADRESS.copied ? 'Copied' : 'JSC CB "PRIVATBANK", 1D HRUSHEVSKOHO STR., KYIV, 01001, UKRAINE'}
                   <img className={styles.imgCopy} src="images/icons/copy.png" />
                </button>
             </p>

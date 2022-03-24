@@ -2,11 +2,11 @@
    background-color: #10a6f9;
    font-family: "Montserrat600";
    color: #fff;
+   text-align: center;
    cursor: pointer;
    padding: 12px 17px;
    width: 100%;
    position: relative;
-   text-align: left;
    border: none;
    outline: none;
    border-radius: 12px;
@@ -28,6 +28,7 @@
 }
  
 .panel {
+   text-align: left;
    font-family: "Montserrat500";
    padding: 12px 20px;
    background-color: #fff;
