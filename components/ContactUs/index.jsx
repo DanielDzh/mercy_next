@@ -11,7 +11,7 @@ const contacts = [
     icon: "images/iconPhone.png",
     name: "phone",
     url: "",
-    desc: "(684) 555-0102",
+    desc: "+421948143899",
   },
   {
     icon: "images/iconMail.png",
@@ -35,7 +35,7 @@ const contacts = [
     icon: "images/iconLocation.png",
     name: "location",
     url: "",
-    desc: "8502 Preston Rd. Inglewood, Maine 98380",
+    desc: "Slovenské  združenie  9 o.z. IČO 54339626 Kresánkova 3581/7B, 84105 Bratislava Slovakia",
   },
 ];
 
