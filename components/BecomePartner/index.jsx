@@ -5,17 +5,27 @@ import ButtonYellow from "../ButtonYellow";
 import { useTrans } from "../../hooks/useTrans";
 import { useOpenHandlers } from "../../hooks/useOpenHandlers";
 import PaymentForm from "../PaymentForm";
+import { usePaymentPopup } from "../../hooks/usePaymentPopup";
 
 export default function BecomePartner() {
-
-  const { open, onOpen, onClose } = useOpenHandlers(false);
+  const {
+    openedOneTimePayment,
+    openedOngoingPayment,
+    onOpenOngoingPayment,
+    onOpenOneTimePayment,
+    onClosePayment,
+  } = usePaymentPopup();
 
   const { trans } = useTrans();
 
   return (
     <>
-      <PaymentForm open={open} onClose={onClose} />
-      <div id='becomePartner'>
+      <PaymentForm
+        open={openedOneTimePayment || openedOngoingPayment}
+        onClose={onClosePayment}
+        ongoing={openedOngoingPayment}
+      />
+      <div id="becomePartner">
         <div className={styles["becomePartner_container"]}>
           <div className={styles["becomePartner_wrapper"]}>
             <div className={styles["becomePartner_image"]}>
@@ -31,19 +41,21 @@ export default function BecomePartner() {
                 <div className={styles["once_help"]}>
                   <h2>{trans("one_assise_title")}</h2>
                   <div className={styles["once_help_text"]}>
-                    <span>
-                      {trans("one_assise_desc")}
-                    </span>
-                    <ButtonBlue title={trans("button_help")} click={onOpen} />
+                    <span>{trans("one_assise_desc")}</span>
+                    <ButtonBlue
+                      title={trans("button_help")}
+                      click={onOpenOneTimePayment}
+                    />
                   </div>
                 </div>
                 <div className={styles["regular_help"]}>
                   <h2>{trans("regul_assis_title")}</h2>
                   <div className={styles["regular_help_text"]}>
-                    <span>
-                      {trans("regul_assis_desc")}
-                    </span>
-                    <ButtonYellow title={trans("button_subscribe")} />
+                    <span>{trans("regul_assis_desc")}</span>
+                    <ButtonYellow
+                      title={trans("button_subscribe")}
+                      click={onOpenOngoingPayment}
+                    />
                   </div>
                 </div>
               </div>

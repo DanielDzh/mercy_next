@@ -15,6 +15,7 @@ import { useQuery } from "../../hooks/useQuery";
 import { Link } from "react-scroll";
 import { formatCurrency } from "../../utils/formatCurrency";
 import Language from "../Language";
+import { usePaymentPopup } from "../../hooks/usePaymentPopup";
 
 const sliderPaths = [
   "images/ruins.jpg",
@@ -34,12 +35,8 @@ const getProgressPercent = (total, expected) => {
 export default function HeroSlider({ totalAmount, expectedAmount }) {
   const { trans } = useTrans();
 
-  const { open, onOpen, onClose } = useOpenHandlers(false);
-  const { query, setQuery, delQuery, checkQueryValue } = useQuery();
-
-  const oneTimePayment = checkQueryValue(PAYMENT_POPUP, ONE_TIME_MODE);
-  const onOpenPayment = () => setQuery({ [PAYMENT_POPUP]: ONE_TIME_MODE });
-  const onClosePayment = () => delQuery();
+  const { openedOneTimePayment, onOpenOneTimePayment, onClosePayment } =
+    usePaymentPopup();
 
   const SamplePrevArrow = (props) => {
     const { className, style, onClick } = props;
@@ -82,10 +79,9 @@ export default function HeroSlider({ totalAmount, expectedAmount }) {
   };
   return (
     <>
-      {oneTimePayment ? (
-        <PaymentForm open={oneTimePayment} onClose={onClosePayment} />
+      {openedOneTimePayment ? (
+        <PaymentForm open={openedOneTimePayment} onClose={onClosePayment} />
       ) : null}
-      {query.s ? <PaymentForm open={open} onClose={onClose} /> : null}
       <div className={styles["slider-area"]}>
         <div className={styles["slider-activator"]}>
           <div className={styles["container-slider"]}>
@@ -156,7 +152,7 @@ export default function HeroSlider({ totalAmount, expectedAmount }) {
 
                 <ButtonBlue
                   title={trans("slider_button_blue")}
-                  click={onOpenPayment}
+                  click={onOpenOneTimePayment}
                 />
                 {/* <PayPal /> */}
               </div>
