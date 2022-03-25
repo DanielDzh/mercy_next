@@ -95,10 +95,18 @@ export default function Form({ onSuccess, ongoing }) {
           onClick={handleEexwallet}
         />
       )}
+<<<<<<< HEAD
       {/* { !ongoing && <CryptoButton disabled={disabled || !product.value} /> } */}
       {!ongoing && <Swift />}
       {!ongoing && <Sepa />}
       {!ongoing && <Ach />}
+=======
+      {/* {!ongoing && <CryptoButton disabled={disabled || !product.value} />} */}
+      {!ongoing && <Swift />}
+      {!ongoing && <Sepa />}
+      {!ongoing && <Ach />}
+
+>>>>>>> b9b681f75f4611414051c905976a5c8652f0d3d4
       {ongoing && (
         <div
           className={generateClasses(styles.unsubscribe, "no-select")}
