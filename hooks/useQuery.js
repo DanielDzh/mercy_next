@@ -6,27 +6,30 @@ export function useQuery() {
   const { query } = router;
 
   const setQuery = useCallback(
-    (params, withHistory = true) => {
-      router.push({
-        pathname: router.pathname,
-        query: { ...(withHistory ? router.query : {}), ...params },
-      });
+    (params, shallow, withHistory = true) => {
+      router.push(
+        {
+          pathname: router.pathname,
+          query: { ...(withHistory ? router.query : {}), ...params },
+        },
+        undefined,
+        { shallow }
+      );
     },
     [router]
   );
-  const delQuery = useCallback(() => {
-    router.push({ pathname: router.pathname, query: {} });
-  }, [router]);
-
-  const checkQueryValue = useCallback(
-    (param, value) => query[param] === value,
-    [query]
+  const delQuery = useCallback(
+    (shallow) => {
+      router.push({ pathname: router.pathname, query: {} }, undefined, {
+        shallow,
+      });
+    },
+    [router]
   );
 
   return {
     setQuery,
     delQuery,
-    checkQueryValue,
     query,
   };
 }

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useCallback, useState } from "react";
 import { PayPalButton } from "react-paypal-button-v2";
 import { useTrans } from "../../../../hooks/useTrans";
 import { generateClasses } from "../../../../utils/generateClassName";
@@ -8,19 +8,39 @@ import styles from "../../PaymentForm.module.scss";
 import CryptoButton from "../CryptoButton";
 import StripeButton from "../StripeButton";
 import Details from "../Details";
+import { Api } from "../../../../services/api";
+import { ErrorBase } from "../../../common/Error";
 
+export const STRIPE_GATEWAY = "STRIPE";
+export const EEXWALLET_GATEWAY = "EEXWALLET";
 
 const PRODUCTS = [
-  { value: "item_25", label: "$25" },
-  { value: "item_50", label: "$50" },
-  { value: "item_100", label: "$100" },
-  { value: "item_250", label: "$250" },
+  { value: "25", label: "$25" },
+  { value: "50", label: "$50" },
+  { value: "100", label: "$100" },
+  { value: "250", label: "$250" },
 ];
 
-export default function Form({ onSuccess }) {
-  const [ongoing, setOngoing] = useState(false);
+export default function Form({ onSuccess, ongoing }) {
   const [product, setProduct] = useState({});
+  const [disabled, setDisabled] = useState(false);
+  const [error, setError] = useState("");
   const { trans } = useTrans();
+
+  const handlePayStripe = useCallback(() => {
+    setDisabled(true);
+    return Api.post("/generate-link", {
+      value: product.value,
+      ongoing,
+      gateway: STRIPE_GATEWAY,
+    })
+      .then((res) => {
+        console.log("RES", res);
+        if (res.url) return window.location.replace(res.url);
+        if (res.message) return setError(res.mesasge);
+      })
+      .finally(() => setDisabled(false));
+  }, [ongoing, product.value]);
 
   return (
     <>
@@ -31,9 +51,13 @@ export default function Form({ onSuccess }) {
         selected={product}
         withCustomValue
       />
-      <StripeButton />
-      <CryptoButton />
-      <Details />
+      <StripeButton
+        disabled={disabled || !product.value}
+        onClick={handlePayStripe}
+      />
+      {!ongoing && <CryptoButton disabled={disabled || !product.value} />}
+      {!ongoing && <Details />}
+      <ErrorBase value={error} />
     </>
   );
 }
