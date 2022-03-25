@@ -1,21 +1,20 @@
-import React from "react";
-import Slider from "react-slick";
-import styles from "./Slider.module.scss";
-import PaymentForm, { ONE_TIME_MODE, PAYMENT_POPUP } from "../PaymentForm";
 import Image from "next/image";
-
+import React from "react";
 import { FaLongArrowAltLeft, FaLongArrowAltRight } from "react-icons/fa";
-import Header from "../Header/index";
+import { Link } from "react-scroll";
+import Slider from "react-slick";
+import { usePaymentPopup } from "../../hooks/usePaymentPopup";
+import { useQueryHandlers } from "../../hooks/useQueryHanlders";
 import { useTrans } from "../../hooks/useTrans";
+import { formatCurrency } from "../../utils/formatCurrency";
 import ButtonBlue from "../ButtonBlue";
 import ButtonBlueBorder from "../ButtonBlueBorder";
+import Header from "../Header/index";
+import PaymentForm, { PAYMENT_POPUP } from "../PaymentForm";
+import UnsubscribePopup, { UNSUBSCRIBE } from "../UnsubscribePopup";
 import Slide from "./Slide";
-import { useOpenHandlers } from "../../hooks/useOpenHandlers";
-import { useQuery } from "../../hooks/useQuery";
-import { Link } from "react-scroll";
-import { formatCurrency } from "../../utils/formatCurrency";
-import Language from "../Language";
-import { usePaymentPopup } from "../../hooks/usePaymentPopup";
+import styles from "./Slider.module.scss";
+
 
 const sliderPaths = [
   "images/ruins.jpg",
@@ -37,6 +36,9 @@ export default function HeroSlider({ totalAmount, expectedAmount }) {
 
   const { openedOneTimePayment, onOpenOneTimePayment, onClosePayment } =
     usePaymentPopup();
+
+  const { isOpened: isUnsibscribeOpen, onClose: onUnsubscribeClose } =
+    useQueryHandlers(PAYMENT_POPUP, UNSUBSCRIBE);
 
   const SamplePrevArrow = (props) => {
     const { className, style, onClick } = props;
@@ -81,6 +83,12 @@ export default function HeroSlider({ totalAmount, expectedAmount }) {
     <>
       {openedOneTimePayment ? (
         <PaymentForm open={openedOneTimePayment} onClose={onClosePayment} />
+      ) : null}
+      {isUnsibscribeOpen ? (
+        <UnsubscribePopup
+          open={isUnsibscribeOpen}
+          onClose={onUnsubscribeClose}
+        />
       ) : null}
       <div className={styles["slider-area"]}>
         <div className={styles["slider-activator"]}>

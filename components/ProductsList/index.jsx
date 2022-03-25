@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { generateClasses } from "../../utils/generateClassName";
 import styles from "./ProductsList.module.scss";
 import { useTrans } from "../../hooks/useTrans";
+import Input from "../common/Input";
 
 export const CUSTOM_VALUE = "CUSTOM_VALUE";
 export const PRODUCT = "PRODUCT";
@@ -41,17 +42,13 @@ export default function ProductsList({
       {withCustomValue && (
         <>
           <hr />
-          <div className={styles.customValue}>
-            <div className={generateClasses(styles.adorment, "no-select")}>
-              {trans("custom-price")}
-            </div>
-            <input
-              className={styles.customInput}
-              value={selected?.type === CUSTOM_VALUE ? selected?.value : ""}
-              onChange={handleCustomValue}
-              placeholder="125.00"
-            />
-          </div>
+          <Input
+            value={selected?.type === CUSTOM_VALUE ? selected?.value : ""}
+            onChange={handleCustomValue}
+            placeholder="125.00"
+            align="right"
+            adorment={trans("custom-price")}
+          />
         </>
       )}
     </div>

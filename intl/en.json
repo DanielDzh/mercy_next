@@ -96,7 +96,7 @@
   "contacts": "Contacts",
   "contacts_name": "Name",
   "contacts_phone": "Phone number",
-  "contacts_mail": "Mail",
+  "contacts_mail": "Email",
   "contacts_message": "Your message",
   "button_send": "Send",
   "footer_join": "Join Us:",
@@ -109,5 +109,11 @@
   "custom-price": "Custom Price",
   "pay-with": "Pay with ",
   "make-it-ongoing": "Make an ongoing payment",
-  "": ""
+  "min-amount-is": "Minimum amount for {gateway} gateway - ${amount}",
+  "thank-you-for-help": "Thanks for your contibution!",
+  "verse": "Truly I say to you, to the extent that you did it to one of these brothers of Mine, even the least of them, you did it to Me.",
+  "verse-link": "Bible, Matthew 25:40",
+  "unsubscribe": "Unsubscribe",
+  "email": "Email",
+  "subscription-cancelled": "Subscription was cancelled"
 }

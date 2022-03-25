@@ -1,0 +1,57 @@
+@import "../../../styles/_colors.scss";
+
+.inputBase {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: 100%;
+
+  .adorment {
+    width: 20vh;
+    padding: 1.5vh;
+    background: $blue;
+    border-radius: 10px 0 0 10px;
+    color: $white;
+    text-align: center;
+  }
+  .input {
+    border: 2px solid $blue;
+    color: $blue;
+    padding: 1vh;
+    border-radius: 10px;
+    display: flex;
+    width: inherit;
+    border-radius: 10px;
+    display: flex;
+    text-align: right;
+
+    &::-webkit-input-placeholder {
+      /* Chrome/Opera/Safari */
+      color: $blue-trarnsparent;
+      font-style: italic;
+    }
+    & ::-moz-placeholder {
+      /* Firefox 19+ */
+      color: $blue-trarnsparent;
+      font-style: italic;
+    }
+    &:-ms-input-placeholder {
+      /* IE 10+ */
+      color: $blue-trarnsparent;
+      font-style: italic;
+    }
+    &:-moz-placeholder {
+      /* Firefox 18- */
+      color: $blue-trarnsparent;
+      font-style: italic;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .withAdorment {
+    border-radius: 0 10px 10px 0;
+  }
+}
