@@ -11,7 +11,8 @@ const contacts = [
     icon: "images/icons/nameCompany.png",
     name: "name",
     url: "",
-    desc: "Slovenské  združenie  9 o.z. IČO 54339626",
+    desc: "Slovenské  združenie  9 o.z.",
+    desc2: "IČO 54339626"
   },
   {
     icon: "images/iconLocation.png",
@@ -65,7 +66,10 @@ const ContactUs = () => {
                 <div key={item.name} className={styles["contacts_wrapper"]}>
                   <a href={item.url && item.url}>
                     <img loading="lazy" src={item.icon} alt="" />
-                    <h3>{item.desc}</h3>
+                    <h3>
+                      <h3>{item.desc}</h3>
+                      <h3>{item.desc2 && item.desc2}</h3>
+                    </h3>
                   </a>
                 </div>
               ))}
