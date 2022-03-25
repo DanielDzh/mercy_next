@@ -89,19 +89,17 @@ export default function Form({ onSuccess, ongoing }) {
         disabled={disabled || !product.value}
         onClick={handlePayStripe}
       />
-<<<<<<< HEAD
-  { !ongoing && <CryptoButton disabled={disabled || !product.value} /> }
-  { !ongoing && <Swift /> }
-  { !ongoing && <Sepa /> }
-  { !ongoing && <Ach /> }
-=======
       {!ongoing && (
         <CryptoButton
           disabled={disabled || !product.value}
           onClick={handleEexwallet}
         />
       )}
-      {!ongoing && <Details />}
+      {/* {!ongoing && <CryptoButton disabled={disabled || !product.value} />} */}
+      {!ongoing && <Swift />}
+      {!ongoing && <Sepa />}
+      {!ongoing && <Ach />}
+
       {ongoing && (
         <div
           className={generateClasses(styles.unsubscribe, "no-select")}
@@ -110,8 +108,7 @@ export default function Form({ onSuccess, ongoing }) {
           {trans("unsubscribe")}
         </div>
       )}
->>>>>>> master
-  <ErrorBase value={error} />
+      <ErrorBase value={error} />
     </>
   );
 }
