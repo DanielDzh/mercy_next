@@ -120,6 +120,8 @@
               line-height: 150%;
               color: #ffffff;
               margin-bottom: 0;
+              display: flex;
+              flex-direction: column;
 
               @media screen and(max-width: 1200px) {
                 font-size: 18px;
