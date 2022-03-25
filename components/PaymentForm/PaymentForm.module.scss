@@ -78,3 +78,12 @@
   color: $black;
   margin-top: 4vh;
 }
+
+.unsubscribe {
+  text-decoration: underline;
+  font-family: "Montserrat600";
+  color: $blue;
+  cursor: pointer;
+  text-align: center;
+  font-size: 2vh;
+}
