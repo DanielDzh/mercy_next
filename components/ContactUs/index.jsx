@@ -8,6 +8,18 @@ import ContactForm from "./Form";
 
 const contacts = [
   {
+    icon: "images/icons/nameCompany.png",
+    name: "name",
+    url: "",
+    desc: "Slovenské  združenie  9 o.z. IČO 54339626",
+  },
+  {
+    icon: "images/iconLocation.png",
+    name: "location",
+    url: "",
+    desc: "Kresánkova 3581/7B, 84105 Bratislava Slovakia",
+  },
+  {
     icon: "images/iconPhone.png",
     name: "phone",
     url: "",
@@ -31,12 +43,6 @@ const contacts = [
   //    url: "",
   //    desc: "(684) 555-0102",
   // },
-  {
-    icon: "images/iconLocation.png",
-    name: "location",
-    url: "",
-    desc: "Slovenské  združenie  9 o.z. IČO 54339626 Kresánkova 3581/7B, 84105 Bratislava Slovakia",
-  },
 ];
 
 const ContactUs = () => {
