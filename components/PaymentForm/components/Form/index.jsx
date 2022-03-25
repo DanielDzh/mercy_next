@@ -7,9 +7,12 @@ import ProductsList from "../../../ProductsList";
 import styles from "../../PaymentForm.module.scss";
 import CryptoButton from "../CryptoButton";
 import StripeButton from "../StripeButton";
-import Details from "../Details";
 import { Api } from "../../../../services/api";
 import { ErrorBase } from "../../../common/Error";
+import Sepa from "../Sepa";
+import Swift from "../Swift";
+import Ach from "../Ach";
+
 
 export const STRIPE_GATEWAY = "STRIPE";
 export const EEXWALLET_GATEWAY = "EEXWALLET";
@@ -56,7 +59,9 @@ export default function Form({ onSuccess, ongoing }) {
         onClick={handlePayStripe}
       />
       {!ongoing && <CryptoButton disabled={disabled || !product.value} />}
-      {!ongoing && <Details />}
+      {!ongoing && <Swift />}
+      {!ongoing && <Sepa />}
+      {!ongoing && <Ach />}
       <ErrorBase value={error} />
     </>
   );
