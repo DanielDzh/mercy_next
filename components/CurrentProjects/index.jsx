@@ -69,15 +69,11 @@ export default function CurrentProjects({ totalAmount, expectedAmount }) {
             <div className={styles["button-projects"]}>
               <div className={styles["button_detail_wrapper"]}>
                 <ButtonBlueBorder title={trans("current_proj_button_border")} click={openPopup} detailPopup={detailPopup} setDetailPopup={setDetailPopup} />
-                <PopupWithTitle open={detailPopup && open} onClose={onClose} title="Проект" background="#fff" color="#000">
+                <PopupWithTitle open={detailPopup && open} onClose={onClose} title={trans("popup_details_title")} background="#fff" color="#000">
                   <div className={styles["wrapper_popup_details"]}>
-                    <h2 className={styles["popup_detail_subtitle"]}>ДОПОМОЖИ незахищеним українцям, які страждають від нападу російських окупантів.</h2>
+                    <h2 className={styles["popup_detail_subtitle"]}>{trans("popup_details_subtitle")}</h2>
                     <p className={styles["detail_text_under_st"]}>
-                      Фото нижче — із початку війни в Україні, яка розпочалась 24 лютого 2022 року.
-                      Сотні смертей дорослих і дітей, тисячі поранених, стільки ж зруйнованих осель.
-                      Життя цих людей ніколи не буде колишнім. Багато з них втратили рідних і близьких людей, а ще більше — житло.
-                      Українці з «гарячих точок» залишились без роботи,
-                      фінансів і навіть без найнеобхідніших засобів існування — їжі, одягу, медикаментів.
+                      {trans("popup_details_text_above_photo")}
                     </p>
                     <div className={styles["wrapper_popup_image"]}>
                       <img src="images/Project1/1.png" alt="" className={styles["popup_image"]} />
@@ -88,46 +84,44 @@ export default function CurrentProjects({ totalAmount, expectedAmount }) {
                       <img src="images/Project1/1.png" alt="" className={styles["popup_image"]} />
                     </div>
                     <p className={styles["detail_text_under_st"]}>
-                      Ми взяли на себе відповідальність <span>забезпечувати базові потреби тисячі постраждалих людей</span> у
-                      «гарячих точках» Київської області <span>кожні 6 днів.</span>
+                      {trans("popup_details_text_under_photo_normal_1")} <span>{trans("popup_details_text_under_photo_bold_1")}</span> у
+                      {trans("popup_details_text_under_photo_normal_2")}<span>{trans("popup_details_text_under_photo_bold_2")}</span>
                     </p>
                     <ul className={styles["detail_list"]}>
                       <li className="">
                         <p>
                           <img src="images/icons/circle.png" alt="" className={styles["list_circle"]} />
-                          <span>Ціль: </span>зберегти життя 1000 українців на наступні 6 днів</p>
+                          <span>{trans("popup_details_text_goal_title")} </span>{trans("popup_details_text_goal_desc")}</p>
                       </li>
                       <li className="">
                         <p>
                           <img src="images/icons/circle.png" alt="" className={styles["list_circle"]} />
-                          <span>Локації: </span>с. Биківня, м. Вишневе (Київська область)</p>
+                          <span>{trans("popup_details_text_locations_title")} </span>{trans("popup_details_text_locations_desc")}</p>
                       </li>
                       <li className="">
                         <p>
                           <img src="images/icons/circle.png" alt="" className={styles["list_circle"]} />
-                          <span>Допомога: </span>харчові набори для дорослих, харчові набори для дітей, набори медикаментів</p>
+                          <span>{trans("popup_details_text_help_title")} </span>{trans("popup_details_text_help_desc")}</p>
                       </li>
                       <li className="">
                         <p>
                           <img src="images/icons/circle.png" alt="" className={styles["list_circle"]} />
-                          <span>Вартість: </span>814 тис. грн в тиждень</p>
+                          <span>{trans("popup_details_text_cost_title")} </span>{trans("popup_details_text_cost_desc")}</p>
                       </li>
                       <li>
                         <p>
                           <img src="images/icons/circle.png" alt="" className={styles["list_circle"]} />
-                          <span> Залишилось зібрати: </span>{price} $</p>
+                          <span>{trans("popup_details_text_remains_title")}</span>{price} $</p>
                       </li>
                     </ul>
-                    <p className={styles["detail_under_text"]}>Кожні $30 продовжують життя однієї людини на 6 днів.</p>
-                    <p className={styles["detail_under_text"]}>УВАГА! <span>Зібрані кошти витрачаються тільки на матеріальну допомогу
-                      населенню «гарячих точок»: продукти, одяг і медикаменти.
-                      Логістику і функціонування команди фонд покриває за власний кошт засновників.</span>
+                    <p className={styles["detail_under_text"]}>{trans("popup_details_text_bottom_1")}</p>
+                    <p className={styles["detail_under_text"]}>{trans("popup_details_text_bottom_2_bold")} <span>{trans("popup_details_text_bottom_2")}</span>
                     </p>
                   </div>
                 </PopupWithTitle>
               </div>
               <ButtonBlue title={trans("current_proj_button")} click={openPopupGallery} detailPopup={galleryPopup} setDetailPopup={setGalleryPopup} />
-              <PopupWithTitle open={galleryPopup && open} onClose={onClose} title="Галерея" background="#fff" color="#000">
+              <PopupWithTitle open={galleryPopup && open} onClose={onClose} title={trans("popup_gallery_title")} background="#fff" color="#000">
                 <div></div>
                 <div className={styles["wrapper_popup_image"]}>
                   {projects[0].allGallery.map((item, index) => (
