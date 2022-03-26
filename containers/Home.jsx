@@ -14,6 +14,8 @@ import { Helmet } from "../components/Helmet";
 import Reviews from "../components/Reviews";
 import { Api } from "../services/api";
 
+const isNaN = (num) => num === null || isNaN(num);
+
 export default function Home({ total, expected }) {
   return (
     <div>
@@ -40,6 +42,9 @@ export default function Home({ total, expected }) {
 export async function getServerSideProps() {
   const data = await Api.get("/total");
   return {
-    props: { total: data.total || 3000, expected: data.expected || 30000 },
+    props: {
+      total: isNaN(data.total) ? data.total : 3000,
+      expected: isNaN(data.expected) ? data.expected : 30000,
+    },
   };
 }
