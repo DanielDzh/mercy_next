@@ -13,11 +13,13 @@ const languages = [
     code: "ua",
     name: "Українська",
     countryCode: "ua",
+    image: "images/icons/Ukr.png"
   },
   {
     code: "en",
     name: "English",
     countryCode: "en",
+    image: "images/icons/Eng.png"
   },
 ];
 
@@ -45,8 +47,10 @@ const Language = ({ colorTitle }) => {
   return (
     <>
       <div className={styles["sec_center"]} ref={textInput}>
-        {/* <input className={styles["dropdown"]} type="checkbox" id="dropdown" name="dropdown" ref={textInputCheck} /> */}
-        <label className={styles["for_dropdown"]} onClick={() => setState(!state)}>{trans("language")} <img style={{ transform: state ? "rotate(180deg)" : "rotate(0deg)" }} loading="lazy" src="images/icons/arrowDown.png" className={styles["uil"]} alt="" /></label>
+        <label className={styles["for_dropdown"]} onClick={() => setState(!state)}>
+          {languages.map((item, index) => item.code === change ? <img className={styles.imgLang} key={index} src={item.image} /> : '')}
+          <img style={{ transform: state ? "rotate(180deg)" : "rotate(0deg)" }} loading="lazy" src="images/icons/arrowDown.png" className={styles.uil} alt="" />
+        </label>
 
         <div className={styles["section_dropdown"]} style={{ opacity: state ? 1 : 0, transform: state ? "translateY(0px)" : "translateY(20px)" }}>
           {languages.map(({ code, name, countryCode }) => (
@@ -54,43 +58,8 @@ const Language = ({ colorTitle }) => {
           ))}
         </div>
       </div>
-      {/* <div className={styles["sec_center_mobile"]}>
-        <input className={styles["dropdown_mobile"]} type="checkbox" id="dropdown" name="dropdown" />
-        <label className={styles["for_dropdown_mobile"]} htmlFor="dropdown">{trans("language")} <img loading="lazy" src="images/icons/arrowDown.png" className={styles["uil"]} alt="" /></label>
-        <div className={styles["section_dropdown_mobile"]}>
-          {languages.map(({ code, name, countryCode }) => (
-            <a className={styles["a"]} href="#" key={countryCode} onClick={() => changeLang(code)}>{name}</a>
-          ))}
-        </div>
-      </div> */}
     </>
   );
 };
 
 export default Language;
-
-
-{/* <div className={styles.language}>
-      <DropdownButton
-        align="end"
-        id={styles["dropdown-variants-Secondary"]}
-        title={trans("language")}
-        className={
-          visiblePopup ? styles["dropArrowTop"] : styles["dropArrowDown"]
-        }
-        style={{ color: colorTitle }}
-        ref={sortRef}
-        onClick={toggleVisiblePopup}
-      >
-        {languages.map(({ code, name, countryCode }) => (
-          <Dropdown.Item
-            href=""
-            key={countryCode}
-            onClick={() => changeLang(code)}
-            className={change === code ? styles["change"] : ""}
-          >
-            {name}
-          </Dropdown.Item>
-        ))}
-      </DropdownButton>
-    </div> */}
