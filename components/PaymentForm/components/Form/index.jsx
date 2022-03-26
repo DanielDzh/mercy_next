@@ -7,9 +7,12 @@ import ProductsList from "../../../ProductsList";
 import styles from "../../PaymentForm.module.scss";
 import CryptoButton from "../CryptoButton";
 import StripeButton from "../StripeButton";
-import Details from "../Details";
 import { Api } from "../../../../services/api";
 import { ErrorBase } from "../../../common/Error";
+import Sepa from "../Sepa";
+import Swift from "../Swift";
+import Ach from "../Ach";
+
 import { useQueryHandlers } from "../../../../hooks/useQueryHanlders";
 import { UNSUBSCRIBE } from "../../../UnsubscribePopup";
 import { PAYMENT_POPUP } from "../..";
@@ -92,7 +95,10 @@ export default function Form({ onSuccess, ongoing }) {
           onClick={handleEexwallet}
         />
       )}
-      {!ongoing && <Details />}
+      {/* { !ongoing && <CryptoButton disabled={disabled || !product.value} /> } */}
+      {!ongoing && <Swift />}
+      {!ongoing && <Sepa />}
+      {!ongoing && <Ach />}
       {ongoing && (
         <div
           className={generateClasses(styles.unsubscribe, "no-select")}
