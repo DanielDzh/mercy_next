@@ -126,7 +126,7 @@
   "send-another-email": "Send another email",
   "payment-success": "Payment Succesful",
   "help-now": "Help now",
-  "custom-price": "Custom Price",
+  "custom-price": "Custom",
   "pay-with": "Pay with ",
   "make-it-ongoing": "Make an ongoing payment",
   "min-amount-is": "Minimum amount for {gateway} gateway - ${amount}",
@@ -135,5 +135,13 @@
   "verse-link": "Bible, Matthew 25:40",
   "unsubscribe": "Unsubscribe",
   "email": "Email",
-  "subscription-cancelled": "Subscription was cancelled"
+  "subscription-cancelled": "Subscription was cancelled",
+  "close": "Close",
+  "select-donate-price": "Select the donation amount",
+  "volunteers": "volunteers",
+  "charity-foundation": "charitable foundation",
+  "help-unrainians": "help for ukrainians",
+  "humanitarian-aid": "humanitarian aid",
+  "refugees": "refugees",
+  "donations": "donations"
 }
