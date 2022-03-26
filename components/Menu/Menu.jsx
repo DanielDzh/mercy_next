@@ -4,7 +4,6 @@ import { useEffect } from 'react'
 import { Link } from "react-scroll";
 import { useTrans } from "../../hooks/useTrans";
 import Language from '../Language';
-import LanguageMobile from '../LanguageMobile';
 
 const Menu = ({ active, setActive }) => {
 
@@ -162,7 +161,7 @@ const Menu = ({ active, setActive }) => {
                   <img loading="lazy" src="images/iconTelegramYellow.png" alt="" className={styles["lang_img"]} />
                </a>
             </div>
-            <LanguageMobile />
+            <Language />
 
 
          </div>

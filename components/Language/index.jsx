@@ -23,31 +23,32 @@ const languages = [
 
 const Language = ({ colorTitle }) => {
   const { trans } = useTrans();
+  const [state, setState] = useState(false);
   const [change, setChange] = useState(trans('language'));
   const router = useRouter();
-  const textInput = useRef(true);
-  const textInputCheck = useRef(true);
-  // useEffect(() => {
-  //   document.body.addEventListener("click", handleOutsideClick);
-  // }, []);
+  const textInput = useRef();
+  useEffect(() => {
+    document.body.addEventListener("click", handleOutsideClick);
+  }, []);
 
-  const handleOutsideClick = () => {
-    if (textInputCheck.current.checked != true) {
-      // textInput.current.click();
-    }
+  const handleOutsideClick = (event) => {
+    const path = event.path || (event.composedPath && event.composedPath());
+    if (!path.includes(textInput.current)) { setState(false) };
   };
 
   const changeLang = (name) => {
     router.push(router.asPath, router.asPath, { locale: name });
     setChange(name);
+    setState(false);
   };
 
   return (
     <>
-      <div className={styles["sec_center"]}>
-        <input className={styles["dropdown"]} type="checkbox" id="dropdown" name="dropdown" ref={textInputCheck} />
-        <label className={styles["for_dropdown"]} htmlFor="dropdown" ref={textInput} >{trans("language")} <img loading="lazy" src="images/icons/arrowDown.png" className={styles["uil"]} alt="" /></label>
-        <div className={styles["section_dropdown"]}>
+      <div className={styles["sec_center"]} ref={textInput}>
+        {/* <input className={styles["dropdown"]} type="checkbox" id="dropdown" name="dropdown" ref={textInputCheck} /> */}
+        <label className={styles["for_dropdown"]} onClick={() => setState(!state)}>{trans("language")} <img style={{ transform: state ? "rotate(180deg)" : "rotate(0deg)" }} loading="lazy" src="images/icons/arrowDown.png" className={styles["uil"]} alt="" /></label>
+
+        <div className={styles["section_dropdown"]} style={{ opacity: state ? 1 : 0, transform: state ? "translateY(0px)" : "translateY(20px)" }}>
           {languages.map(({ code, name, countryCode }) => (
             <a className={styles["a"]} href="#" key={countryCode} onClick={() => changeLang(code)}>{name}</a>
           ))}

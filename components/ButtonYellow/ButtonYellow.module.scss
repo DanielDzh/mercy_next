@@ -59,20 +59,23 @@
          transition: all 400ms linear;
       }
 
-      &:hover{
-         border: 2px solid #10A6F9;
-         transform: scale(1.05);
-         color: #fff; 
-         
-         &:after{
-            border-radius: 13px;
-            position: absolute;
-            content: '';
-            width: 100%; height: 100%;
-            background: #10A6F9;
-            top: 0;  left: 0; right: 0;
-            z-index: -1;
-            transition: all 400ms ease;
+         @media screen and(min-width: 768px) {
+
+            &:hover{
+               border: 2px solid #10A6F9;
+               transform: scale(1.05);
+               color: #fff; 
+               
+               &:after{
+                  border-radius: 13px;
+                  position: absolute;
+                  content: '';
+                  width: 100%; height: 100%;
+                  background: #10A6F9;
+                  top: 0;  left: 0; right: 0;
+                  z-index: -1;
+                  transition: all 400ms ease;
+               }
+            }
          }
-      }
    }
