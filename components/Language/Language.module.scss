@@ -13,8 +13,7 @@
   pointer-events: none;
 }
 
-.dropdown:checked + .for_dropdown,
-.dropdown:not(:checked) + .for_dropdown{
+.for_dropdown{
   margin: 0;
   position: relative;
   font-family: "Montserrat600";
@@ -42,13 +41,13 @@
   color: #CFD2D5;
 
 }
-.dropdown:not(:checked) + .for_dropdown .uil{
+.for_dropdown .uil{
    width: 1rem;
   font-size: 24px;
   margin-left: 7px;
   transition: transform 200ms linear;
 }
-.dropdown:checked + .for_dropdown .uil{
+.for_dropdown .uil{
    width: 1rem;
   transform: rotate(180deg);
   font-size: 24px;
@@ -66,15 +65,13 @@
   display: block;
   box-shadow: 0 14px 35px 0 rgba(9,9,12,0.4);
   z-index: 2;
-  opacity: 0;
+  opacity: 1;
   pointer-events: none;
   transform: translateY(20px);
   transition: all 200ms linear;
 }
-.dropdown:checked ~ .section_dropdown{
-  opacity: 1;
+.section_dropdown{
   pointer-events: auto;
-  transform: translateY(0);
 }
 .section_dropdown:after{
   position: absolute;
