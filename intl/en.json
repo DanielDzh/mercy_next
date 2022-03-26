@@ -137,5 +137,11 @@
   "email": "Email",
   "subscription-cancelled": "Subscription was cancelled",
   "close": "Close",
-  "select-donate-price": "Select the donation amount"
+  "select-donate-price": "Select the donation amount",
+  "volunteers": "volunteers",
+  "charity-foundation": "charitable foundation",
+  "help-unrainians": "help for ukrainians",
+  "humanitarian-aid": "humanitarian aid",
+  "refugees": "refugees",
+  "donations": "donations"
 }

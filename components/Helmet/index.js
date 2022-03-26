@@ -13,10 +13,11 @@ export const Helmet = ({
   const tabTitle = `${customTitle ? customTitle : trans(title)} | ${trans(
     "project-title"
   )}`;
-  const descr = `${customDescription
-    ? customDescription
-    : trans(description ? description : "default-description")
-    }`;
+  const descr = `${
+    customDescription
+      ? customDescription
+      : trans(description ? description : "default-description")
+  }`;
   const imageSrc = image ? image : null;
 
   return (
@@ -37,11 +38,12 @@ export const Helmet = ({
       <meta name="twitter:card" content={imageSrc} />
       <meta
         keywords={[
-          trans("dialect-key"),
-          trans("interactive-map"),
-          trans("dialect-vocabulary"),
-          trans("map"),
-          trans("dialects-map"),
+          trans("volunteers"),
+          trans("charity-foundation"),
+          trans("help-unrainians"),
+          trans("humanitarian-aid"),
+          trans("refugees"),
+          trans("donations"),
         ].join(", ")}
       />
     </HelmetComponent>

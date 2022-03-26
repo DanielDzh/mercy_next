@@ -139,5 +139,11 @@
   "stripe-unsubscribe-hint": "Введіть пошту, яку ви використовували для створення підписки в Stripe.",
   "continue": "Продовжити",
   "subscription-cancelled": "Підписка відмінена",
-  "close": "Закрити"
+  "close": "Закрити",
+  "volunteers": "волонтери",
+  "charity-foundation": "благодійний фонд",
+  "help-unrainians": "допомога українцям",
+  "humanitarian-aid": "гуманітарна допомога",
+  "refugees": "біженці",
+  "donations": "пожертвування"
 }
