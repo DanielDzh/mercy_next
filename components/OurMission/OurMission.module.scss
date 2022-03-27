@@ -39,13 +39,16 @@
             transform: scale(1.01);
             overflow: hidden;
             width: 100%;
+            cursor: pointer;
 
-            &:hover{
-               cursor: pointer;
+            @media screen and(min-width: 768px) {
+               
+               &:hover{
 
-               img{
-                     transition: all .5s ease;
-                     transform: scale(1.01);
+                  img{
+                        transition: all .5s ease;
+                        transform: scale(1.01);
+                  }
                }
             }
 
@@ -241,10 +244,13 @@
             overflow: hidden;
             cursor: pointer;
 
-            &:hover{
-               img{
-                  transform: scale(1.01);
-                  transition: all .4s ease;
+            @media screen and(min-width: 768px) {
+
+               &:hover{
+                  img{
+                     transform: scale(1.01);
+                     transition: all .4s ease;
+                  }
                }
             }
 

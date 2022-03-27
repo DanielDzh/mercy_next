@@ -31,14 +31,13 @@
  
 .panel {
    text-align: left;
-   font-family: "Montserrat500";
-   padding: 12px 20px;
-   background-color: #fff;
-   border: 1.5px solid #10a6f9;
-   overflow: hidden;
    max-height: 0;
-   display: none;
-   transition: all 0.4s ease;
+   font-family: "Montserrat500";
+   padding: 0px;
+   background-color: #fff;
+   border: none;
+   overflow: hidden;
+   transition: all .4s;
    margin: 0;
 
    p{
@@ -74,9 +73,12 @@
 }
 
 .activePanel{
-   transition: all 0.4s ease;
-   display: block;
-   max-height: 100%;
+   padding: 12px 20px;
    border-bottom-left-radius: 12px;
+   border: 1.5px solid #10a6f9;
    border-bottom-right-radius: 12px;
+   overflow: hidden;
+   position: relative;
+   transition: max-height 650ms;
+   max-height: 20rem;
 }

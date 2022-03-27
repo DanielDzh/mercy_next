@@ -5,8 +5,6 @@
     background: #ffbc15;
   }
 }
-button{
-}
 .buttonBlue {
   -webkit-appearance: none;
 
@@ -71,23 +69,26 @@ button{
     transition: all 400ms linear;
   }
 
-  &:hover {
-    border: 2px solid #ffbc15;
-    transform: scale(1.05);
-    color: black;
+  @media screen and(min-width: 768px) {
 
-    &:after {
-      border-radius: 13px;
-      position: absolute;
-      content: "";
-      width: 100%;
-      height: 100%;
-      background: #ffbc15;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: -1;
-      transition: all 400ms ease;
+    &:hover {
+      border: 2px solid #ffbc15;
+      transform: scale(1.05);
+      color: black;
+
+      &:after {
+        border-radius: 13px;
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 100%;
+        background: #ffbc15;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: -1;
+        transition: all 400ms ease;
+      }
     }
   }
 }
