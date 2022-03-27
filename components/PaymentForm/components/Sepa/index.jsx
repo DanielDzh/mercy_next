@@ -4,7 +4,7 @@ import { generateClasses } from "../../../../utils/generateClassName";
 import styles from "./Sepa.module.scss";
 import { useClipboard } from 'use-clipboard-copy';
 
-const NAME = "Slovenské združenie 9";
+const NAME = "Slovenske zdruzenie 9";
 const BIC = "TRWIBEB1XXX";
 const IBAN = "BE40 9672 7900 1163";
 const ADRESS = 'Avenue Louise 54, Room S52 Brussels 1050 Belgium';
@@ -51,7 +51,7 @@ export default function Sepa({ disabled, onClick }) {
             <p className={styles.fat}>Account holder name:</p>
             <p style={{ marginBottom: '10px' }} >
                <input ref={clipboardNAME.target} value={NAME} type="hidden" />
-               <button onClick={clipboardNAME.copy}>{clipboardNAME.copied ? 'Copied' : <span>Slovenské združenie 9</span>} <img className={styles.imgCopy} src="images/icons/copy.png" /> </button>
+               <button onClick={clipboardNAME.copy}>{clipboardNAME.copied ? 'Copied' : <span>Slovenske zdruzenie 9</span>} <img className={styles.imgCopy} src="images/icons/copy.png" /> </button>
             </p>
             <p className={styles.fat}>BIC код:</p>
             <p style={{ marginBottom: '10px' }} >

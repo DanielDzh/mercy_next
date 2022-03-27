@@ -4,7 +4,7 @@ import { generateClasses } from "../../../../utils/generateClassName";
 import styles from "./Ach.module.scss";
 import { useClipboard } from 'use-clipboard-copy';
 
-const NAME = "Slovenské združenie 9";
+const NAME = "Slovenske zdruzenie 9";
 const ROUTINGNUMBER = "084009519";
 const ACCOUNTNUMBER = "9600003303286602";
 const ACCOUNTTYPE = "checking";
@@ -55,7 +55,7 @@ export default function Ach({ disabled, onClick }) {
             <p className={styles.fat}>Account holder name:</p>
             <p style={{ marginBottom: '10px' }} >
                <input ref={clipboardNAME.target} value={NAME} type="hidden" />
-               <button onClick={clipboardNAME.copy}>{clipboardNAME.copied ? 'Copied' : <span>Slovenské združenie 9</span>} <img className={styles.imgCopy} src="images/icons/copy.png" /> </button>
+               <button onClick={clipboardNAME.copy}>{clipboardNAME.copied ? 'Copied' : <span>Slovenske zdruzenie 9</span>} <img className={styles.imgCopy} src="images/icons/copy.png" /> </button>
             </p>
             <p className={styles.fat}>Routing Number: </p>
             <p style={{ marginBottom: '10px' }} >

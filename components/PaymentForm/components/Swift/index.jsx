@@ -5,7 +5,7 @@ import { generateClasses } from "../../../../utils/generateClassName";
 import styles from "./Swift.module.scss";
 import { useClipboard } from 'use-clipboard-copy';
 
-const NAME = 'lovenské združenie 9';
+const NAME = 'Slovenske zdruzenie 9';
 const ACCOUNTNUMBER = "8311546446";
 const SWIFT = "CMFGUS33";
 const ADRESS = '19 W 24th Street New York NY 10010 United States';
@@ -52,7 +52,7 @@ export default function Swift({ disabled, onClick }) {
             <p className={styles.fat}>Name:</p>
             <p style={{ marginBottom: '10px' }} >
                <input ref={clipboardNAME.target} value={NAME} type="hidden" />
-               <button onClick={clipboardNAME.copy}>{clipboardNAME.copied ? 'Copied' : <span>lovenské združenie 9</span>} <img className={styles.imgCopy} src="images/icons/copy.png" /> </button>
+               <button onClick={clipboardNAME.copy}>{clipboardNAME.copied ? 'Copied' : <span>Slovenske zdruzenie 9</span>} <img className={styles.imgCopy} src="images/icons/copy.png" /> </button>
             </p>
             <p className={styles.fat}>Account Number: </p>
             <p style={{ marginBottom: '10px' }} >
