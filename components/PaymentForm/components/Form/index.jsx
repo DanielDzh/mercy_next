@@ -16,6 +16,7 @@ import Ach from "../Ach";
 import { useQueryHandlers } from "../../../../hooks/useQueryHanlders";
 import { UNSUBSCRIBE } from "../../../UnsubscribePopup";
 import { PAYMENT_POPUP } from "../..";
+import { useRouter } from "next/router";
 
 export const STRIPE_GATEWAY = "STRIPE";
 export const EEXWALLET_GATEWAY = "EEXWALLET";
@@ -28,6 +29,8 @@ const PRODUCTS = [
 ];
 
 export default function Form({ onSuccess, ongoing }) {
+  const router = useRouter();
+  console.log("🚀 ~ router", window.location);
   const [product, setProduct] = useState({});
   const [disabled, setDisabled] = useState(false);
   const [error, setError] = useState("");
@@ -43,7 +46,13 @@ export default function Form({ onSuccess, ongoing }) {
 
   const sendApiRequest = useCallback(
     (params) =>
-      Api.post("/generate-link", params)
+      Api.post(
+        "/generate-link",
+        Object.assign(params, {
+          successUrl: `${window.location.href}&r=success`,
+          rejectUrl: window.location.origin,
+        })
+      )
         .then((res) => {
           if (res.url) return window.location.replace(res.url);
           if (res.message) return setError(res.message);
