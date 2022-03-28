@@ -20,3 +20,17 @@
 .disabled {
   background-color: $dark-grey;
 }
+
+.paymentIcons{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+} 
+.paymentIcon{
+  display: flex;
+  align-items: center;
+}
+.paymentIcon:not(:first-of-type){
+  margin-left: 5px;
+}
