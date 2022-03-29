@@ -26,6 +26,7 @@ export default function Home({ total, expected }) {
       <Helmet
         customTitle="Mercy Chain"
         description="share_text"
+        image="images/Logo.png"
       />
       <HeroSlider totalAmount={total} expectedAmount={expected} />
       <AboutUs />
