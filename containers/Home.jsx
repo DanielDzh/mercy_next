@@ -25,7 +25,7 @@ export default function Home({ total, expected }) {
     <div>
       <Helmet
         customTitle="Mercy Chain"
-        description={trans("share_text")}
+        description="share_text"
       />
       <HeroSlider totalAmount={total} expectedAmount={expected} />
       <AboutUs />
