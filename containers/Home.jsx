@@ -13,15 +13,19 @@ import Footer from "../components/Footer";
 import { Helmet } from "../components/Helmet";
 import Reviews from "../components/Reviews";
 import { Api } from "../services/api";
+import { useTrans } from "../../hooks/useTrans";
 
 const isNumber = (num) => num !== null && !isNaN(num);
 
 export default function Home({ total, expected }) {
+
+  const { trans } = useTrans();
+
   return (
     <div>
       <Helmet
         customTitle="Mercy Chain"
-        description="Головне завдання благодійного фонду “UNFAILING CHARITY” — забезпечити допомогу та матеріальну підтримку найбільш потребуючого населення потребуючих країн. "
+        description={trans("share_text")}
       />
       <HeroSlider totalAmount={total} expectedAmount={expected} />
       <AboutUs />
