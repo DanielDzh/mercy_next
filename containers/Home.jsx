@@ -13,7 +13,7 @@ import Footer from "../components/Footer";
 import { Helmet } from "../components/Helmet";
 import Reviews from "../components/Reviews";
 import { Api } from "../services/api";
-import { useTrans } from "../../hooks/useTrans";
+import { useTrans } from "../hooks/useTrans";
 
 const isNumber = (num) => num !== null && !isNaN(num);
 
