@@ -14,11 +14,11 @@ export const Helmet = ({
     "project-title"
   )}`;
   const descr = `${customDescription
-      ? customDescription
-      : trans(description ? description : "default-description")
+    ? customDescription
+    : trans(description ? description : "default-description")
     }`;
   const imageSrc = image ? image : null;
-
+  console.log(descr);
   return (
     <HelmetComponent>
       <title>{tabTitle}</title>
