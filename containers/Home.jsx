@@ -14,6 +14,7 @@ import { Helmet } from "../components/Helmet";
 import Reviews from "../components/Reviews";
 import { Api } from "../services/api";
 import { useTrans } from "../hooks/useTrans";
+import VideoBlock from "../components/VideoBlock";
 
 const isNumber = (num) => num !== null && !isNaN(num);
 
@@ -29,6 +30,7 @@ export default function Home({ total, expected }) {
         image="images/Logo.png"
       />
       <HeroSlider totalAmount={total} expectedAmount={expected} />
+      <VideoBlock />
       <AboutUs />
       <OurMission />
       <OurValues />

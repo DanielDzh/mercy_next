@@ -18,7 +18,6 @@ export const Helmet = ({
     : trans(description ? description : "default-description")
     }`;
   const imageSrc = image ? image : null;
-  console.log(descr);
   return (
     <HelmetComponent>
       <title>{tabTitle}</title>
