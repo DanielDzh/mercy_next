@@ -66,8 +66,8 @@ export default function HeroSlider({ totalAmount, expectedAmount }) {
   };
 
   const settings = {
-    arrows: true,
-    dots: true,
+    arrows: false,
+    dots: false,
     infinite: true,
     autoplay: true,
     autoplaySpeed: 0,
