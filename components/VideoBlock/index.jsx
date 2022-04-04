@@ -21,13 +21,13 @@ export default function VideoBlock() {
             <div className={styles["video_block_wrapper"]}>
                <div className={styles["video_text"]}>
                   <h1 className={styles["text_h1_white"]}>
-                     Як працює
+                     {trans("how_is_work")}
                   </h1>
                   <h1 className={styles["text_h1_yellow"]}>
                      Mercy Chain
                   </h1>
                   <p className={styles["text_p"]}>
-                     Перегляньте відео, щоб детальніше ознайомитись із роботою нашого фонду.
+                     {trans("watching_video")}
                   </p>
                </div>
                <div className={styles["video_image_wrapper"]} style={{ background: `url("images/backVideo.png") no-repeat 100% 100%/contain` }}>
@@ -39,10 +39,8 @@ export default function VideoBlock() {
             {visibleVideo ?
                <div className={styles["video_container"]}>
                   <div className={styles["close_video"]} onClick={() => setVisibleVideo(false)}></div>
-                  <video loop controls preload="auto" className={styles.video}>
-                     <source type="video/mp4" src="videos/cleap.mp4" />
-                     <source type="video/webm" src="videos/forest.webm" />
-                  </video>
+                  <iframe width="560" height="315" className={styles.video} src="https://www.youtube.com/embed/Z6oAxqEjzjs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                  </iframe>
                </div>
                : ""}
          </div>

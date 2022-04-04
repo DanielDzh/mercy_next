@@ -105,6 +105,9 @@ export default function Header() {
           <span></span>
           <Language />
         </div>
+        <div className={styles["mobile_lang"]}>
+          <Language />
+        </div>
         <div className={styles["burger"]} >
           <div className={menuActive ? `${styles.header_burger} ${styles.active}` : styles["header_burger"]} onClick={() => setMenuActive(!menuActive)}>
             <span></span>
