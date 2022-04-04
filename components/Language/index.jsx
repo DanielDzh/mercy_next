@@ -49,10 +49,16 @@ const Language = ({ colorTitle }) => {
       <div className={styles["sec_center"]} ref={textInput}>
         <label className={styles["for_dropdown"]} onClick={() => setState(!state)}>
           {languages.map((item, index) => item.code === change ? <img className={styles.imgLang} key={index} src={item.image} /> : '')}
-          <img style={{ transform: state ? "rotate(180deg)" : "rotate(0deg)" }} loading="lazy" src="images/icons/arrowDown.png" className={styles.uil} alt="" />
+          <img style={{ transform: state ? "rotate(180deg)" : "rotate(0deg)" }} loading="lazy" src="images/icons/arrowDown.png" className={styles["uil_desc"]} alt="" />
+          <img style={{ transform: state ? "rotate(180deg)" : "rotate(0deg)" }} loading="lazy" src="images/icons/arrowRight.png" className={styles["uil_mobile"]} alt="" />
         </label>
 
-        <div className={styles["section_dropdown"]} style={{ opacity: state ? 1 : 0, transform: state ? "translateY(0px)" : "translateY(20px)" }}>
+        <div className={styles["section_dropdown_desc"]} style={{ opacity: state ? 1 : 0, transform: state ? "translateY(0px)" : "translateY(20px)" }}>
+          {languages.map(({ code, name, countryCode }) => (
+            <a className={styles["a"]} href="#" key={countryCode} onClick={() => changeLang(code)}>{name}</a>
+          ))}
+        </div>
+        <div className={styles["section_dropdown_mobile"]} style={{ opacity: state ? 1 : 0, transform: state ? "translateX(0px)" : "translateX(20px)" }}>
           {languages.map(({ code, name, countryCode }) => (
             <a className={styles["a"]} href="#" key={countryCode} onClick={() => changeLang(code)}>{name}</a>
           ))}

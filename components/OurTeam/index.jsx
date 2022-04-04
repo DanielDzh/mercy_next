@@ -115,12 +115,11 @@ export default function OurTeam() {
       facebook: "https://www.facebook.com/pryhodkoolia",
     },
     {
-      photo: "images/DavidPolohov.png",
-      name: trans("David_Polohov"),
-      profession: trans("David_Polohov_spec"),
-      telegram: "https://t-do.ru/@Maksimalniy",
-      instagram: "https://instagram.com/david_polokhov?utm_medium=copy_link",
-      facebook: "https://www.facebook.com/profile.php?id=100006714226042",
+      photo: "images/SergiiRubak.png",
+      name: trans("Sergii_Rubak"),
+      profession: trans("Sergii_Rubak_spec"),
+      telegram: "https://t-do.ru/@SerhiiRybak",
+      instagram: "https://instagram.com/se_rybak?utm_medium=copy_link"
     },
     {
       photo: "images/SofiaPonomareva.png",
