@@ -161,7 +161,6 @@ const Menu = ({ active, setActive }) => {
                   <img loading="lazy" src="images/iconTelegramYellow.png" alt="" className={styles["lang_img"]} />
                </a>
             </div>
-            <Language />
 
 
          </div>
