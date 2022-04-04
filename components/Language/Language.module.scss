@@ -95,7 +95,7 @@
   }
 
   @media screen and(max-width: 425px) {
-    width: 17px;
+    width: 19px;
   }
 }
 
@@ -124,11 +124,9 @@
   top: 50px;
   right: 0;
   border-radius: 16px;
-  pointer-events: auto;
   box-shadow: 0 14px 35px 0 rgba(9, 9, 12, 0.4);
   z-index: 2;
   opacity: 1;
-  pointer-events: none;
   transform: translateY(20px);
   transition: all 200ms linear;
 
