@@ -51,12 +51,12 @@ export default function OurTeam() {
       facebook: "",
     },
     {
-      photo: "images/MaksSigua.png",
-      name: trans("Maxym_Sihua"),
-      profession: trans("Maxym_Sihua_spec"),
-      telegram: "https://t-do.ru/@TargetMediaG",
-      instagram: "https://instagram.com/max.sihua?utm_medium=copy_link",
-      facebook: "https://www.facebook.com/max.sihua",
+      photo: "images/Chrystya.png",
+      name: trans("Krystyna_Tkachuk"),
+      profession: trans("Krystyna_Tkachuk_spec"),
+      telegram: "https://t-do.ru/@hrystichka",
+      instagram: "https://instagram.com/hrystichka?utm_medium=copy_link",
+      facebook: "https://www.facebook.com/profile.php?id=100017174077914",
     },
     {
       photo: "images/DariaTitarchuk.png",
@@ -136,14 +136,6 @@ export default function OurTeam() {
       telegram: "https://t-do.ru/@stton",
       instagram: "https://instagram.com/zoltan.i?utm_medium=copy_link",
       facebook: "https://www.facebook.com/profile.php?id=100002106721100",
-    },
-    {
-      photo: "images/Chrystya.png",
-      name: trans("Krystyna_Tkachuk"),
-      profession: trans("Krystyna_Tkachuk_spec"),
-      telegram: "https://t-do.ru/@hrystichka",
-      instagram: "https://instagram.com/hrystichka?utm_medium=copy_link",
-      facebook: "https://www.facebook.com/profile.php?id=100017174077914",
     }
   ];
 

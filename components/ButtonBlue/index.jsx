@@ -12,18 +12,14 @@ export default function ButtonBlue({
 }) {
   return (
     <div
-      className={generateClasses(styles.heroButton, className)}
+      className={generateClasses(
+        styles.buttonBlue, className,
+        loading ? styles.loading : ""
+      )}
       onClick={click}
+      {...rest}
     >
-      <div
-        className={generateClasses(
-          styles.buttonBlue,
-          loading ? styles.loading : ""
-        )}
-        {...rest}
-      >
-        {title}
-      </div>
+      {title}
     </div>
   );
 }
