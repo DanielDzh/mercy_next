@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import { RWebShare } from "react-web-share";
 import { useTrans } from "../hooks/useTrans";
 
-const Example = ({ children }) => {
+const Example = ({ children, styles }) => {
    const { trans } = useTrans();
    return (
-      <div>
+      <div style={styles}>
          <RWebShare
             data={{
                text: trans("poem"),
