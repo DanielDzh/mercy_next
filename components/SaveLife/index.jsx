@@ -50,7 +50,7 @@ export default function SaveLife() {
           </div>
 
           <div className={styles["button-save-mobile"]}>
-            <Example>
+            <Example styles={{ width: '100%' }}>
               <ButtonBlueBorder title={trans("save_life_button_border")} />
             </Example>
             <ButtonBlue title={trans("save_life_button")} click={onOpen} />

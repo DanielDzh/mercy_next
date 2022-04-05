@@ -40,30 +40,6 @@ export default function HeroSlider({ totalAmount, expectedAmount }) {
   const { isOpened: isUnsibscribeOpen, onClose: onUnsubscribeClose } =
     useQueryHandlers(PAYMENT_POPUP, UNSUBSCRIBE);
 
-  const SamplePrevArrow = (props) => {
-    const { className, style, onClick } = props;
-    return (
-      <div
-        className={className}
-        style={{ ...style, display: "none" }}
-        onClick={onClick}
-      >
-        <FaLongArrowAltLeft />
-      </div>
-    );
-  };
-  const SampleNextvArrow = (props) => {
-    const { className, style, onClick } = props;
-    return (
-      <div
-        className={className}
-        style={{ ...style, display: "none" }}
-        onClick={onClick}
-      >
-        <FaLongArrowAltRight />
-      </div>
-    );
-  };
 
   const settings = {
     arrows: false,
@@ -75,9 +51,7 @@ export default function HeroSlider({ totalAmount, expectedAmount }) {
     speed: 10000,
     slidesToShow: 1,
     slidesToScroll: 1,
-    padding: 20,
-    prevArrow: <SamplePrevArrow />,
-    nextArrow: <SampleNextvArrow />,
+    padding: 20
   };
   return (
     <>
@@ -152,6 +126,7 @@ export default function HeroSlider({ totalAmount, expectedAmount }) {
                   activeClass="active"
                   spy={false}
                   offset={5}
+                  style={{ width: '100%' }}
                 >
                   <ButtonBlueBorder
                     title={trans("slider_button_blue_border")}
