@@ -1,417 +1,114 @@
-.slider-area {
-  .slider-activator {
+.hero {
+  height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .hero_container {
     position: relative;
-    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 2vw 15vw;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100%;
+    max-height: 800px;
+    width: 100%;
 
-    .container-slider {
-      z-index: 2;
-      height: 100%;
-      width: 100%;
+    @media screen and (max-width: 1024px) {
+      padding: 2vw 12vw;
+      height: 80%;
+    }
 
-      @media screen and (max-width: 600px) {
-        padding: 20px;
-        padding-top: 15px;
+    @media screen and (max-width: 610px) {
+      padding: 2vw 9vw;
+    }
 
+    @media screen and (max-width: 500px) {
+      padding: 2vw 4vw;
+    }
+
+    @media screen and (max-width: 375px) {
+      padding: 2vw 4vw;
+    }
+
+
+    .hero_abs {
+      position: absolute;
+      top: 14vh;
+      right: 65vh;
+      display: flex;
+
+      @media screen and (max-width: 1024px) {
+        top: 6vh;
+        right: 55vh;
       }
 
-      @media screen and (max-width: 450px) {
-        padding: 15px;
-        padding-top: 15px;
-
-      }
-
-      .content-hero {
-        justify-content: center;
+      .hero_abs_text {
+        padding: 10px 14px;
+        border: 1px solid #FFFFFF;
+        border-radius: 10px;
         display: flex;
         flex-direction: column;
-        align-items: center;
-        height: 100%;
 
-        .hero-logo {
-          display: flex;
-          justify-content: center;
-
-          @media screen and (max-width: 1024px) {
-            width: 25vw;
-          }
-
-          @media screen and (max-width: 600px) {
-            width: 53vw;
-            margin-top: 10vw;
-          }
-
-          img {
-            width: 65%;
-          }
+        p,
+        h2 {
+          margin: 0;
+          font-family: 'Montserrat400';
+          font-size: 16.5772px;
+          line-height: 126%;
+          color: #FFFFFF;
         }
 
-        .hero-text {
-          margin-top: 2vh;
-          text-align: center;
-          max-width: 70%;
-
-          @media screen and (max-width: 600px) {
-            max-width: 100%;
-          }
-
-          @media screen and (max-width: 375px) {
-            margin-top: 4vh;
-          }
-
-          h1 {
-            font-family: "Montserrat800";
-            font-weight: 100;
-            // font-size: 5.715rem;
-            font-size: 8.5vw;
-            line-height: 10vw;
-            color: #ffffff;
-
-            @media screen and (max-width: 900px) {
-              font-size: 7vw;
-            }
-
-            @media screen and (max-width: 600px) {
-              font-size: 45px;
-              line-height: 55px;
-            }
-
-          }
-
-          h2 {
-            font-family: "Montserrat700";
-            // max-width: 70%;
-            margin: 0 auto;
-            font-weight: bold;
-            font-size: 2.5vw;
-            line-height: 43px;
-            color: #ffffff;
-
-            @media screen and (max-width: 1024px) {
-              line-height: 33px;
-            }
-
-            @media screen and (max-width: 900px) {
-              font-size: 22px;
-              line-height: 33px;
-            }
-
-            @media screen and (max-width: 600px) {
-              font-size: 20px;
-              line-height: 130%;
-            }
-
-            // @media screen and (max-width: 375px){
-            //   font-size: 16px;
-            //   line-height: 21px;
-            // }
-
-            span {
-              color: #ffbc15;
-            }
-          }
-
-          p {
-            font-family: "Montserrat400";
-            margin-top: 1.5rem;
-            font-size: 1.6vw;
-            line-height: 23px;
-            letter-spacing: 0.03em;
-            color: #ffffff;
-
-            @media screen and (max-width: 600px) {
-              font-size: 14px;
-              margin: 3.5vw auto;
-              line-height: 154%;
-            }
-
-            // @media screen and (max-width: 375px){
-            //   font-size: 3vw;
-            //   line-height: 14px;
-            // }
-
-            span {
-              font-family: "Montserrat700";
-              font-weight: bold;
-              color: #ffffff;
-            }
-          }
-
-          // p:last-of-type{
-          //   letter-spacing: 0.02em;
-          //   color: #aaaaaa;
-          // }
-        }
-
-        .hero-progress {
-          font-family: "Montserrat800";
-          width: 100%;
-          margin-top: 12vh;
-
-          #myProgress {
-            width: 40%;
-            background-color: rgb(160, 157, 157);
-            margin: 0 auto;
-            position: relative;
-
-            @media screen and (max-width: 600px) {
-              width: 95%;
-            }
-
-            .thirty-circle {
-              width: 1.8vh;
-              height: 1.8vh;
-              background: rgb(160, 157, 157);
-              border-radius: 26px;
-              position: absolute;
-              right: -0.3vh;
-              top: -0.7vh;
-
-              @media screen and (max-width: 375px) {
-                width: 1.5vh;
-                height: 1.5vh;
-                top: -.6vh;
-              }
-
-            }
-
-            .thirty-price {
-              position: absolute;
-              top: 2vh;
-              right: -30px;
-              font-size: 20px;
-              line-height: 25px;
-              text-align: center;
-              color: #ffffff;
-
-              @media screen and (max-width: 900px) {
-                font-size: 18px;
-              }
-
-              @media screen and (max-width: 768px) {
-                font-size: 14px;
-              }
-
-              @media screen and (max-width: 600px) {
-                font-size: 13px;
-                right: -5px;
-              }
-
-              @media screen and (max-width: 375px) {
-                top: 1.5vh;
-                // font-size: 13px;
-                line-height: 19px;
-              }
-            }
-          }
-
-          #myBar {
-            width: 20%;
-            height: 3px;
-            background-color: #ffbc15;
-            position: relative;
-
-            @media screen and (max-width: 425px) {
-              height: 2px;
-            }
-
-            .first-price {
-              position: absolute;
-              top: 2vh;
-              left: 0px;
-              font-size: 20px;
-              line-height: 25px;
-              text-align: center;
-              color: #ffffff;
-
-              @media screen and (max-width: 900px) {
-                font-size: 18px;
-              }
-
-              @media screen and (max-width: 768px) {
-                font-size: 14px;
-              }
-
-              @media screen and (max-width: 600px) {
-                font-size: 13px;
-              }
-
-              @media screen and (max-width: 375px) {
-                top: 1.5vh;
-                left: -1px;
-                // font-size: 11px;
-                line-height: 18px;
-              }
-            }
-
-            .second-price {
-              position: absolute;
-              top: -5vh;
-              right: -35px;
-              font-size: 20px;
-              line-height: 25px;
-              text-align: center;
-              color: #ffffff;
-
-              @media screen and (max-width: 900px) {
-                font-size: 18px;
-              }
-
-              @media screen and (max-width: 768px) {
-                top: -5vh;
-                right: -20px;
-                font-size: 14px;
-              }
-
-              @media screen and (max-width: 600px) {
-                font-size: 13px;
-                right: -35px;
-              }
-
-              @media screen and (max-width: 375px) {
-                top: -3.5vh;
-                line-height: 18px;
-              }
-            }
-
-            .first-circle {
-              width: 1.8vh;
-              height: 1.8vh;
-              background: #ffbc15;
-              border-radius: 26px;
-              position: absolute;
-              left: -0.3vh;
-              top: -0.7vh;
-
-              @media screen and (max-width: 375px) {
-                width: 1.5vh;
-                height: 1.5vh;
-                top: -.6vh;
-              }
-            }
-
-            .second-circle {
-              width: 2.5vh;
-              height: 2.5vh;
-              background: #ffbc15;
-              border-radius: 26px;
-              position: absolute;
-              right: 0;
-              top: -1.1vh;
-              box-shadow: 0px 5px 30px #ffbc15;
-
-              @media screen and (max-width: 375px) {
-                width: 1.5vh;
-                height: 1.5vh;
-                top: -.6vh;
-              }
-            }
-          }
-        }
-
-        .hero-buttons {
-          // margin-bottom: 10vw;
-          margin-top: 10vh;
-          display: flex;
-
-          .link {
-            text-decoration: none;
-            margin-right: 15px;
-          }
-
-          @media screen and (max-width:600px) {
-            align-items: center;
-            width: 100%;
-            justify-content: center;
-
-            .link {
-              margin-right: 10px;
-            }
-          }
-
-          @media screen and (max-width: 374px) {
-            flex-direction: column;
-            align-items: center;
-            width: 100%;
-
-            a {
-              margin-bottom: 10px;
-              margin-right: 0;
-              width: 100%;
-            }
-
-            div {
-              width: 100%;
-            }
-
-            .link {
-              margin-right: 0;
-            }
-          }
-
-
+        h2 {
+          color: #FFBC15;
+          font-size: 18px;
         }
       }
-    }
 
-    .hero-slider {
-      height: 100%;
-      width: 100%;
-      position: absolute;
-      top: 0;
-      z-index: -2;
+      .hero_abs_line {
+        height: 100px;
+        right: -55px;
+        top: 25px;
+        position: absolute;
 
-      @media screen and (max-width:600px) {
-        display: none;
-      }
-
-      div {
-        height: 100%;
-      }
-
-      .container_back_photo {
-        position: relative;
-        height: 100vh;
-
-        .wrapp_back_photo {
-          position: absolute;
-          width: 100%;
+        img {
           height: 100%;
-
-          .under_back_photo {
-            position: absolute;
-            height: 100%;
-            width: 100%;
-            background: radial-gradient(92.07% 50% at 50% 50%,
-                rgba(15, 29, 43, 0.28) 0%,
-                #0f1d2b 100%),
-              rgba(15, 29, 43, 0.56);
-          }
-
-          .back_photo {
-            object-fit: cover;
-            height: 100%;
-            width: 100%;
-          }
         }
       }
     }
 
-    .hero_photo_mobile {
-      height: 100vh;
-      width: 100%;
-      position: absolute;
-      top: 0;
-      z-index: -2;
-      display: none;
+    .hero_text {
 
-      img {
-        height: 100%;
-        width: 100%;
-        object-fit: cover;
+      .hero_title {
+
+        h1 {
+          margin-bottom: 3px;
+          font-family: "Montserrat700";
+          font-size: 3vw;
+          color: #FFFFFF;
+
+          span:first-of-type {
+            padding: .3vw 1vw;
+            background-color: #10A6F9;
+            color: #0F1D2B;
+          }
+
+          span:last-of-type {
+            padding: .3vw 1vw;
+            background-color: #FFBC15;
+            color: #0F1D2B;
+          }
+        }
       }
 
-      @media screen and(max-width: 500px) {
-        display: block;
+      p {
+        width: 80%;
+        margin: 20px 0 40px 0;
+        font-family: "Montserrat700";
+        font-size: 1vw;
+        color: #FFFFFF;
+
       }
     }
   }
