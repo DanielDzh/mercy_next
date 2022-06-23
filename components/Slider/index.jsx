@@ -1,6 +1,5 @@
 import Image from "next/image";
 import React from "react";
-import { FaLongArrowAltLeft, FaLongArrowAltRight } from "react-icons/fa";
 import { Link } from "react-scroll";
 import Slider from "react-slick";
 import { usePaymentPopup } from "../../hooks/usePaymentPopup";
