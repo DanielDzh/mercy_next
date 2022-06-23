@@ -16,9 +16,20 @@
       justify-content: center;
       align-items: center;
 
+      .logo {
+         width: 120px;
+
+         img {
+            height: 100%;
+            width: 100%;
+         }
+
+         @media screen and(max-width: 1024px) {
+            margin-right: 30px;
+         }
+      }
 
       .header_links {
-         flex-grow: 1;
          display: flex;
          justify-content: center;
          margin-left: 3vw;
@@ -32,7 +43,7 @@
             cursor: pointer;
             font-family: 'Montserrat600';
             font-style: normal;
-            font-size: 14px;
+            font-size: 12px;
             line-height: 17px;
             text-align: center;
             letter-spacing: 0.03em;
@@ -86,7 +97,7 @@
             display: block;
             height: 30px;
             width: 1px;
-            background-color: #fff;
+            background-color: #223E5A;
             margin-left: 25px;
          }
       }

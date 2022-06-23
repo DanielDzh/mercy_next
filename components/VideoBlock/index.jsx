@@ -16,23 +16,23 @@ export default function VideoBlock() {
    const { trans } = useTrans();
 
    return (
-      <div id="">
+      <div id="aboutUs">
          <div className={styles["video_block_container"]}>
             <div className={styles["video_block_wrapper"]}>
+               <div className={styles["video_image_wrapper"]}>
+                  <img className={styles["image_video"]} src="images/backVideo.png" alt="" />
+                  <img className={styles["button_play"]} src="images/buttonPlay.png" alt="" onClick={() => setVisibleVideo(true)} />
+               </div>
                <div className={styles["video_text"]}>
                   <h1 className={styles["text_h1_white"]}>
                      {trans("how_is_work")}
                   </h1>
                   <h1 className={styles["text_h1_yellow"]}>
-                     Mercy Chain
+                     {trans("how_it_work_2")}
                   </h1>
                   <p className={styles["text_p"]}>
                      {trans("watching_video")}
                   </p>
-               </div>
-               <div className={styles["video_image_wrapper"]} style={{ background: `url("images/backVideo.png") no-repeat 100% 100%/contain` }}>
-                  <img className={styles["image_video"]} src="images/imageVideo.png" alt="" />
-                  <img className={styles["button_play"]} src="images/buttonPlay.png" alt="" onClick={() => setVisibleVideo(true)} />
                </div>
 
             </div>

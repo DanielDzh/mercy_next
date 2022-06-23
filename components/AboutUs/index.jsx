@@ -1,5 +1,4 @@
 import React from "react";
-import SectionTitle from "../SectionTitle";
 import CustomList from "../CustomList";
 import styles from "./AboutUs.module.scss";
 import ButtonBlue from "../ButtonBlue";
@@ -16,32 +15,79 @@ export default function AboutUs() {
   return (
     <>
       <PaymentForm open={open} onClose={onClose} />
-      <div id="aboutUs">
-        <div className={styles["aboutUs-container"]}>
-          <div className={styles["aboutUs-img"]}>
-            <img loading="lazy" src="images/we.png" alt="" className={styles["aboutUs-img-img"]} />
-            <div className={styles["aboutUs_desc_tablet"]}>
-              <SectionTitle
-                title={trans("aboutUs_title")}
-                desc={trans("aboutUs_desc_under_title")}
-              />
-              <CustomList />
+      <div id="minutiae">
+        <div className={styles["aboutUs_container"]}>
+          <h1 className={styles["aboutUs_title"]}>
+            {trans('aboutUs_title')}
+            <span>{trans('aboutUs_title_2')}</span>
+          </h1>
+
+          <div className={styles["aboutUs_blocks"]}>
+            <div className={styles["aboutUs_block"]}>
+              <div className={styles["aboutUs_block_img"]}>
+                <img src="images/vestInWork/img_1.png" alt="" />
+              </div>
+              <h2 className={styles["aboutUs_block_h2"]}>
+                {trans('armored_plate')}
+              </h2>
+              <p className={styles["aboutUs_block_p"]}>
+                {trans('armored_plate_desc')}
+              </p>
             </div>
-          </div>
-          <div className={styles["aboutUs-info"]}>
-            <div className={styles["aboutUs_desc_desktop"]}>
-              <SectionTitle
-                title={trans("aboutUs_title")}
-                desc={trans("aboutUs_desc_under_title")}
-              />
-              <CustomList />
+            <div className={styles["aboutUs_block"]}>
+              <div className={styles["aboutUs_block_img"]}>
+                <img src="images/vestInWork/img_2.png" alt="" />
+              </div>
+              <h2 className={styles["aboutUs_block_h2"]}>
+                {trans('splinter_proof')}
+              </h2>
+              <p className={styles["aboutUs_block_p"]}>
+                {trans('splinter_proof_desc')}
+              </p>
             </div>
-            <img loading="lazy" src="images/we_mobile.png" alt="" className={styles["aboutUs-img-mobile"]} />
-            <p>
-              {trans("aboutUs_desc_under")}
-            </p>
-            <div className={styles["aboutUs-buttons"]}>
-              <ButtonBlue title={trans("aboutUs_button")} click={onOpen} />
+            <div className={styles["aboutUs_block"]}>
+              <div className={styles["aboutUs_block_img"]}>
+                <img src="images/vestInWork/img_3.png" alt="" />
+              </div>
+              <h2 className={styles["aboutUs_block_h2"]}>
+                {trans('internal_coating')}
+              </h2>
+              <p className={styles["aboutUs_block_p"]}>
+                {trans('internal_coating_desc')}
+              </p>
+            </div>
+            <div className={styles["aboutUs_block"]}>
+              <div className={styles["aboutUs_block_img"]}>
+                <img src="images/vestInWork/img_4.png" alt="" />
+              </div>
+              <h2 className={styles["aboutUs_block_h2"]}>
+                {trans('plate_carrier')}
+              </h2>
+              <p className={styles["aboutUs_block_p"]}>
+                {trans('plate_carrier_desc')}
+              </p>
+            </div>
+            <div className={styles["aboutUs_block"]}>
+              <div className={styles["aboutUs_block_img"]}>
+                <img src="images/vestInWork/img_5.png" alt="" />
+              </div>
+              <h2 className={styles["aboutUs_block_h2"]}>
+                {trans('testing_of')}
+              </h2>
+              <p className={styles["aboutUs_block_p"]}>
+                {trans('testing_of_desc')}
+              </p>
+            </div>
+            <div className={styles["aboutUs_block"]}>
+              <div className={styles["aboutUs_block_img"]}>
+                <img src="images/vestInWork/img_6.png" alt="" />
+              </div>
+              <h2 className={styles["aboutUs_block_h2"]}>
+                {trans('system_of_urgent')}
+              </h2>
+              <p className={styles["aboutUs_block_p"]}>
+                {trans('system_of_urgent_desc')}
+              </p>
             </div>
           </div>
         </div>

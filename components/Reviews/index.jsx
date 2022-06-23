@@ -3,13 +3,57 @@ import Slider from "react-slick";
 import styles from "./Reviews.module.scss";
 import ButtonBlue from "../ButtonBlue";
 import { useTrans } from "../../hooks/useTrans";
+import { Link } from "react-scroll";
 
 const sliderPaths = [
-   "images/reviews/review1.jpg",
-   "images/reviews/review2.jpg",
-   "images/reviews/review3.jpg",
-   "images/reviews/review4.jpg",
-   "images/reviews/review5.jpg",
+   {
+      date: '14 квітня',
+      amount: '60 бронежелетів',
+      city: 'м.Харків',
+      img: "images/reviews/reviews.png",
+   },
+   {
+      date: '14 квітня',
+      amount: '60 бронежелетів',
+      city: 'м.Харків',
+      img: "images/reviews/reviews.png",
+   },
+   {
+      date: '14 квітня',
+      amount: '60 бронежелетів',
+      city: 'м.Харків',
+      img: "images/reviews/reviews.png",
+   },
+   {
+      date: '14 квітня',
+      amount: '60 бронежелетів',
+      city: 'м.Харків',
+      img: "images/reviews/reviews.png",
+   },
+   {
+      date: '14 квітня',
+      amount: '60 бронежелетів',
+      city: 'м.Харків',
+      img: "images/reviews/reviews.png",
+   },
+   {
+      date: '14 квітня',
+      amount: '60 бронежелетів',
+      city: 'м.Харків',
+      img: "images/reviews/reviews.png",
+   },
+   {
+      date: '14 квітня',
+      amount: '60 бронежелетів',
+      city: 'м.Харків',
+      img: "images/reviews/reviews.png",
+   },
+   {
+      date: '14 квітня',
+      amount: '60 бронежелетів',
+      city: 'м.Харків',
+      img: "images/reviews/reviews.png",
+   }
 ];
 const count = sliderPaths.lenght;
 export default function Reviews() {
@@ -21,7 +65,7 @@ export default function Reviews() {
       return (
          <div
             className={className}
-            style={{ ...style, cursor: 'pointer', display: "flex", justifyContent: 'center', alignItems: 'center', position: 'absolute', left: '40%', bottom: '0%', width: '3vw', height: '3vw', padding: '.8vw', borderRadius: '50px', backgroundColor: 'unset', opacity: .5, zIndex: 2 }}
+            style={{ ...style, cursor: 'pointer', display: "flex", justifyContent: 'center', alignItems: 'center', position: 'absolute', left: '37%', bottom: '0%', height: '3vw', padding: '.8vw', borderRadius: '50px', backgroundColor: 'unset', zIndex: 2 }}
             onClick={onClick}
          >
             <img loading="lazy" style={{ width: '100%', height: '100%' }} src="images/icons/back.png" alt="" />
@@ -33,7 +77,7 @@ export default function Reviews() {
       return (
          <div
             className={className}
-            style={{ ...style, cursor: 'pointer', display: "flex", justifyContent: 'center', alignItems: 'center', position: 'absolute', right: '40%', bottom: '0%', width: '3vw', height: '3vw', padding: '.8vw', borderRadius: '50px', backgroundColor: 'unset', opacity: .5 }}
+            style={{ ...style, cursor: 'pointer', display: "flex", justifyContent: 'center', alignItems: 'center', position: 'absolute', right: '37%', bottom: '0%', height: '3vw', padding: '.8vw', borderRadius: '50px', backgroundColor: 'unset' }}
             onClick={onClick}
          >
             <img loading="lazy" style={{ width: '100%', height: '100%' }} src="images/icons/next.png" alt="" />
@@ -43,10 +87,9 @@ export default function Reviews() {
 
    const settings = {
       className: "center",
-      centerMode: true,
       infinite: true,
       centerPadding: "60px",
-      slidesToShow: 3,
+      slidesToShow: 5,
       speed: 300,
       arrows: true,
       dots: true,
@@ -85,7 +128,7 @@ export default function Reviews() {
          <a>
             <div className={styles["custom_paging"]}
                style={{
-                  backgroundColor: `${i === activeSlide ? '#ffbc15' : "#525252"}`,
+                  backgroundColor: `${i === activeSlide ? '#10A6F9' : "#525252"}`,
                   // boxShadow: `${i === activeSlide ? '0px 0px 7px rgb(255 188 21 / 50%)' : "0px 0px 7px rgb(16 166 249 / 30%)"}`,
 
                }}
@@ -103,25 +146,64 @@ export default function Reviews() {
    const { trans } = useTrans();
 
    return (
-      <div id="Reviews">
+      <div id="reviews">
          <div className={styles["reviews_container"]}>
-            <h1 className={styles["reviews_title"]}>
-               {trans("reviews_title")}
-            </h1>
+            <div className={styles["reviews_title"]}>
+
+               <h1 className={styles["reviews_title_h1"]}>
+                  {trans("reviews_title")}
+               </h1>
+               <p className={styles["reviews_title_p"]}>
+                  {trans("reviews_title_2")}
+               </p>
+               <div className={styles["reviews_title_block"]}>
+                  <span className={styles["reviews_title_block_span_yellow"]}>85 </span>
+                  <span>комплексів на суму </span>
+                  <span className={styles["reviews_title_block_span_yellow"]}>18700 </span>
+                  <span>USD</span>
+               </div>
+            </div>
             <div className={styles["reviews_slider"]}>
                <Slider {...settings}>
-                  {sliderPaths.map((p, index) => (
+                  {sliderPaths.map((item, index) => (
                      <div className={styles["slider_wrapp"]} key={index + 1}>
-                        <img loading="lazy"
-                           className={`${styles['reviews_slide']} ${activeSlide === index ? styles["slide_center"] : styles["slide_not_center"]}`}
-                           // className={`${styles['reviews_slide']} ${activeSlide === index ? styles["slide_center"] : activeSlide === index + 1 ? styles["slide_after_slide"] : index === count ? styles["slide_before_slide"] : styles["slide_not_center"]}`}
-                           src={p}
-                           alt=""
-                        />
+                        <div className={styles["slider_wrapp_img"]}>
+                           <img loading="lazy"
+                              className={styles['reviews_slide']}
+                              src={item.img}
+                              alt=""
+                           />
+                        </div>
+                        <div className={styles["slide_desc"]}>
+                           <div className={styles["slide_desc_cont"]}>
+                              <img src="images/icons/date.png" alt="" />
+                              <p>{item.date}</p>
+                           </div>
+                           <div className={styles["slide_desc_cont"]}>
+                              <img src="images/icons/amount.png" alt="" />
+                              <p>{item.amount}</p>
+                           </div>
+                           <div className={styles["slide_desc_cont"]}>
+                              <img src="images/icons/city.png" alt="" />
+                              <p>{item.city}</p>
+                           </div>
+                        </div>
                      </div>
                   ))}
                </Slider>
             </div>
+
+            <Link
+               className={styles["link"]}
+               to="details"
+               smooth={true}
+               duration={2000}
+               activeClass="active"
+               spy={false}
+               offset={5}
+            >
+               <ButtonBlue title={trans("slider_button_blue")} />
+            </Link>
          </div>
       </div>
    );
