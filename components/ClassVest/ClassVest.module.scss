@@ -1,0 +1,127 @@
+#levels {
+
+
+   .levels_of_dody_container {
+      padding: 5vw 15vw;
+      width: 100%;
+      background: #0F1D2B;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      @media screen and (max-width: 768px) {
+         flex-direction: column;
+      }
+
+      @media screen and (max-width: 600px) {
+         padding: 55px 40px;
+      }
+
+      @media screen and (max-width: 450px) {
+         padding: 45px 20px;
+      }
+
+
+      .levels_of_dody_title {
+         font-family: 'Montserrat700';
+         font-size: 3.5vw;
+         line-height: 130.2%;
+         text-align: center;
+         color: #fff;
+         margin-bottom: 40px;
+
+         span {
+            padding: .3vw 1vw;
+            background-color: #10A6F9;
+            color: #0F1D2B;
+         }
+      }
+
+      .levels_of_dody_body {
+         display: flex;
+         align-items: center;
+
+         .images_vest {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 70%;
+
+
+            .images_vest_rating {
+               display: flex;
+               margin-bottom: 10px;
+
+
+               .images_vest_rating_img {
+                  width: 4vw;
+                  height: 4vw;
+
+                  img {
+                     width: 150%;
+                     height: 150%;
+                  }
+               }
+
+            }
+
+            .image_vest {
+               width: 24vw;
+
+               img {
+                  width: 100%;
+               }
+            }
+         }
+
+         .vest_choice_and_desc {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            margin-left: 15px;
+
+            .vest_choices {
+               display: flex;
+
+               .vest_choice {
+                  border-radius: 13px;
+                  border: 2px #57616B solid;
+                  margin-right: 10px;
+                  cursor: pointer;
+                  transition: all .3s ease;
+
+                  &:hover {
+                     transform: scale(1.1);
+                     transition: all .3s ease;
+                  }
+
+                  p {
+                     font-family: 'Montserrat600';
+                     font-size: 1.5vw;
+                     line-height: 130.2%;
+                     text-align: center;
+                     color: #878E95;
+                     margin: 0;
+                     padding: 8px 24px;
+
+                  }
+               }
+            }
+
+            .vest_desc {
+               margin-top: 30px;
+
+               p {
+                  font-family: 'Montserrat400';
+                  font-size: 1.2vw;
+                  line-height: 160%;
+                  color: #FFFFFF;
+                  opacity: 0.7;
+               }
+            }
+         }
+      }
+
+   }
+
+}

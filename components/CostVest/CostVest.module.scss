@@ -1,0 +1,100 @@
+.cost {
+   height: 85vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+   .cost_container {
+      display: flex;
+      flex-direction: column;
+      padding: 2vw 15vw;
+      justify-content: center;
+      align-items: flex-start;
+      height: 100%;
+      max-height: 800px;
+      width: 100%;
+
+      @media screen and (max-width: 1024px) {
+         padding: 2vw 12vw;
+         height: 80%;
+      }
+
+      @media screen and (max-width: 610px) {
+         padding: 2vw 9vw;
+      }
+
+      @media screen and (max-width: 500px) {
+         padding: 2vw 4vw;
+      }
+
+      @media screen and (max-width: 375px) {
+         padding: 2vw 4vw;
+      }
+
+
+      .cost_text {
+
+         .cost_title {
+
+            h1 {
+               font-family: 'Montserrat700';
+               font-size: 3vw;
+               line-height: 130.2%;
+               color: #0F1D2B;
+
+               span:first-of-type {
+                  padding: .3vw 1vw;
+                  background-color: #FFBC15;
+                  color: #0F1D2B;
+               }
+
+               span:last-of-type {
+                  color: #fff;
+               }
+            }
+         }
+
+         .cost_desc_p {
+            margin: 25px 0;
+            width: 50%;
+            font-family: 'Montserrat400';
+            font-size: 1.5vw;
+            line-height: 160%;
+            color: #FFFFFF;
+
+         }
+
+         .cost_desc_span {
+            width: 50%;
+
+            p {
+               font-family: 'Montserrat400';
+               font-size: 1vw;
+               line-height: 160%;
+               color: #FFFFFF;
+               opacity: 0.7;
+               margin-bottom: 1.2rem;
+            }
+         }
+      }
+
+      .warning {
+         display: flex;
+         align-items: center;
+
+         img {
+            width: 18px;
+            height: 18px;
+            margin-right: 7px;
+         }
+
+         h2 {
+            font-family: 'Montserrat400';
+            font-size: 1.5vw;
+            line-height: 160%;
+            color: #E00000;
+            margin-bottom: 0;
+         }
+      }
+   }
+}

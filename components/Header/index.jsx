@@ -13,6 +13,9 @@ export default function Header() {
   return (
     <div id={styles["header"]}>
       <div className={styles["header_container"]}>
+        <div className={styles["logo"]}>
+          <img src="images/allLogo.png" alt="" />
+        </div>
         <div className={styles["header_links"]}>
           <Link
             className={styles["header_link"]}
@@ -27,7 +30,7 @@ export default function Header() {
           </Link>
           <Link
             className={styles["header_link"]}
-            to="currentProjects"
+            to="minutiae"
             smooth={true}
             duration={2000}
             activeClass="active"
@@ -38,7 +41,7 @@ export default function Header() {
           </Link>
           <Link
             className={styles["header_link"]}
-            to="becomePartner"
+            to="levels"
             smooth={true}
             duration={2000}
             activeClass="active"
@@ -49,7 +52,7 @@ export default function Header() {
           </Link>
           <Link
             className={styles["header_link"]}
-            to="Reviews"
+            to="cost"
             smooth={true}
             duration={2000}
             activeClass="active"
@@ -60,7 +63,7 @@ export default function Header() {
           </Link>
           <Link
             className={styles["header_link"]}
-            to="ourTeam"
+            to="reviews"
             smooth={true}
             duration={2000}
             activeClass="active"
@@ -71,7 +74,7 @@ export default function Header() {
           </Link>
           <Link
             className={styles["header_link"]}
-            to="ourPartners"
+            to="details"
             smooth={true}
             duration={2000}
             activeClass="active"
@@ -98,9 +101,6 @@ export default function Header() {
           </a>
           <a href="https://www.facebook.com/Mercy-Chain-108789655101913/">
             <img loading="lazy" src="images/iconFacebookYellow.png" alt="" className={styles["lang_desc_img"]} />
-          </a>
-          <a href="">
-            <img loading="lazy" src="images/iconTelegramYellow.png" alt="" className={styles["lang_desc_img"]} />
           </a>
           <span></span>
           <Language />
