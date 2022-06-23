@@ -82,7 +82,7 @@ export default function HeroSlider({ totalAmount, expectedAmount }) {
                 <h1>{trans("slider_title")}</h1>
                 <h2>
                   {trans("slider_desc_1")} <span>1000</span>{" "}
-                  {trans("slider_desc_2")} <span>6</span>{" "}
+                  <span>{trans("slider_desc_2")}</span>
                   {trans("slider_desc_3")}
                 </h2>
                 <p>
