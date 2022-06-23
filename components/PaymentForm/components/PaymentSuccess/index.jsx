@@ -13,11 +13,11 @@ export default function PaymentSuccess({ onClose }) {
         <div className={styles.base}>{trans("verse")}</div>
         <div className={styles.origin}>{trans("verse-link")}</div>
       </div>
-      {/* <ButtonBlue
+      <ButtonBlue
         className={styles.btn}
         title={trans("close")}
         click={onClose}
-      /> */}
+      />
     </>
   );
 }

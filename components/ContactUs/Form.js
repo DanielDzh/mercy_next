@@ -84,7 +84,7 @@ export default function ContactForm({ onSubmit }) {
           />
         </button>
         <ErrorBase value={formState.errorMessage} />
-      </form>
+      </form>{" "}
     </div>
   );
 }
