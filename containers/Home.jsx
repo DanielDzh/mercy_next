@@ -1,9 +1,12 @@
 import React from "react";
 import HeroSlider from "../components/Slider";
 import AboutUs from "../components/AboutUs";
-import ClassVest from "../components/ClassVest";
+import SaveLife from "../components/SaveLife";
+import OurMission from "../components/OurMission";
 import OurTeam from "../components/OurTeam";
-import CostVest from "../components/CostVest";
+import OurValues from "../components/OurValues";
+import BecomePartner from "../components/BecomePartner";
+import CurrentProjects from "../components/CurrentProjects";
 import OurPartners from "../components/OurPartners";
 import ContactUs from "../components/ContactUs";
 import Footer from "../components/Footer";
@@ -12,8 +15,6 @@ import Reviews from "../components/Reviews";
 import { Api } from "../services/api";
 import { useTrans } from "../hooks/useTrans";
 import VideoBlock from "../components/VideoBlock";
-import Details from "../components/Details";
-import Everyday from "../components/Everyday";
 
 const isNumber = (num) => num !== null && !isNaN(num);
 
@@ -31,13 +32,14 @@ export default function Home({ total, expected }) {
       <HeroSlider totalAmount={total} expectedAmount={expected} />
       <VideoBlock />
       <AboutUs />
-      <ClassVest />
-      <CostVest />
-      <Everyday />
+      <OurMission />
+      <OurValues />
+      <SaveLife />
+      <CurrentProjects totalAmount={total} expectedAmount={expected} />
+      <BecomePartner />
       <Reviews />
-      <Details />
-      {/* <OurTeam /> */}
-      {/* <OurPartners /> */}
+      <OurTeam />
+      <OurPartners />
       <ContactUs />
       <Footer />
     </div>

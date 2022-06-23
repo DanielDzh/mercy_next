@@ -8,6 +8,13 @@ import ContactForm from "./Form";
 
 const contacts = [
   {
+    icon: "images/icons/nameCompany.png",
+    name: "name",
+    url: "",
+    desc: "Slovenské  združenie  9 o.z.",
+    desc2: "IČO 54339626"
+  },
+  {
     icon: "images/iconLocation.png",
     name: "location",
     url: "",
@@ -51,40 +58,22 @@ const ContactUs = () => {
   return (
     <div id="contactUs">
       <div className={styles["contactUs_container"]}>
-        <div className={styles["ourContacts"]}>
-          <h1 className={styles["ourContacts_h1"]}>
-            Контакти
-          </h1>
-          {contacts.map((item) => (
-            <div key={item.name} className={styles["contacts_wrapper"]}>
-              <a href={item.url && item.url}>
-                <img loading="lazy" src={item.icon} alt="" />
-                <h3>
-                  <h3>{item.desc}</h3>
-                </h3>
-              </a>
-            </div>
-          ))}
-          <span className={styles["ourContacts_span"]}></span>
-          <h2 className={styles["ourContacts_h2"]}>
-            Слідкуй за нашою роботою
-          </h2>
-          <div className={styles["ourContacts_social"]}>
-            <a href="">
-              <img src="images/iconInstYellow.png" alt="" />
-            </a>
-            <a href="">
-              <img src="images/iconFacebookYellow.png" alt="" />
-            </a>
-          </div>
-        </div>
         <div className={styles["contactUs_block"]}>
-          {/* <h1 className={styles["contactUs_title"]}>{trans("contacts")}</h1> */}
-          <div className={styles["contactUs_block_img"]}>
-            <img src="images/contactUs.png" alt="" />
-          </div>
+          <h1 className={styles["contactUs_title"]}>{trans("contacts")}</h1>
           <div className={styles["contactUs_content"]}>
-
+            <div className={styles["ourContacts"]}>
+              {contacts.map((item) => (
+                <div key={item.name} className={styles["contacts_wrapper"]}>
+                  <a href={item.url && item.url}>
+                    <img loading="lazy" src={item.icon} alt="" />
+                    <h3>
+                      <h3>{item.desc}</h3>
+                      <h3>{item.desc2 && item.desc2}</h3>
+                    </h3>
+                  </a>
+                </div>
+              ))}
+            </div>
             {success ? (
               <div
                 className={generateClasses(
@@ -108,10 +97,7 @@ const ContactUs = () => {
                 </span>
               </div>
             ) : (
-              <div className={styles["form_title"]}>
-                <h1>Форма зворотнього зв’язку</h1>
-                <ContactForm onSubmit={onSubmit} />
-              </div>
+              <ContactForm onSubmit={onSubmit} />
             )}
           </div>
         </div>

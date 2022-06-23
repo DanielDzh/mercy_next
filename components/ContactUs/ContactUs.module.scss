@@ -1,160 +1,27 @@
 .contactUs_container {
-  display: flex;
-  padding: 7vw 7vw 9vw 7vw;
+  padding: 7vw 15vw 9vw 13vw;
 
   @media screen and(max-width: 600px) {
     padding: 7vw 40px 9vw 40px;
   }
-
   @media screen and(max-width: 450px) {
     padding: 7vw 20px 9vw 20px;
   }
 
-  .ourContacts {
-    margin-right: 4vw;
-
-    @media screen and(max-width: 1024px) {
-      margin-bottom: 30px;
-    }
-
-    @media screen and(max-width: 600px) {
-      margin-bottom: 20px;
-    }
-
-    .ourContacts_h1 {
-      font-family: 'Montserrat700';
-      font-size: 3vw;
-      line-height: 130.2%;
-      color: #0F1D2B;
-      background-color: #10A6F9;
-      padding: 3px 10px;
-      text-transform: uppercase;
-      width: fit-content;
-      margin-bottom: 2vw;
-    }
-
-    .ourContacts_span {
-      display: block;
-      width: 80%;
-      height: 3px;
-      background-color: #223E5A;
-      margin: 30px 0;
-    }
-
-    .ourContacts_h2 {
-      width: fit-content;
-      font-family: 'Montserrat700';
-      font-size: 1.5vw;
-      line-height: 130.2%;
-      color: #FFFFFF;
-      margin-bottom: 15px;
-    }
-
-    .ourContacts_social {
-      a {
-        margin-right: 20px;
-
-        img {
-          height: 1.8vw;
-        }
-      }
-    }
-
-    .contacts_wrapper:last-child a {
-      margin-bottom: 0;
-    }
-
-
-    .contacts_wrapper {
-      @media screen and(max-width: 600px) {
-        margin-bottom: 15px;
-      }
-
-      a {
-        width: fit-content;
-        text-decoration: none;
-        display: flex;
-        align-items: center;
-        margin-bottom: 1vw;
-        transition: all 0.5s ease;
-
-        @media screen and(min-width: 768px) {
-
-          &:hover {
-            transform: scale(1.07);
-          }
-        }
-
-        img {
-          width: 1.8vw;
-          margin-right: 1.5vw;
-
-          @media screen and(max-width: 768px) {
-            width: 2.2vw;
-          }
-
-          @media screen and(max-width: 600px) {
-            width: 5vw;
-            margin-right: 4vw;
-          }
-        }
-
-        h3 {
-          width: fit-content;
-          font-family: "Montserrat400";
-          color: #ffffff;
-          margin-bottom: 0;
-          display: flex;
-          flex-direction: column;
-          font-weight: 400;
-          font-size: 18px;
-          line-height: 160%;
-
-          @media screen and(max-width: 1200px) {
-            font-size: 18px;
-            line-height: 140%;
-          }
-
-          @media screen and(max-width: 1024px) {
-            font-size: 16px;
-            line-height: 130%;
-          }
-
-          @media screen and(max-width: 900px) {
-            font-size: 15px;
-          }
-
-          @media screen and(max-width: 768px) {
-            font-size: 15px;
-          }
-
-          @media screen and(max-width: 600px) {
-            font-size: 15px;
-            line-height: 150%;
-          }
-        }
-      }
-    }
-  }
-
-
   .contactUs_block {
-    border: 2px solid #FFBC15;
+    border: 2px solid #10a6f9;
     box-sizing: border-box;
     border-radius: 25px;
-    display: flex;
+    padding: 4vw 7vw 2vw;
 
-
-    .contactUs_block_img {
-      width: 35vw;
-      height: 100%;
-
-      img {
-        border-radius: 22px;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
+    @media screen and(max-width: 900px) {
+      padding: 2.5vw 7vw 2vw;
+      border: 1.5px solid #10a6f9;
+      padding: 4vw 6vw 2vw;
+    }
+    @media screen and(max-width: 600px) {
+      border: 1px solid #10a6f9;
+      padding: 5vw 22px 3vw;
     }
 
     .contactUs_title {
@@ -169,23 +36,19 @@
       @media screen and(max-width: 1200px) {
         font-size: 55px;
       }
-
       @media screen and(max-width: 1024px) {
         font-size: 50px;
         margin-bottom: 2vw;
       }
-
       @media screen and(max-width: 900px) {
         font-size: 42px;
         margin-bottom: 1vw;
       }
-
       @media screen and(max-width: 600px) {
         font-size: 37px;
         line-height: 45px;
         margin-bottom: 25px;
       }
-
       // @media screen and(max-width: 450px){
       //    font-size: 30px;
       //    line-height: 30px;
@@ -197,24 +60,94 @@
     }
 
     .contactUs_content {
-      padding: 2vw 2vw 2vw;
       display: flex;
+      padding: 3vw 0;
 
-      @media screen and(max-width: 900px) {
-        border: 1.5px solid #FFBC15;
+      @media screen and(max-width: 1024px) {
+        padding: 1.5vw 0 2vw;
       }
-
-      @media screen and(max-width: 600px) {
-        border: 1px solid #FFBC15;
-      }
-
-      @media screen and(max-width: 1024px) {}
 
       @media screen and(max-width: 1024px) {
         flex-direction: column;
       }
 
+      .ourContacts {
+        margin-right: 5vw;
 
+        @media screen and(max-width: 1024px) {
+          margin-bottom: 30px;
+        }
+        @media screen and(max-width: 600px) {
+          margin-bottom: 20px;
+        }
+
+        .contacts_wrapper:last-child a {
+          margin-bottom: 0;
+        }
+        .contacts_wrapper {
+          @media screen and(max-width: 600px) {
+            margin-bottom: 15px;
+          }
+
+          a {
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            margin-bottom: 2vw;
+            transition: all 0.5s ease;
+
+            @media screen and(min-width: 768px) {
+              
+              &:hover {
+                transform: scale(1.07);
+              }
+            }
+
+            img {
+              width: 1.8vw;
+              margin-right: 1.5vw;
+
+              @media screen and(max-width: 768px) {
+                width: 2.2vw;
+              }
+              @media screen and(max-width: 600px) {
+                width: 5vw;
+                margin-right: 4vw;
+              }
+            }
+
+            h3 {
+              font-family: "Montserrat400";
+              font-style: normal;
+              font-size: 20px;
+              line-height: 150%;
+              color: #ffffff;
+              margin-bottom: 0;
+              display: flex;
+              flex-direction: column;
+
+              @media screen and(max-width: 1200px) {
+                font-size: 18px;
+                line-height: 140%;
+              }
+              @media screen and(max-width: 1024px) {
+                font-size: 16px;
+                line-height: 130%;
+              }
+              @media screen and(max-width: 900px) {
+                font-size: 15px;
+              }
+              @media screen and(max-width: 768px) {
+                font-size: 15px;
+              }
+              @media screen and(max-width: 600px) {
+                font-size: 15px;
+                line-height: 150%;
+              }
+            }
+          }
+        }
+      }
 
       .successBlock {
         display: flex;
@@ -251,7 +184,7 @@
             border: 0;
             background: #1a2a3b;
             border-radius: 12px;
-            padding: 0.5vw 1vw;
+            padding: 0.9vw 1.7vw;
             font-family: "Montserrat400";
             font-style: normal;
             font-size: 16px;
@@ -261,20 +194,16 @@
             @media screen and(max-width: 1200px) {
               font-size: 14px;
             }
-
             @media screen and(max-width: 900px) {
               font-size: 12px;
             }
-
             @media screen and(max-width: 700px) {
               padding: 1.2vw 2vw;
             }
-
             @media screen and(max-width: 600px) {
               font-size: 16px;
               padding: 10px 15px;
             }
-
             @media screen and(max-width: 375px) {
               font-size: 14px;
               padding: 10px 15px;
@@ -286,7 +215,6 @@
               box-shadow: 0px 0px 7px rgba(16, 166, 249, 0.3);
             }
           }
-
           .data_user {
             display: flex;
 
@@ -301,7 +229,7 @@
             }
 
             .user_name {
-              margin-right: 10px;
+              margin-right: 1vw;
 
               @media screen and(max-width: 600px) {
                 margin-right: 0;
@@ -311,7 +239,7 @@
 
           .quetion_user {
             height: 100%;
-            margin: 10px 0;
+            margin: 1.5vw 0;
 
             @media screen and(max-width: 600px) {
               margin-top: 0;
@@ -321,9 +249,8 @@
               width: 100%;
               height: 100;
             }
-
             .user_mail {
-              margin-bottom: 10px;
+              margin-bottom: 1.5vw;
 
               @media screen and(max-width: 600px) {
                 margin-bottom: 10px;
@@ -337,27 +264,13 @@
 
             @media screen and(max-width: 500px) {
               width: 100%;
-
               div {
                 width: 100%;
-
-                div {}
+                div {
+                }
               }
             }
           }
-        }
-      }
-
-      .form_title {
-        display: flex;
-        flex-direction: column;
-
-        h1 {
-          font-family: 'Montserrat700';
-          font-size: 27px;
-          line-height: 130.2%;
-          color: #FFFFFF;
-          margin-bottom: 20px;
         }
       }
     }
