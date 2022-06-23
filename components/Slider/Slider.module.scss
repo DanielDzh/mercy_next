@@ -60,9 +60,112 @@
           color: #FFFFFF;
         }
 
+<<<<<<< HEAD
+        .hero-text {
+          margin-top: 2vh;
+          text-align: center;
+          max-width: 70%;
+
+          @media screen and (max-width: 600px) {
+            max-width: 100%;
+          }
+
+          @media screen and (max-width: 375px) {
+            margin-top: 4vh;
+          }
+
+          h1 {
+            font-family: "Montserrat800";
+            font-weight: 100;
+            // font-size: 5.715rem;
+            font-size: 8.5vw;
+            line-height: 10vw;
+            color: #ffffff;
+
+            @media screen and (max-width: 900px) {
+              font-size: 7vw;
+            }
+
+            @media screen and (max-width: 600px) {
+              font-size: 45px;
+              line-height: 55px;
+            }
+
+          }
+
+          h2 {
+            font-family: "Montserrat700";
+            // max-width: 70%;
+            margin: 0 auto;
+            font-weight: bold;
+            font-size: 2.5vw;
+            line-height: 53px;
+            letter-spacing: 1px;
+            color: #ffffff;
+
+            @media screen and (max-width: 1024px) {
+              line-height: 33px;
+            }
+
+            @media screen and (max-width: 900px) {
+              font-size: 22px;
+              line-height: 33px;
+            }
+
+            @media screen and (max-width: 600px) {
+              font-size: 20px;
+              line-height: 130%;
+            }
+
+            // @media screen and (max-width: 375px){
+            //   font-size: 16px;
+            //   line-height: 21px;
+            // }
+
+            span:first-of-type {
+              color: #ffbc15;
+            }
+
+            span:last-of-type {
+              color: #10a6f9;
+            }
+          }
+
+          p {
+            font-family: "Montserrat400";
+            margin-top: 1.5rem;
+            font-size: 1.6vw;
+            line-height: 23px;
+            letter-spacing: 0.03em;
+            color: #ffffff;
+
+            @media screen and (max-width: 600px) {
+              font-size: 14px;
+              margin: 3.5vw auto;
+              line-height: 154%;
+            }
+
+            // @media screen and (max-width: 375px){
+            //   font-size: 3vw;
+            //   line-height: 14px;
+            // }
+
+            span {
+              font-family: "Montserrat700";
+              font-weight: bold;
+              color: #ffffff;
+            }
+          }
+
+          // p:last-of-type{
+          //   letter-spacing: 0.02em;
+          //   color: #aaaaaa;
+          // }
+=======
         h2 {
           color: #FFBC15;
           font-size: 18px;
+>>>>>>> master
         }
       }
 

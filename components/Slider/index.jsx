@@ -20,8 +20,24 @@ export default function HeroSlider({ totalAmount, expectedAmount }) {
                 <p>{trans("slider_already_sent_1")}</p>
                 <h2>{trans("slider_already_sent_2")}</h2>
               </div>
+<<<<<<< HEAD
+              <div className={styles["hero-text"]}>
+                <h1>{trans("slider_title")}</h1>
+                <h2>
+                  {trans("slider_desc_1")} <span>1000</span>{" "}
+                  <span>{trans("slider_desc_2")}</span>
+                  {trans("slider_desc_3")}
+                </h2>
+                <p>
+                  {trans("slider_p_1")} <span>{formatCurrency(30)}</span>{" "}
+                  {trans("slider_p_2")}
+                  <span> {trans("slider_p_3")}</span>
+                </p>
+                {/* <p>{trans('slider_p_renewal')}</p> */}
+=======
               <div className={styles["hero_abs_line"]}>
                 <img src="images/LineOnVest.png" alt="" />
+>>>>>>> master
               </div>
             </div>
             <div className={styles["hero_text"]}>
