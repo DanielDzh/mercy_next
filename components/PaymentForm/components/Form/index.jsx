@@ -30,7 +30,7 @@ const PRODUCTS = [
 
 export default function Form({ onSuccess, ongoing }) {
   const router = useRouter();
-  console.log("🚀 ~ router", window.location);
+  // console.log("🚀 ~ router", window.location);
   const [product, setProduct] = useState({});
   const [disabled, setDisabled] = useState(false);
   const [error, setError] = useState("");
