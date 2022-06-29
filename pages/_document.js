@@ -1,7 +1,5 @@
 import { Html, Head, Main, NextScript } from 'next/document'
-import Script from 'next/script'
 import React from 'react';
-import ReactDOMServer from 'react-dom/server';
 
 export default function Document() {
 
