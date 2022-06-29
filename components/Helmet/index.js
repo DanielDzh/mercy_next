@@ -1,6 +1,8 @@
 import HelmetComponent from "next/head";
 import React from "react";
 import { useTrans } from "../../hooks/useTrans";
+import Script from "next/script";
+import Head from "next/head";
 
 export const Helmet = ({
   title,
