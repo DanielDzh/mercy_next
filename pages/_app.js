@@ -53,6 +53,10 @@ const AppProviders = (props) => {
           gtag('config', 'G-7TDHC266HL');
         `}
       </Script>
+      <Script
+        async
+        src="https://www.googletagmanager.com/ns.html?id='GTM-P4FTBHR'"
+      ></Script>
       <App {...props} />
     </LoadingProvider>
   );
