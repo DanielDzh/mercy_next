@@ -24,15 +24,20 @@ export default function PaymentForm({ open, onClose, ongoing }) {
       ongoing ? ONGOING_MODE : ONE_TIME_MODE
     ) && checkQueryValue(query, PAYMENT_RESULT, SUCESSFUL_PAYMENT);
 
-  const title = success ? trans("payment-success") : trans("help-now");
+  // const title = success ? trans("payment-success") : trans("help-now");
+  const title = trans("help-now");
+  
 
   return (
+    // <PopupWithTitle title={title} onClose={onClose} open={open}>
+    //   {success ? (
+    //     <PaymentSuccess onClose={onClose} />
+    //   ) : (
+    //     <Form ongoing={ongoing} />
+    //   )}
+    // </PopupWithTitle>
     <PopupWithTitle title={title} onClose={onClose} open={open}>
-      {success ? (
-        <PaymentSuccess onClose={onClose} />
-      ) : (
-        <Form ongoing={ongoing} />
-      )}
-    </PopupWithTitle>
+      <Form ongoing={ongoing} />
+  </PopupWithTitle>
   );
 }
