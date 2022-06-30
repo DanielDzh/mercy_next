@@ -141,7 +141,7 @@ export default function OurTeam() {
       photo: "images/DianaErenshtein.png",
       name: trans("Diana_Erenshtein"),
       profession: trans("Diana_Erenshtein_spec"),
-      telegram: "https://t-do.ru/@diana_erstn",
+      telegram: "",
       instagram: "https://www.instagram.com/diana.erstn/",
       facebook: "https://www.facebook.com/diana.erstn",
     }
