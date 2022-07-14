@@ -9,7 +9,6 @@ const val = "GTM-P4FTBHR";
     <Html>
       <Head>
       <script
-        strategy="afterInteractive"
         dangerouslySetInnerHTML={{
           __html: `
                   (function(w,d,s,l,i){
@@ -21,12 +20,12 @@ const val = "GTM-P4FTBHR";
                   `,
         }}
       />
+        <meta name="facebook-domain-verification" content="qvue06yaa91etgs5g54h9kljb5pb7w" />
       </Head>
       <body>
         <Main />
         <NextScript />
       </body>
-    
     </Html>
   )
 }
