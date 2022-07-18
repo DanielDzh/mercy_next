@@ -11,7 +11,7 @@ const contacts = [
     icon: "images/icons/nameCompany.png",
     name: "name",
     url: "",
-    desc: "Slovenské  združenie  9 o.z.",
+    desc: "Mercychain",
     desc2: "IČO 54339626"
   },
   {
