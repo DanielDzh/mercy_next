@@ -1,6 +1,5 @@
 import Image from "next/image";
-import React from "react";
-import { FaLongArrowAltLeft, FaLongArrowAltRight } from "react-icons/fa";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-scroll";
 import Slider from "react-slick";
 import { usePaymentPopup } from "../../hooks/usePaymentPopup";
@@ -14,6 +13,7 @@ import PaymentForm, { PAYMENT_POPUP } from "../PaymentForm";
 import UnsubscribePopup, { UNSUBSCRIBE } from "../UnsubscribePopup";
 import Slide from "./Slide";
 import styles from "./Slider.module.scss";
+import CountUp from "react-countup";
 
 
 const sliderPaths = [
@@ -31,15 +31,16 @@ const getProgressPercent = (total, expected) => {
   return value;
 };
 
-export default function HeroSlider({ totalAmount, expectedAmount, projectsRef }) {
-  const { trans } = useTrans();
+export default function HeroSlider({totalAmount, expectedAmount, projectsRef}) {
+  const {trans} = useTrans();
 
-  const { openedOneTimePayment, onOpenOneTimePayment, onClosePayment } =
+  const {openedOneTimePayment, onOpenOneTimePayment, onClosePayment} =
     usePaymentPopup();
 
-  const { isOpened: isUnsibscribeOpen, onClose: onUnsubscribeClose } =
+  const {isOpened: isUnsibscribeOpen, onClose: onUnsubscribeClose} =
     useQueryHandlers(PAYMENT_POPUP, UNSUBSCRIBE);
 
+  const [width, setWidth] = useState(0);
 
   const settings = {
     arrows: false,
@@ -53,6 +54,10 @@ export default function HeroSlider({ totalAmount, expectedAmount, projectsRef })
     slidesToScroll: 1,
     padding: 20
   };
+
+  useEffect(() => {
+    setWidth(getProgressPercent(totalAmount, expectedAmount))
+  }, [])
   return (
     <>
       {openedOneTimePayment ? (
@@ -94,26 +99,38 @@ export default function HeroSlider({ totalAmount, expectedAmount, projectsRef })
               </div>
               <div className={styles["hero-progress"]}>
                 <div id={styles.myProgress}>
-                  <span className={styles["thirty-circle"]}/>
+                  <span className={styles["thirty-circle"]} />
                   <span className={styles["thirty-price"]}>
-                    {formatCurrency(expectedAmount)}
+                    <CountUp
+                      start={0}
+                      end={Math.floor(expectedAmount)}
+                      duration={2}
+                      separator=","
+                      decimals={2}
+                      decimal="."
+                      prefix="$"
+                    />
                   </span>
                   <div
                     id={styles.myBar}
                     style={{
-                      width: `${getProgressPercent(
-                        totalAmount,
-                        expectedAmount
-                      )}%`,
+                      width: `${width}%`,
                     }}
                   >
                     <span className={styles["first-price"]}>0</span>
                     <span className={styles["second-price"]}>
-                      {formatCurrency(Math.floor(totalAmount))}
+                     <CountUp
+                       start={0}
+                       end={Math.floor(totalAmount)}
+                       duration={2}
+                       separator=","
+                       decimals={2}
+                       decimal="."
+                       prefix="$"
+                     />
                     </span>
-
-                    <span className={styles["first-circle"]}/>
-                    <span className={styles["second-circle"]}/>
+                    <span className={styles["first-circle"]} />
+                    <span className={styles["second-circle"]} />
                   </div>
                 </div>
               </div>
@@ -126,7 +143,7 @@ export default function HeroSlider({ totalAmount, expectedAmount, projectsRef })
                   activeClass="active"
                   spy={false}
                   offset={5}
-                  style={{ width: '100%' }}
+                  style={{width: '100%'}}
                 >
                   <ButtonBlueBorder
                     className="details"
@@ -146,11 +163,11 @@ export default function HeroSlider({ totalAmount, expectedAmount, projectsRef })
                 duration={2000}
                 spy={false}
                 offset={5}
-                onClick={()=> projectsRef.current.slickGoTo(0)}>
-              <a className={styles["hero-before"]}>
-                {trans('slider_p_before')}
-                <img src={"images/icons/long-arrow.svg"} alt='' />
-              </a>
+                onClick={() => projectsRef.current.slickGoTo(0)}>
+                <a className={styles["hero-before"]}>
+                  {trans('slider_p_before')}
+                  <img src={"images/icons/long-arrow.svg"} alt='' />
+                </a>
               </Link>
             </div>
           </div>

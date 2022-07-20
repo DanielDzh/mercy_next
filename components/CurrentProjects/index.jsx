@@ -37,7 +37,7 @@ export default function CurrentProjects({ totalAmount, expectedAmount, projectsR
   const projects = [
     {
       done:true,
-      label: "збір завершено",
+      label: "proj_label_done",
       title: "finished_proj_desc_title",
       desc1: "finished_proj_desc_1",
       desc2:"finished_proj_desc_3",
@@ -53,7 +53,7 @@ export default function CurrentProjects({ totalAmount, expectedAmount, projectsR
     },
     {
       done:false,
-      label: "Збір Триває",
+      label: "proj_label_in_process",
       title: "current_proj_desc_title",
       desc1: "current_proj_desc_1",
       desc2:"current_proj_desc_3",
@@ -184,7 +184,7 @@ export default function CurrentProjects({ totalAmount, expectedAmount, projectsR
           background={"#fff"} color="#000">
           <div />
           <div className={styles["wrapper_popup_image"]}>
-            {projects[1].allGallery.map((item, index) => (
+            {projects[0].allGallery.map((item, index) => (
               <img src={item} alt="" key={index} className={styles["popup_image"]} />
             ))}
           </div>
