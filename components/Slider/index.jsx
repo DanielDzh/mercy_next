@@ -120,7 +120,7 @@ export default function HeroSlider({totalAmount, expectedAmount, projectsRef}) {
                     <span className={styles["first-price"]}>0</span>
                     <span className={styles["second-price"]}>
                      <CountUp
-                       start={0}
+                       start={4}
                        end={Math.floor(totalAmount)}
                        duration={2}
                        separator=","
