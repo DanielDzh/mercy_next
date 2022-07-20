@@ -1,6 +1,13 @@
 #header {
+   position: fixed;
+   left: 0;
+   top: 0;
+   width: 100%;
+   z-index: 50;
+   background: #14212e;
+   padding: 15px;
    .header_container {
-      padding: 15px;
+      padding: 0 15px;
 
       @media screen and(max-width: 1024px) {
          display: flex;
@@ -30,7 +37,7 @@
 
          .header_link {
             cursor: pointer;
-            font-family: 'Montserrat600';
+            font-family: 'Montserrat600', sans-serif;
             font-style: normal;
             font-size: 14px;
             line-height: 17px;
@@ -121,7 +128,7 @@
 
             @media screen and(max-width: 600px) {
                margin-top: 10px;
-               margin-right: 0px;
+               margin-right: 0;
             }
 
             span {
@@ -161,7 +168,6 @@
       .header_burger.active {
          display: block;
          cursor: pointer;
-         display: block;
          position: relative;
          width: 23px;
          height: 7px;
@@ -176,7 +182,7 @@
       .header_burger.active::before {
          background-color: #10A6F9;
          transform: rotate(-45deg);
-         top: 0px;
+         top: 0;
          left: -5px;
          width: 30px;
       }

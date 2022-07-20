@@ -4,7 +4,7 @@ import { IntlProvider } from "react-intl";
 import { DEFAULT_LOCALE, intlMessages } from "../intl";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../public/css/slick.min.css";
-import "../styles/globals.css";
+import "../styles/main.scss";
 import { LoadingProvider, useLoading } from "../hooks/useLoading";
 import Script from "next/script";
 
