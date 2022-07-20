@@ -16,8 +16,6 @@
 
       @media screen and (max-width: 450px) {
         padding: 15px;
-        padding-top: 15px;
-
       }
 
       .content-hero {
@@ -26,6 +24,7 @@
         flex-direction: column;
         align-items: center;
         height: 100%;
+        padding: 0 15px;
 
         .hero-logo {
           display: flex;
@@ -48,10 +47,10 @@
         .hero-text {
           margin-top: 2vh;
           text-align: center;
-          max-width: 70%;
+          max-width: 670px;
 
-          @media screen and (max-width: 600px) {
-            max-width: 100%;
+          @media screen and (max-width: 900px) {
+            max-width: 470px;
           }
 
           @media screen and (max-width: 375px) {
@@ -59,52 +58,34 @@
           }
 
           h1 {
-            font-family: "Montserrat800";
+            font-family: "Montserrat800", sans-serif;
             font-weight: 100;
-            // font-size: 5.715rem;
-            font-size: 8.5vw;
-            line-height: 10vw;
+            font-size: 92px;
+            line-height: 1.2;
             color: #ffffff;
 
             @media screen and (max-width: 900px) {
-              font-size: 7vw;
+              font-size: 72px;
             }
 
             @media screen and (max-width: 600px) {
-              font-size: 45px;
-              line-height: 55px;
+              font-size: 46px;
             }
 
           }
 
           h2 {
-            font-family: "Montserrat700";
-            // max-width: 70%;
+            font-family: "Montserrat700", sans-serif;
             margin: 0 auto;
             font-weight: bold;
-            font-size: 2.5vw;
-            line-height: 55px;
+            font-size: 36px;
+            line-height: 1.2;
             letter-spacing: 1px;
             color: #ffffff;
 
-            @media screen and (max-width: 1024px) {
-              line-height: 33px;
-            }
-
             @media screen and (max-width: 900px) {
-              font-size: 22px;
-              line-height: 33px;
-            }
-
-            @media screen and (max-width: 600px) {
               font-size: 20px;
-              line-height: 130%;
             }
-
-            // @media screen and (max-width: 375px){
-            //   font-size: 16px;
-            //   line-height: 21px;
-            // }
 
             span:first-of-type {
               color: #ffbc15;
@@ -115,39 +96,50 @@
           }
 
           p {
-            font-family: "Montserrat400";
+            font-family: "Montserrat400", sans-serif;
             margin-top: 1.5rem;
-            font-size: 1.6vw;
-            line-height: 23px;
+            font-size: 19px;
+            line-height: 1.2;
             letter-spacing: 0.03em;
             color: #ffffff;
 
             @media screen and (max-width: 600px) {
               font-size: 14px;
               margin: 3.5vw auto;
-              line-height: 154%;
             }
 
-            // @media screen and (max-width: 375px){
-            //   font-size: 3vw;
-            //   line-height: 14px;
-            // }
-
             span {
-              font-family: "Montserrat700";
+              font-family: "Montserrat700", sans-serif;
               font-weight: bold;
               color: #ffffff;
             }
           }
-
-          // p:last-of-type{
-          //   letter-spacing: 0.02em;
-          //   color: #aaaaaa;
-          // }
         }
-
+        .hero-before {
+          display: block;
+          margin-top: 32px;
+          font-weight: 700;
+          font-size: 18px;
+          color: #10A6F9;
+          transition: .2s linear;
+          text-decoration: underline;
+          cursor: pointer;
+          &:hover, &:active {
+            text-decoration: none;
+            opacity: .7;
+            img {
+              left: 13px;
+            }
+          }
+          img {
+            position: relative;
+            left: 8px;
+            width: 32px;
+            transition: .2s linear;
+          }
+        }
         .hero-progress {
-          font-family: "Montserrat800";
+          font-family: "Montserrat800", sans-serif;
           width: 100%;
           margin-top: 12vh;
 

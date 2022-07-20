@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import HeroSlider from "../components/Slider";
 import AboutUs from "../components/AboutUs";
 import SaveLife from "../components/SaveLife";
@@ -20,7 +20,7 @@ const isNumber = (num) => num !== null && !isNaN(num);
 
 export default function Home({ total, expected }) {
 
-  const { trans } = useTrans();
+  let projectsRef = useRef(null);
 
   return (
     <div>
@@ -29,13 +29,13 @@ export default function Home({ total, expected }) {
         description="share_text"
         image="images/Logo.png"
       />
-      <HeroSlider totalAmount={total} expectedAmount={expected} />
+      <HeroSlider projectsRef={projectsRef} totalAmount={total} expectedAmount={expected} />
       <VideoBlock />
       <AboutUs />
       <OurMission />
       <OurValues />
       <SaveLife />
-      <CurrentProjects totalAmount={total} expectedAmount={expected} />
+      <CurrentProjects projectsRef={projectsRef} totalAmount={total} expectedAmount={expected} />
       <BecomePartner />
       <Reviews />
       <OurTeam />

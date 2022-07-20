@@ -9,7 +9,7 @@
 .buttonBlue {
   -webkit-appearance: none;
 
-  font-family: "Montserrat600";
+  font-family: "Montserrat600", sans-serif;
   position: relative;
   text-align: center;
   cursor: pointer;
@@ -30,9 +30,9 @@
   border: 2px solid #10a6f9;
   box-sizing: border-box;
   border-radius: 16px;
-  box-shadow: 0px 5px 40px rgba(16, 166, 249, 0.3);
+  box-shadow: 0 5px 40px rgba(16, 166, 249, 0.3);
   transition: all 400ms ease;
-
+  white-space: nowrap;
   @media screen and (max-width: 1200px) {
     padding: 0.8rem 1.9rem;
     font-size: 16px;

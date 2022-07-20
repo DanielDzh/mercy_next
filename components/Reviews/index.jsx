@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import Slider from "react-slick";
 import styles from "./Reviews.module.scss";
-import ButtonBlue from "../ButtonBlue";
 import { useTrans } from "../../hooks/useTrans";
+import { SamplePrevArrow } from "../SlickSlider/SamplePrevArrow/SamplePrevArrow";
+import { SampleNextArrow } from "../SlickSlider/SampleNextArrow/SampleNextArrow";
 
 const sliderPaths = [
    "images/reviews/review1.jpg",
@@ -11,35 +12,9 @@ const sliderPaths = [
    "images/reviews/review4.jpg",
    "images/reviews/review5.jpg",
 ];
-const count = sliderPaths.lenght;
 export default function Reviews() {
 
    const [activeSlide, setActiveSlide] = useState(0);
-
-   const SamplePrevArrow = (props) => {
-      const { className, style, onClick } = props;
-      return (
-         <div
-            className={className}
-            style={{ ...style, cursor: 'pointer', display: "flex", justifyContent: 'center', alignItems: 'center', position: 'absolute', left: '40%', bottom: '0%', width: '3vw', height: '3vw', padding: '.8vw', borderRadius: '50px', backgroundColor: 'unset', opacity: .5, zIndex: 2 }}
-            onClick={onClick}
-         >
-            <img loading="lazy" style={{ width: '100%', height: '100%' }} src="images/icons/back.png" alt="" />
-         </div>
-      );
-   };
-   const SampleNextvArrow = (props) => {
-      const { className, style, onClick } = props;
-      return (
-         <div
-            className={className}
-            style={{ ...style, cursor: 'pointer', display: "flex", justifyContent: 'center', alignItems: 'center', position: 'absolute', right: '40%', bottom: '0%', width: '3vw', height: '3vw', padding: '.8vw', borderRadius: '50px', backgroundColor: 'unset', opacity: .5 }}
-            onClick={onClick}
-         >
-            <img loading="lazy" style={{ width: '100%', height: '100%' }} src="images/icons/next.png" alt="" />
-         </div>
-      );
-   };
 
    const settings = {
       className: "center",
@@ -55,7 +30,6 @@ export default function Reviews() {
          {
             breakpoint: 768,
             settings: {
-               // slidesToShow: 1,
                infinite: true,
                arrows: false,
             }
@@ -69,35 +43,10 @@ export default function Reviews() {
             }
          },
       ],
-      appendDots: dots => (
-         <div
-            style={{
-               backgroundColor: "unset",
-               borderRadius: "10px",
-               padding: "10px",
-               marginTop: '4vw'
-            }}
-         >
-            <ul style={{ margin: "0px" }}> {dots} </ul>
-         </div>
-      ),
-      customPaging: i => (
-         <a>
-            <div className={styles["custom_paging"]}
-               style={{
-                  backgroundColor: `${i === activeSlide ? '#ffbc15' : "#525252"}`,
-                  // boxShadow: `${i === activeSlide ? '0px 0px 7px rgb(255 188 21 / 50%)' : "0px 0px 7px rgb(16 166 249 / 30%)"}`,
-
-               }}
-            >
-               {/* {i + 1} */}
-            </div>
-         </a>
-      ),
       beforeChange: next => setActiveSlide(next),
       afterChange: current => setActiveSlide(current),
       prevArrow: <SamplePrevArrow />,
-      nextArrow: <SampleNextvArrow />,
+      nextArrow: <SampleNextArrow />,
    };
 
    const { trans } = useTrans();

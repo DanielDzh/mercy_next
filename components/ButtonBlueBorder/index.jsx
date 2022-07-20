@@ -1,10 +1,10 @@
 import React from 'react';
-import { Link } from 'react-scroll';
 import styles from './ButtonBlueBorder.module.scss';
+import cn from "classnames";
 
-export default function ButtonBlueBorder({ title, click, detailPopup, setDetailPopup }) {
+export default function ButtonBlueBorder({ title, click, className }) {
   return (
-    <div className={styles['hero-button']} onClick={click}>
+    <div className={cn(styles['hero-button'], className)} onClick={click}>
       <div className={styles['button-blue-border']}>
         {title}
       </div>

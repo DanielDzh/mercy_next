@@ -7,7 +7,7 @@ const Slide = ({ src }) => {
       className={`${styles["slide-item"]} ${styles["container_back_photo"]}`}
     >
       <div className={styles["wrapp_back_photo"]}>
-        <div className={styles["under_back_photo"]}></div>
+        <div className={styles["under_back_photo"]}/>
         <img loading="lazy" className={styles["back_photo"]} src={src} alt="" />
       </div>
     </div>

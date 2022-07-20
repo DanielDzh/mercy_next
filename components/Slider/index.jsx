@@ -31,7 +31,7 @@ const getProgressPercent = (total, expected) => {
   return value;
 };
 
-export default function HeroSlider({ totalAmount, expectedAmount }) {
+export default function HeroSlider({ totalAmount, expectedAmount, projectsRef }) {
   const { trans } = useTrans();
 
   const { openedOneTimePayment, onOpenOneTimePayment, onClosePayment } =
@@ -86,7 +86,7 @@ export default function HeroSlider({ totalAmount, expectedAmount }) {
                   {trans("slider_desc_3")}
                 </h2>
                 <p>
-                  {trans("slider_p_1")} <span>{formatCurrency(30)}</span>{" "}
+                  {trans("slider_p_1")} <span>{formatCurrency(20)}</span>{" "}
                   {trans("slider_p_2")}
                   <span> {trans("slider_p_3")}</span>
                 </p>
@@ -94,7 +94,7 @@ export default function HeroSlider({ totalAmount, expectedAmount }) {
               </div>
               <div className={styles["hero-progress"]}>
                 <div id={styles.myProgress}>
-                  <span className={styles["thirty-circle"]}></span>
+                  <span className={styles["thirty-circle"]}/>
                   <span className={styles["thirty-price"]}>
                     {formatCurrency(expectedAmount)}
                   </span>
@@ -112,8 +112,8 @@ export default function HeroSlider({ totalAmount, expectedAmount }) {
                       {formatCurrency(Math.floor(totalAmount))}
                     </span>
 
-                    <span className={styles["first-circle"]}></span>
-                    <span className={styles["second-circle"]}></span>
+                    <span className={styles["first-circle"]}/>
+                    <span className={styles["second-circle"]}/>
                   </div>
                 </div>
               </div>
@@ -129,6 +129,7 @@ export default function HeroSlider({ totalAmount, expectedAmount }) {
                   style={{ width: '100%' }}
                 >
                   <ButtonBlueBorder
+                    className="details"
                     title={trans("slider_button_blue_border")}
                   />
                 </Link>
@@ -139,6 +140,18 @@ export default function HeroSlider({ totalAmount, expectedAmount }) {
                 />
                 {/* <PayPal /> */}
               </div>
+              <Link
+                to="currentProjects"
+                smooth={true}
+                duration={2000}
+                spy={false}
+                offset={5}
+                onClick={()=> projectsRef.current.slickGoTo(0)}>
+              <a className={styles["hero-before"]}>
+                {trans('slider_p_before')}
+                <img src={"images/icons/long-arrow.svg"} alt='' />
+              </a>
+              </Link>
             </div>
           </div>
           <div className={styles["hero-slider"]}>
@@ -149,7 +162,7 @@ export default function HeroSlider({ totalAmount, expectedAmount }) {
             </Slider>
           </div>
           <div className={styles["hero_photo_mobile"]}>
-            <img loading="lazy" src="images/backHero.png" alt="" />
+            <img loading="lazy" src={"images/backHero.png"} alt="" />
           </div>
         </div>
       </div>
