@@ -48,7 +48,10 @@ export default function CurrentProjects({ totalAmount, expectedAmount, projectsR
         "images/project1/2.png",
         "images/project1/3.png",
         "images/project1/4.png",
-        "images/project1/5.png"
+        "images/project1/5.png",
+        "images/project1/6.jpg",
+        "images/project1/9.jpg",
+        "images/project1/8.jpg",
       ],
     },
     {
@@ -138,7 +141,7 @@ export default function CurrentProjects({ totalAmount, expectedAmount, projectsR
             </div>
             <p className={styles["detail_text_under_st"]}>
               {trans("popup_details_text_under_photo_normal_1")} <span>{trans("popup_details_text_under_photo_bold_1")}</span> у
-              {trans("popup_details_text_under_photo_normal_2")}<span>{trans("popup_details_text_under_photo_bold_2")}</span>
+              {trans("popup_details_text_under_photo_normal_2")}
             </p>
             <ul className={styles["detail_list"]}>
               <li className="">

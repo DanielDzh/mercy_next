@@ -12,7 +12,6 @@
 
   .popup {
     width: 100%;
-    height: 100%;
     position: relative;
     z-index: 1000;
     top: 0;
@@ -41,12 +40,11 @@
     .wrapper_back{
       width: 100%;
       background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.67713) 49.78%, #FFFFFF 100%);
-      border-radius: 0px 0px;
-      height: 20%;
+      height: 15%;
       bottom: 0;
       position: absolute;
       z-index: 1000;
-      border-radius: 0px 0px 10px 10px;
+      border-radius: 0 0 10px 10px;
       pointer-events: none;
     }
     .opened {
@@ -55,7 +53,7 @@
 
     .closed {
       display: none;
-      transition: "max-width 0.5s, opacity 0.2s 0.3s";
+      transition: max-width 0.5s, opacity 0.2s 0.3s;
     }
 
     .content {
