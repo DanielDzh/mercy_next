@@ -13,7 +13,6 @@ import Footer from "../components/Footer";
 import { Helmet } from "../components/Helmet";
 import Reviews from "../components/Reviews";
 import { Api } from "../services/api";
-import { useTrans } from "../hooks/useTrans";
 import VideoBlock from "../components/VideoBlock";
 
 const isNumber = (num) => num !== null && !isNaN(num);
@@ -35,7 +34,7 @@ export default function Home({ total, expected }) {
       <OurMission />
       <OurValues />
       <SaveLife />
-      <CurrentProjects projectsRef={projectsRef} totalAmount={total} expectedAmount={expected} />
+      <CurrentProjects projectsRef={projectsRef} />
       <BecomePartner />
       <Reviews />
       <OurTeam />

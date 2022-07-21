@@ -11,9 +11,7 @@ import cn from "classnames";
 import { SamplePrevArrow } from "../SlickSlider/SamplePrevArrow/SamplePrevArrow";
 import { SampleNextArrow } from "../SlickSlider/SampleNextArrow/SampleNextArrow";
 
-export default function CurrentProjects({ totalAmount, expectedAmount, projectsRef }) {
-  const price = Math.floor(expectedAmount - totalAmount);
-
+export default function CurrentProjects({ projectsRef }) {
   const { open, onOpen, onClose } = useOpenHandlers(false);
 
   const [galleryPopup, setGalleryPopup] = useState(false);
@@ -50,8 +48,14 @@ export default function CurrentProjects({ totalAmount, expectedAmount, projectsR
         "images/project1/4.png",
         "images/project1/5.png",
         "images/project1/6.jpg",
-        "images/project1/9.jpg",
         "images/project1/8.jpg",
+        "images/project1/9.jpg",
+        "images/project1/10.jpg",
+        "images/project1/11.jpg",
+        "images/project1/12.jpg",
+        "images/project1/13.jpg",
+        "images/project1/14.jpg",
+        "images/project1/15.jpg",
       ],
     },
     {
@@ -143,38 +147,6 @@ export default function CurrentProjects({ totalAmount, expectedAmount, projectsR
               {trans("popup_details_text_under_photo_normal_1")} <span>{trans("popup_details_text_under_photo_bold_1")}</span> у
               {trans("popup_details_text_under_photo_normal_2")}
             </p>
-            <ul className={styles["detail_list"]}>
-              <li className="">
-                <p>
-                  <img src={"images/icons/circle.png"} alt="" className={styles["list_circle"]} />
-                  <span>{trans("popup_details_text_goal_title")} </span>{trans("popup_details_text_goal_desc")}
-                </p>
-              </li>
-              <li className="">
-                <p>
-                  <img src={"images/icons/circle.png"} alt="" className={styles["list_circle"]} />
-                  <span>{trans("popup_details_text_locations_title")} </span>{trans("popup_details_text_locations_desc")}
-                </p>
-              </li>
-              <li className="">
-                <p>
-                  <img src={"images/icons/circle.png"} alt="" className={styles["list_circle"]} />
-                  <span>{trans("popup_details_text_help_title")} </span>{trans("popup_details_text_help_desc")}
-                </p>
-              </li>
-              <li className="">
-                <p>
-                  <img src={"images/icons/circle.png"} alt="" className={styles["list_circle"]} />
-                  <span>{trans("popup_details_text_cost_title")} </span>{trans("popup_details_text_cost_desc")}
-                </p>
-              </li>
-              <li>
-                <p>
-                  <img src={"images/icons/circle.png"} alt="" className={styles["list_circle"]} />
-                  <span>{trans("popup_details_text_remains_title")}</span>{price} $</p>
-              </li>
-            </ul>
-            <p className={styles["detail_under_text"]}>{trans("popup_details_text_bottom_1")}</p>
             <p className={styles["detail_under_text"]}>
               {trans("popup_details_text_bottom_2_bold")} <span>{trans("popup_details_text_bottom_2")}</span>
             </p>
