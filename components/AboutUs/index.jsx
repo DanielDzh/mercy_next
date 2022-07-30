@@ -1,6 +1,5 @@
 import React from "react";
 import SectionTitle from "../SectionTitle";
-import CustomList from "../CustomList";
 import styles from "./AboutUs.module.scss";
 import ButtonBlue from "../ButtonBlue";
 import { useTrans } from "../../hooks/useTrans";
@@ -9,9 +8,9 @@ import PaymentForm from "../PaymentForm";
 
 export default function AboutUs() {
 
-  const { open, onOpen, onClose } = useOpenHandlers(false);
+  const {open, onOpen, onClose} = useOpenHandlers(false);
 
-  const { trans } = useTrans();
+  const {trans} = useTrans();
 
   return (
     <>
@@ -19,13 +18,15 @@ export default function AboutUs() {
       <div id="aboutUs">
         <div className={styles["aboutUs-container"]}>
           <div className={styles["aboutUs-img"]}>
-            <img loading="lazy" src="images/we.png" alt="" className={styles["aboutUs-img-img"]} />
+            <img loading="lazy" src={"images/we.png"} alt="" className={styles["aboutUs-img-img"]} />
             <div className={styles["aboutUs_desc_tablet"]}>
               <SectionTitle
                 title={trans("aboutUs_title")}
                 desc={trans("aboutUs_desc_under_title")}
               />
-              <CustomList />
+              <SectionTitle
+                desc={trans("aboutUs_desc_under_title_2")}
+              />
             </div>
           </div>
           <div className={styles["aboutUs-info"]}>
@@ -34,9 +35,11 @@ export default function AboutUs() {
                 title={trans("aboutUs_title")}
                 desc={trans("aboutUs_desc_under_title")}
               />
-              <CustomList />
+              <SectionTitle
+                desc={trans("aboutUs_desc_under_title_2")}
+              />
             </div>
-            <img loading="lazy" src="images/we_mobile.png" alt="" className={styles["aboutUs-img-mobile"]} />
+            <img loading="lazy" src={"images/we_mobile.png"} alt="" className={styles["aboutUs-img-mobile"]} />
             <p>
               {trans("aboutUs_desc_under")}
             </p>

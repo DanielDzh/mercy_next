@@ -1,8 +1,11 @@
 .slider-area {
   .slider-activator {
     position: relative;
-    height: 100vh;
-
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 32px;
     .container-slider {
       z-index: 2;
       height: 100%;
