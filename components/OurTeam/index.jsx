@@ -40,7 +40,7 @@ export default function OurTeam() {
       active: true,
     },
     {
-      photo: "images/team-2.png",
+      photo: "images/yurii-kavun.png",
       name: useTrans().trans("Yurii_Kavun"),
       profession: useTrans().trans("Yurii_Kavun_spec"),
       telegram: "https://t-do.ru/@daniilbogatiuk",
@@ -50,7 +50,7 @@ export default function OurTeam() {
       active: true,
     },
     {
-      photo: "images/VasulCherniak.png",
+      photo: "images/vasyl-cherniak.png",
       name: trans("Vasyl_Cherniak"),
       profession: trans("Vasyl_Cherniak_spec"),
       telegram: "",
@@ -60,7 +60,7 @@ export default function OurTeam() {
       active: true,
     },
     {
-      photo: "images/HaidukTetiana.png",
+      photo: "images/haiduk-tetiana.png",
       name: trans("Haiduk_Tetiana"),
       profession: trans("Haiduk_Tetiana_spec"),
       telegram: "https://t-do.ru/@tania_haiduk",
@@ -80,7 +80,7 @@ export default function OurTeam() {
       active: true,
     },
     {
-      photo: "images/team-3.png",
+      photo: "images/melnyk-mykola.png",
       name: useTrans().trans("Melnyk_Mykola"),
       profession: useTrans().trans("Melnyk_Mykola_spec"),
       telegram: "",
@@ -90,7 +90,7 @@ export default function OurTeam() {
       active: true,
     },
     {
-      photo: "images/YuriyBurchak.png",
+      photo: "images/yurii-burchak.png",
       name: trans("Yurii_Burchak"),
       profession: trans("Yurii_Burchak_spec"),
       telegram: "https://t-do.ru/@burchak1",
@@ -100,7 +100,7 @@ export default function OurTeam() {
       active: true,
     },
     {
-      photo: "images/team-1.png",
+      photo: "images/volodymyr-pustovit.png",
       name: useTrans().trans("Volodymyr_Pustovit"),
       profession: useTrans().trans("Volodymyr_Pustovit_spec"),
       telegram: "https://t-do.ru/@daniilbogatiuk",
@@ -189,7 +189,7 @@ export default function OurTeam() {
       active: true,
     },
     {
-      photo: "images/Chrystya.png",
+      photo: "images/krystyna-tkachuk.png",
       name: trans("Krystyna_Tkachuk"),
       profession: trans("Krystyna_Tkachuk_spec"),
       telegram: "https://t-do.ru/@hrystichka",
@@ -264,7 +264,7 @@ export default function OurTeam() {
               <div className={styles["human_popup_line"]} />
               {people.map((item, index) => {
                 if (item.active !== true) return <TeamItem key={index} item={item} />
-              })}}
+              })}
             </>}
             {activeTab === 2 && people.map((item, index) => {
               if (item.active !== true) return <TeamItem key={index} item={item} />
