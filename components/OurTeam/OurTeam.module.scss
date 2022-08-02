@@ -136,11 +136,12 @@
    }
    .human {
      &:nth-child(2n) {
-       .human_img {
-         img{
-           background-color: #10A6F9;
-         }
+       .human_photo {
+         background-color: #10A6F9;
        }
+     }
+     .human_photo {
+       background-color: #ffbc15;
      }
    }
    .human_img{
@@ -164,7 +165,6 @@
      }
      img{
        width: 100%;
-       background-color: #ffbc15;
      }
      .hover{
        position: absolute;
