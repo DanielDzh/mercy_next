@@ -213,7 +213,7 @@ export default function OurTeam() {
   const TeamItem = ({item}) => {
     return (<div className={styles.human}>
       <div className={styles["human_img"]}>
-        <img loading="lazy" src={item.photo} alt="" />
+        <img className={styles["human_photo"]} loading="lazy" src={item.photo} alt="" />
         <div className={styles["hover"]}>
           {item.telegram && <Telegram url={item.telegram} />}
           {item.facebook && <Facebook url={item.facebook} />}
