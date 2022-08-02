@@ -7,17 +7,17 @@ import { useOpenHandlers } from "../../hooks/useOpenHandlers";
 
 
 const SocialMedia = ({url, icon}) => (
-  <a target='_blank' href={url}>
+  <a target='_blank' href={url} rel="noreferrer">
     <img loading="lazy" src={icon} alt="" />
   </a>
 );
 
 const Telegram = ({url}) => (
-  <SocialMedia target='_blank' url={url} icon="images/iconTelegram.png" />
+  <SocialMedia target='_blank' rel="noreferrer" url={url} icon="images/iconTelegram.png" />
 );
 
 const Facebook = ({url}) => (
-  <SocialMedia target='_blank' url={url} icon="images/iconFacebook.png" />
+  <SocialMedia target='_blank' rel="noreferrer" url={url} icon="images/iconFacebook.png" />
 );
 
 const Instagram = ({url}) => <SocialMedia url={url} icon="images/iconInst.png" />;
