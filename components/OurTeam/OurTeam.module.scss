@@ -134,6 +134,13 @@
        }
      }
    }
+   .human {
+     &:nth-child(2n) {
+       .human_img {
+         background: #10A6F9;
+       }
+     }
+   }
    .human_img{
      position: relative;
      margin-bottom: 2vw;
@@ -141,6 +148,7 @@
      width: 15vw;
      overflow: hidden;
      border-radius: 100%;
+     background: #ffbc15;
      @media screen and(max-width: 1024px){
        width: 14vw;
      }
