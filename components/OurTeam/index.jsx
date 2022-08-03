@@ -179,7 +179,7 @@ export default function OurTeam() {
       active: true,
     },
     {
-      photo: "images/JuliaN.png",
+      photo: "images/julia-nikitenko.png",
       name: trans("Julia_Nikitenko"),
       profession: trans("Julia_Nikitenko_spec"),
       telegram: "https://t-do.ru/@juliya_nikitenko",
@@ -199,13 +199,13 @@ export default function OurTeam() {
       active: false,
     },
     {
-      photo: "images/DianaSkorniakova.png",
+      photo: "images/diana-skorniakova.png",
       name: trans("Diana_Skorniakova"),
       profession: trans("Diana_Skorniakova_spec"),
       telegram: "https://t-do.ru/@Birdy_off_the_lens",
       instagram: "https://instagram.com/ce_prosto_di?utm_medium=copy_link",
       facebook: "https://www.facebook.com/diana.skorniakova",
-      period: `${trans("team_period")} 2022`,
+      period: `${trans("team_period")} 2022-2022`,
       active: false,
     },
   ];
