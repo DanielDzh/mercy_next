@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import styles from "./CurrentProjects.module.scss";
 import Slider from "react-slick";
 import ButtonBlueBorder from "../ButtonBlueBorder";
@@ -90,6 +90,10 @@ export default function CurrentProjects({ projectsRef }) {
       },
     ],
   };
+
+  useEffect(() => {
+    projectsRef.current.slickGoTo(1)
+  }, [])
 
   return (
     <div id='currentProjects' >
