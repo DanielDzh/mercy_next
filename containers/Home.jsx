@@ -11,7 +11,7 @@ import OurPartners from "../components/OurPartners";
 import ContactUs from "../components/ContactUs";
 import Footer from "../components/Footer";
 import { Helmet } from "../components/Helmet";
-import Reviews from "../components/Reviews";
+// import Reviews from "../components/Reviews";
 import { Api } from "../services/api";
 import VideoBlock from "../components/VideoBlock";
 
@@ -36,7 +36,7 @@ export default function Home({ total, expected }) {
       <SaveLife />
       <CurrentProjects projectsRef={projectsRef} />
       <BecomePartner />
-      <Reviews />
+      {/*<Reviews />*/}
       <OurTeam />
       <OurPartners />
       <ContactUs />
