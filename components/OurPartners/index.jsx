@@ -37,6 +37,9 @@ const OurPartners = () => {
                      <img loading="lazy" src="images/partner3.png" alt="" className={styles["image"]} />
                   </div>
                   <div className={styles["image_wrapp"]}>
+                     <img loading="lazy" src="images/partner4.png" alt="" className={styles["image"]} />
+                  </div>
+                  <div className={styles["image_wrapp"]}>
                      <img loading="lazy" src="images/partner1.png" alt="" className={styles["image"]} />
                   </div>
                   <div className={styles["image_wrapp"]}>
@@ -44,6 +47,9 @@ const OurPartners = () => {
                   </div>
                   <div className={styles["image_wrapp"]}>
                      <img loading="lazy" src="images/partner3.png" alt="" className={styles["image"]} />
+                  </div>
+                  <div className={styles["image_wrapp"]}>
+                     <img loading="lazy" src="images/partner4.png" alt="" className={styles["image"]} />
                   </div>
                </Slider>
             </div>
