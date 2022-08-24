@@ -67,7 +67,6 @@ export default function ContactForm({ onSubmit }) {
           <div className={styles.field}>
             <textarea
               rows="4"
-              type=""
               value={form.text}
               onChange={handleField}
               name="text"
