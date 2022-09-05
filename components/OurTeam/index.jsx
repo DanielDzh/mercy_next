@@ -36,7 +36,7 @@ export default function OurTeam() {
       telegram: "https://t-do.ru/@daniilbogatiuk",
       instagram: "https://www.instagram.com/daniil.bogatiuk/",
       facebook: "https://www.facebook.com/daniil.bogatiuk",
-      period: `${trans("team_period")} 2022`,
+      period: `${trans("team_period_now")} 2022`,
       active: true,
     },
     {
@@ -46,7 +46,7 @@ export default function OurTeam() {
       telegram: "",
       instagram: "https://www.instagram.com/yuriy_kavun/?hl=ru",
       facebook: "https://www.facebook.com/YuriiKavun",
-      period: `${trans("team_period")} 2022`,
+      period: `${trans("team_period_now")} 2022`,
       active: true,
     },
     {
@@ -56,7 +56,7 @@ export default function OurTeam() {
       telegram: "",
       instagram: "https://instagram.com/cherniakvasia?utm_medium=copy_link",
       facebook: "https://www.facebook.com/cherniakvasyl",
-      period: `${trans("team_period")} 2022`,
+      period: `${trans("team_period_now")} 2022`,
       active: true,
     },
     {
@@ -66,7 +66,7 @@ export default function OurTeam() {
       telegram: "https://t-do.ru/@tania_haiduk",
       instagram: "https://www.instagram.com/tanya.gaiduk/?hl=ru",
       facebook: "https://www.facebook.com/profile.php?id=100012549618008",
-      period: `${trans("team_period")} 2022`,
+      period: `${trans("team_period_now")} 2022`,
       active: true,
     },
     {
@@ -76,7 +76,7 @@ export default function OurTeam() {
       telegram: "https://t-do.ru/@dariatytarchuk",
       instagram: "https://instagram.com/dariatytarchuk?utm_medium=copy_link",
       facebook: "https://www.facebook.com/profile.php?id=100010570006326",
-      period: `${trans("team_period")} 2022`,
+      period: `${trans("team_period_now")} 2022`,
       active: true,
     },
     {
@@ -86,7 +86,7 @@ export default function OurTeam() {
       telegram: "",
       instagram: "https://www.instagram.com/mykola.melnyk_",
       facebook: "https://www.facebook.com/MykolaVitaliyovych",
-      period: `${trans("team_period")} 2022`,
+      period: `${trans("team_period_now")} 2022`,
       active: true,
     },
     {
@@ -96,7 +96,7 @@ export default function OurTeam() {
       telegram: "",
       instagram: ": https://instagram.com/oleksii_kuropata?igshid=YmMyMTA2M2Y=",
       facebook: "https://m.facebook.com/100004072906033/",
-      period: `${trans("team_period")} 2022`,
+      period: `${trans("team_period_now")} 2022`,
       active: true,
     },
     {
@@ -106,7 +106,7 @@ export default function OurTeam() {
       telegram: "",
       instagram: "",
       facebook: "https://www.facebook.com/wpustovit",
-      period: `${trans("team_period")} 2022`,
+      period: `${trans("team_period_now")} 2022`,
       active: true,
     },
     {
@@ -116,7 +116,7 @@ export default function OurTeam() {
       telegram: "https://t-do.ru/@burchak1",
       instagram: "https://instagram.com/burchak1?utm_medium=copy_link",
       facebook: "https://www.facebook.com/mrburchak",
-      period: `${trans("team_period")} 2022`,
+      period: `${trans("team_period_now")} 2022`,
       active: true,
     },
     {
@@ -126,7 +126,7 @@ export default function OurTeam() {
       telegram: "",
       instagram: "https://instagram.com/tasha_grinchenko?igshid=YmMyMTA2M2Y=",
       facebook: "https://www.facebook.com/tasha.heritage",
-      period: `${trans("team_period")} 2022`,
+      period: `${trans("team_period_now")} 2022`,
       active: true,
     },
     {
@@ -136,7 +136,7 @@ export default function OurTeam() {
       telegram: "",
       instagram: "https://instagram.com/chrissistal?igshid=YmMyMTA2M2Y=",
       facebook: "",
-      period: `${trans("team_period")} 2022`,
+      period: `${trans("team_period_now")} 2022`,
       active: true,
     },
     {
@@ -146,7 +146,7 @@ export default function OurTeam() {
       telegram: "https://t-do.ru/@danonedz",
       instagram: "https://instagram.com/danone.dz?utm_medium=copy_link",
       facebook: "",
-      period: `${trans("team_period")} 2022`,
+      period: `${trans("team_period_now")} 2022`,
       active: true,
     },
     {
@@ -155,7 +155,7 @@ export default function OurTeam() {
       profession: trans("Sergii_Rubak_spec"),
       telegram: "https://t-do.ru/@SerhiiRybak",
       instagram: "https://instagram.com/se_rybak?utm_medium=copy_link",
-      period: `${trans("team_period")} 2022`,
+      period: `${trans("team_period_now")} 2022`,
       active: true,
     },
     {
@@ -165,7 +165,7 @@ export default function OurTeam() {
       telegram: "",
       instagram: "https://instagram.com/helga_tusyk?utm_medium=copy_link",
       facebook: "https://www.facebook.com/pryhodkoolia",
-      period: `${trans("team_period")} 2022`,
+      period: `${trans("team_period_now")} 2022`,
       active: true,
     },
     {
@@ -175,7 +175,7 @@ export default function OurTeam() {
       telegram: "https://t-do.ru/@dveronika1807",
       instagram: "https://instagram.com/veronika.dulishkovych?utm_medium=copy_link",
       facebook: "https://www.facebook.com/veronika.dulishkovich",
-      period: `${trans("team_period")} 2022`,
+      period: `${trans("team_period_now")} 2022`,
       active: true,
     },
     {
@@ -185,7 +185,7 @@ export default function OurTeam() {
       telegram: "https://t-do.ru/@stton",
       instagram: "https://instagram.com/zoltan.i?utm_medium=copy_link",
       facebook: "https://www.facebook.com/profile.php?id=100002106721100",
-      period: `${trans("team_period")} 2022`,
+      period: `${trans("team_period_now")} 2022`,
       active: true,
     },
     {
@@ -195,7 +195,7 @@ export default function OurTeam() {
       telegram: "",
       instagram: "https://instagram.com/velveteen.rabbit1?utm_medium=copy_link",
       facebook: "https://www.facebook.com/sophie.ponomariova",
-      period: `${trans("team_period")} 2022`,
+      period: `${trans("team_period_now")} 2022`,
       active: true,
     },
     {
@@ -205,7 +205,7 @@ export default function OurTeam() {
       telegram: "https://t-do.ru/@juliya_nikitenko",
       instagram: "",
       facebook: "https://www.facebook.com/NikitenkoJuliya",
-      period: `${trans("team_period")} 2022`,
+      period: `${trans("team_period_now")} 2022`,
       active: true,
     },
     {
@@ -215,7 +215,7 @@ export default function OurTeam() {
       telegram: "https://t-do.ru/@hrystichka",
       instagram: "https://instagram.com/hrystichka?utm_medium=copy_link",
       facebook: "https://www.facebook.com/profile.php?id=100017174077914",
-      period: `${trans("team_period")} 2022-2022`,
+      period: `${trans("team_period_before")} 2022-2022`,
       active: false,
     },
     {
@@ -225,7 +225,7 @@ export default function OurTeam() {
       telegram: "https://t-do.ru/@Birdy_off_the_lens",
       instagram: "https://instagram.com/ce_prosto_di?utm_medium=copy_link",
       facebook: "https://www.facebook.com/diana.skorniakova",
-      period: `${trans("team_period")} 2022-2022`,
+      period: `${trans("team_period_before")} 2022-2022`,
       active: false,
     },
     {
@@ -235,7 +235,17 @@ export default function OurTeam() {
       telegram: "",
       instagram: "https://www.instagram.com/diana.erstn/",
       facebook: "https://www.facebook.com/diana.erstn",
-      period: `${trans("team_period")} 2022-2022`,
+      period: `${trans("team_period_before")} 2022-2022`,
+      active: false,
+    },
+    {
+      photo: "images/TetianaVovk.png",
+      name: trans("Tetiana_Vovk"),
+      profession: trans("Tetiana_Vovk_spec"),
+      telegram: "",
+      instagram: "",
+      facebook: "",
+      period: `${trans("team_period_before")} 2022-2022`,
       active: false,
     },
   ];
