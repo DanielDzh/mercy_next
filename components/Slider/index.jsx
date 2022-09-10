@@ -95,7 +95,7 @@ export default function HeroSlider({totalAmount, expectedAmount, projectsRef}) {
                   {trans("slider_p_2")}
                   <span> {trans("slider_p_3")}</span>
                 </p>
-                {/* <p>{trans('slider_p_renewal')}</p> */}
+                 <p className={styles['slider-collected']}>{trans('collected_assistance')}</p>
               </div>
               <div className={styles["hero-progress"]}>
                 <div id={styles.myProgress}>
