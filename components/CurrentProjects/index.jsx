@@ -3,7 +3,6 @@ import styles from "./CurrentProjects.module.scss";
 import Slider from "react-slick";
 import ButtonBlueBorder from "../ButtonBlueBorder";
 import ButtonBlue from "../ButtonBlue";
-import Warning from "../Warning";
 import { useTrans } from "../../hooks/useTrans";
 import { useOpenHandlers } from "../../hooks/useOpenHandlers";
 import PopupWithTitle from "../common/PopupWithTitle";
@@ -168,10 +167,6 @@ export default function CurrentProjects({ projectsRef }) {
             ))}
           </div>
         </PopupWithTitle>
-        <Warning
-          color="#FF0000"
-          text={trans("warning")}
-        />
       </div>
     </div>
   );
