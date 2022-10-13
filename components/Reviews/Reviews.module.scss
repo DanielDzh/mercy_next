@@ -1,126 +1,86 @@
-.reviews_container{
-   margin-bottom: 7vw;
+.reviews_container {
+  margin-bottom: 7vw;
 
-   @media screen and(max-width: 768px){
-      margin-bottom: 12vw;
-   }
-   @media screen and(max-width: 425px){
-      margin-bottom: 15vw;
-   }
-  
-   .reviews_title{
-      font-family: 'Montserrat800';
-      font-style: normal;
-      font-size: 60px;
-      line-height: 73px;
-      text-align: center;
-      text-transform: uppercase;
-      color: #FFFFFF;
-      margin-bottom: 4vw;
+  @media screen and(max-width: 768px) {
+    margin-bottom: 12vw;
+  }
+  @media screen and(max-width: 425px) {
+    margin-bottom: 15vw;
+  }
 
-      @media screen and(max-width: 1200px){
-         font-size: 55px;
+  .reviews_title {
+    font-family:    'Montserrat800', sans-serif;
+    font-style:     normal;
+    font-size:      60px;
+    line-height:    73px;
+    text-align:     center;
+    text-transform: uppercase;
+    color:          #FFFFFF;
+    margin-bottom:  4vw;
+
+    @media screen and(max-width: 1200px) {
+      font-size: 55px;
+    }
+    @media screen and(max-width: 1024px) {
+      font-size: 50px;
+    }
+    @media screen and(max-width: 900px) {
+      font-size:     44px;
+      margin-bottom: 3vw;
+    }
+    @media screen and(max-width: 768px) {
+      font-size:   40px;
+      line-height: 53px;
+    }
+    @media screen and(max-width: 600px) {
+      font-size: 36px;
+    }
+    @media screen and(max-width: 450px) {
+      font-size:     30px;
+      line-height:   33px;
+      margin-bottom: 7vw;
+    }
+  }
+
+  .reviews_slider {
+    position: relative;
+    :global {
+      .slick-slide {
+        .slider_content {
+          padding:       28px;
+          background:    transparent;
+          border-radius: 20px;
+          border:        2px solid #FFBC15;
+          @media screen and(max-width: 567px) {
+            border-radius: 15px;
+            padding:       16px;
+          }
+        }
+        &:nth-child(2n) {
+          .slider_content {
+            border: 2px solid #10A6F9;
+          }
+        }
       }
-      @media screen and(max-width: 1024px){
-         font-size: 50px;
+    }
+    .slider_wrapp {
+      padding: 0 24px;
+      @media screen and(max-width: 567px) {
+        padding: 0 8px;
       }
-      @media screen and(max-width: 900px){
-         font-size: 44px;
-         margin-bottom: 3vw;
+      p {
+        font-size: 18px;
+        @media screen and(max-width: 567px) {
+          font-size: 14px;
+        }
       }
-      @media screen and(max-width: 768px){
-         font-size: 40px;
-         line-height: 53px;
+      h6 {
+        margin-top:    20px;
+        font-size:     14px;
+        font-style:    italic;
+        text-align:    right;
+        margin-bottom: 0;
       }
-      @media screen and(max-width: 600px){
-         font-size: 36px;
-      }
-      @media screen and(max-width: 450px){
-         font-size: 30px;
-         line-height: 33px;
-         margin-bottom: 7vw;
-      }
-   }
-
-   .reviews_slider{
-      position: relative;
-
-      div{
-
-         div{
-            display: flex;
-            align-items: center;
-         }
-      }
-      
-
-      .slider_wrapp{
-         height: 100%;
-         width: 100%;
-         padding: 0 1vw;
-
-         @media screen and( max-width: 600px){
-            width: 80%;
-         }
-         @media screen and( max-width: 375px){
-            width: 80%;
-            padding: 0 2vw;
-         }
-
-         .reviews_slide{
-            transition: all .3s ease;
-            margin: auto;
-            border: .5vw solid #fff;
-            border-radius: 14px;
-         }
-
-         .slide_center{
-            opacity: 1;
-            width: 100%;
-
-            @media screen and( max-width: 600px){
-               width: 60%;
-            }
-            @media screen and( max-width: 500px){
-               width: 80%;
-            }
-            @media screen and( max-width: 420px){
-               width: 100%;
-            }
-         }
-         .slide_not_center{
-            opacity: .4;
-            width: 95%; 
-
-            @media screen and( max-width: 600px){
-               width: 100%;
-            }
-            @media screen and( max-width: 500px){
-               width: 100%;
-            }
-         }
-
-         .slide_after_slide{
-            opacity: .4;
-            width: 95%; 
-
-            @media screen and( max-width: 600px){
-               width: 60%;
-               margin: 0;
-               margin-left: auto;
-            }
-         }
-         .slide_before_slide{
-            opacity: .4;
-            width: 95%; 
-
-            @media screen and( max-width: 600px){
-               width: 60%;
-               margin: 0;
-               margin-right: auto;
-            }
-         }
-      }
-   }
-   
+    }
+  }
 }
