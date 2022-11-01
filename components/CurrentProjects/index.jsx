@@ -82,6 +82,7 @@ export default function CurrentProjects({ projectsRef }) {
         "images/project3/10.jpg",
         "images/project3/11.jpg",
         "images/project3/12.jpg",
+        "images/project3/13.jpg",
       ],
       popup_details_subtitle: "popup_details_subtitle_3",
       popup_details_text_above_photo: "popup_details_text_above_photo_3",
