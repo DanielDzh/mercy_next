@@ -180,8 +180,8 @@ export default function CurrentProjects({ projectsRef }) {
               className={styles["detail_text_under_st"]}
               dangerouslySetInnerHTML={{ __html: trans(projects[detailPopup - 1].popup_details_text_above_photo) }} />
             <div className={styles["wrapper_popup_image"]}>
-              {projects[detailPopup - 1].allGallery.slice(0, 4).map(project =>
-                <img src={project} alt="" className={styles["popup_image"]} />)}
+              {projects[detailPopup - 1].allGallery.slice(0, 4).map((project, index) =>
+                <img key={index} src={project} alt="" className={styles["popup_image"]} />)}
             </div>
             <div
               className={styles["detail_text_under_st"]}
