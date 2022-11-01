@@ -163,7 +163,7 @@ export default function HeroSlider({totalAmount, expectedAmount, projectsRef}) {
                 duration={2000}
                 spy={false}
                 offset={5}
-                onClick={() => projectsRef.current.slickGoTo(0)}>
+                onClick={() => projectsRef.current.slickGoTo(1)}>
                 <a className={styles["hero-before"]}>
                   {trans('slider_p_before')}
                   <img src={"images/icons/long-arrow.svg"} alt='' />
