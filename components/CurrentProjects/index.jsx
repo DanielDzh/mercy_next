@@ -95,7 +95,7 @@ export default function CurrentProjects({ projectsRef }) {
       desc1: "current_proj_desc_1",
       desc2: "current_proj_desc_3",
       desc3: "",
-      gallery: ["images/project2/project2-hero-1.png", "images/project2/project2-hero-2.png"],
+      gallery: ["images/project2/project2-hero-1.jpg", "images/project2/project2-hero-2.png"],
       allGallery: [],
     },
   ];
