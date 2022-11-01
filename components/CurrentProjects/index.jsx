@@ -149,8 +149,9 @@ export default function CurrentProjects({ projectsRef }) {
                     <h2 className={styles["current_desc_h2"]}
                         dangerouslySetInnerHTML={{ __html: trans(project.desc1) }} />
                     {project.done && <>
-                      {project.desc3 && <p className={styles["current_desc3"]}
-                                           dangerouslySetInnerHTML={{ __html: trans(project.desc3) }} />}
+                      {project.desc3 &&
+                      <p className={styles["current_desc3"]}
+                         dangerouslySetInnerHTML={{ __html: trans(project.desc3) }} />}
                       <div className={styles["current_progress"]} />
                     </>}
                     <p className={styles["current_desc3"]} dangerouslySetInnerHTML={{ __html: trans(project.desc2) }} />
