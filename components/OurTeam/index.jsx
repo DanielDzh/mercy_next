@@ -30,22 +30,22 @@ export default function OurTeam() {
 
   const people = [
     {
-      photo: "images/natasha-grinchenko.png",
-      name: trans("Natasha_Grinchenko"),
-      profession: trans("Natasha_Grinchenko_spec"),
-      telegram: "",
-      instagram: "https://instagram.com/tasha_grinchenko?igshid=YmMyMTA2M2Y=",
-      facebook: "https://www.facebook.com/tasha.heritage",
-      period: `${trans("team_period_now")} 2022`,
-      active: true,
-    },
-    {
       photo: "images/yurii-kavun.png",
       name: useTrans().trans("Yurii_Kavun"),
       profession: useTrans().trans("Yurii_Kavun_spec"),
       telegram: "",
       instagram: "https://www.instagram.com/yuriy_kavun/?hl=ru",
       facebook: "https://www.facebook.com/YuriiKavun",
+      period: `${trans("team_period_now")} 2022`,
+      active: true,
+    },
+    {
+      photo: "images/natasha-grinchenko.png",
+      name: trans("Natasha_Grinchenko"),
+      profession: trans("Natasha_Grinchenko_spec"),
+      telegram: "",
+      instagram: "https://instagram.com/tasha_grinchenko?igshid=YmMyMTA2M2Y=",
+      facebook: "https://www.facebook.com/tasha.heritage",
       period: `${trans("team_period_now")} 2022`,
       active: true,
     },
