@@ -8,7 +8,7 @@ import styles from "./VideoBlock.module.scss";
 export default function VideoBlock() {
   const [visibleVideo, setVisibleVideo] = useState(false);
   const router = useRouter()
-  const currentLang =  router.locale
+  const currentLang = router.locale
 
   useEffect(() => {
 
@@ -45,7 +45,7 @@ export default function VideoBlock() {
           <div className={styles["video_container"]}>
             <div className={styles["close_video"]} onClick={() => setVisibleVideo(false)}></div>
             <iframe width="560" height="415" className={styles.video}
-                    src={`https://www.youtube.com/embed/Z6oAxqEjzjs?&hl=${currentLang === 'en' ? 'en' : 'uk'}&cc_lang_pref=${currentLang === 'en' ? 'en' : 'uk'};cc_load_policy=1`}
+                    src={`https://www.youtube.com/embed/Z6oAxqEjzjs?&cc_lang_pref=${currentLang === 'en' ? 'en' : 'uk'};cc_load_policy=1`}
                     title="YouTube video player" frameBorder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen>
