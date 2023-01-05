@@ -22,8 +22,8 @@ const contacts = [
   {
     icon: "images/iconPhone.png",
     name: "phone",
-    url: "tel:3  +380 (67) 204 87 76",
-    desc: "3  +380 (67) 204 87 76",
+    url: "tel:+380 (67) 204 87 76",
+    desc: "+380 (67) 204 87 76",
   },
   {
     icon: "images/iconMail.png",
