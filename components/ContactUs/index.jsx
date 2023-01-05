@@ -11,20 +11,19 @@ const contacts = [
     icon: "images/icons/nameCompany.png",
     name: "name",
     url: "",
-    desc: "Mercy Сhain",
-    desc2: "IČO 54339626"
+    desc: "MERCY CHAIN",
   },
   {
     icon: "images/iconLocation.png",
     name: "location",
     url: "",
-    desc: "Kresánkova 3581/7B, 84105 Bratislava Slovakia",
+    desc: "Kyiv, Ukraine",
   },
   {
     icon: "images/iconPhone.png",
     name: "phone",
-    url: "",
-    desc: "+421948143899",
+    url: "tel:3  +380 (67) 204 87 76",
+    desc: "3  +380 (67) 204 87 76",
   },
   {
     icon: "images/iconMail.png",
