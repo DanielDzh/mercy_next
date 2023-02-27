@@ -6,27 +6,27 @@ import PopupWithTitle from "../common/PopupWithTitle";
 import { useOpenHandlers } from "../../hooks/useOpenHandlers";
 
 
-const SocialMedia = ({url, icon}) => (
+const SocialMedia = ({ url, icon }) => (
   <a target='_blank' href={url} rel="noreferrer">
     <img loading="lazy" src={icon} alt="" />
   </a>
 );
 
-const Telegram = ({url}) => (
+const Telegram = ({ url }) => (
   <SocialMedia target='_blank' rel="noreferrer" url={url} icon="images/iconTelegram.png" />
 );
 
-const Facebook = ({url}) => (
+const Facebook = ({ url }) => (
   <SocialMedia target='_blank' rel="noreferrer" url={url} icon="images/iconFacebook.png" />
 );
 
-const Instagram = ({url}) => <SocialMedia url={url} icon="images/iconInst.png" />;
+const Instagram = ({ url }) => <SocialMedia url={url} icon="images/iconInst.png" />;
 
 export default function OurTeam() {
-  const {open, onOpen, onClose} = useOpenHandlers(false);
+  const { open, onOpen, onClose } = useOpenHandlers(false);
   const [activeTab, setActiveTab] = useState(1);
 
-  const {trans} = useTrans();
+  const { trans } = useTrans();
 
   const people = [
     {
@@ -66,6 +66,16 @@ export default function OurTeam() {
       telegram: "https://t-do.ru/@tania_haiduk",
       instagram: "https://www.instagram.com/tanya.gaiduk/?hl=ru",
       facebook: "https://www.facebook.com/profile.php?id=100012549618008",
+      period: `${trans("team_period_now")} 2022`,
+      active: true,
+    },
+    {
+      photo: "images/nataliia-rohocha.png",
+      name: trans("Nataliia_Rohocha"),
+      profession: trans("Nataliia_Rohocha_spec"),
+      telegram: "",
+      instagram: "https://www.instagram.com/_n.a.t.a.l.i_a_/?hl=ru",
+      facebook: "https://www.facebook.com/natalis.domini.756",
       period: `${trans("team_period_now")} 2022`,
       active: true,
     },
@@ -139,7 +149,7 @@ export default function OurTeam() {
       active: true,
     },
     {
-      photo: "images/Daniel.jpg",
+      photo: "images/Daniel.png",
       name: trans("Danylo_Dzhyzhula"),
       profession: trans("Danylo_Dzhyzhula_spec"),
       telegram: "https://t-do.ru/@danonedz",
@@ -240,7 +250,7 @@ export default function OurTeam() {
     },
   ];
 
-  const TeamItem = ({item}) => {
+  const TeamItem = ({ item }) => {
     return (<div className={styles.human}>
       <div className={styles["human_img"]}>
         <img className={styles["human_photo"]} loading="lazy" src={item.photo} alt="" />
