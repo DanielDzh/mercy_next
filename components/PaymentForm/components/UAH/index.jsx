@@ -41,21 +41,21 @@ export default function UAH({ disabled, onClick }) {
          </button>
 
          <div className={generateClasses(styles.panelUAH, active ? styles.activePanel : "")}>
-            <p className={styles.fat}>Рахунок в гривні:</p>
+            <p className={styles.fat}>{trans("correspondent_banks")}:</p>
             <p style={{ margin: '5px 0 20px' }} >
-               Найменування отримувача<br/>
+            {trans("recipient's_name")}<br/>
                БО «БФ «МЕРСІ ЧЕЙН»<br/>
                <br/>
-               Код одержувача<br/>
+               {trans("recipient_code")}<br/>
                <button onClick={clipboardCODE.copy}>{clipboardCODE.copied ? 'Copied' : <span>44979212</span>} <img className={styles.imgCopy} src="images/icons/copy.png" /> </button>
                <input ref={clipboardCODE.target} value={CODE} type="hidden" />
                <br/>
-               Рахунок отримувача у форматі відповідно до стандарту IBAN<br/>
+               {trans("recipient's_account_IBAN_standard")}<br/>
                <button onClick={clipboardSCORE.copy}>{clipboardSCORE.copied ? 'Copied' : <span>UA243052990000026001030129102</span>} <img className={styles.imgCopy} src="images/icons/copy.png" /> </button>
                <input ref={clipboardSCORE.target} value={SCORE} type="hidden" />
                <br/>
-               Призначення платежу: англійською мовою<br/>
-               «Безповоротна благодійна фінансова допомога…..»<br/>
+               {trans("purpose_of_payment")}<br/>
+               {trans("irrevocable_charitable")}<br/>
             </p>
          </div>
       </>
