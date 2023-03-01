@@ -103,7 +103,7 @@ export default function Swift({ disabled, onClick }) {
                <input ref={clipboardIBAN_EUR.target} value={IBAN_EUR} type="hidden" />
                <br/>
                Назва банку/Name of the bank: <br/>
-               JSC CB "PRIVATBANK", 1D HRUSHEVSKOHO STR., KYIV, 01001, UKRAINE,<br/> 
+               JSC CB &quot;PRIVATBANK&quot;, 1D HRUSHEVSKOHO STR., KYIV, 01001, UKRAINE,<br/> 
                <br/>
                SWIFT code банку/Bank SWIFT Code: <br/>
                <button onClick={clipboardSWIFT_EUR.copy}>{clipboardSWIFT_EUR.copied ? 'Copied' : <span>PBANUA2X</span>} <img className={styles.imgCopy} src="images/icons/copy.png" /> </button>
@@ -138,7 +138,7 @@ export default function Swift({ disabled, onClick }) {
                «Безповоротна благодійна фінансова допомога…..»<br/>
                <br/>
                Purpose of payment: in English<br/>
-               "Irrevocable charitable financial assistance..."<br/>
+               &quot;Irrevocable charitable financial assistance...&quot;<br/>
             </p>
             <div style={{height: '1px', width: '100%', background: 'rgb(193 193 193)'}}></div>
              <p style={{ marginTop: '20px' }} className={styles.fat}>Рахунок в доларах США</p>
@@ -152,7 +152,7 @@ export default function Swift({ disabled, onClick }) {
                <input ref={clipboardCODE_USD.target} value={CODE_USD} type="hidden" />
                <br/>
                Назва банку/Name of the bank <br/>
-               JSC CB "PRIVATBANK", 1D HRUSHEVSKOHO STR., KYIV, 01001, UKRAINE <br/>
+               JSC CB &quot;PRIVATBANK&quot;, 1D HRUSHEVSKOHO STR., KYIV, 01001, UKRAINE <br/>
                <br/>
                SWIFT code банку/Bank SWIFT Code <br/>
                <button onClick={clipboardSWIFT_1_USD.copy}>{clipboardSWIFT_1_USD.copied ? 'Copied' : <span>PBANUA2X</span>} <img className={styles.imgCopy} src="images/icons/copy.png" /> </button>
@@ -194,7 +194,7 @@ export default function Swift({ disabled, onClick }) {
                «Безповоротна благодійна фінансова допомога…..»<br/>
                <br/>
                Purpose of payment: in English<br/>
-               "Irrevocable charitable financial assistance..."<br/>
+               &quot;Irrevocable charitable financial assistance...&quot;<br/>
             </p>
          </div>
       </>
