@@ -17,6 +17,7 @@ import { useQueryHandlers } from "../../../../hooks/useQueryHanlders";
 import { UNSUBSCRIBE } from "../../../UnsubscribePopup";
 import { PAYMENT_POPUP } from "../..";
 import { useRouter } from "next/router";
+import UAH from "../UAH";
 
 export const STRIPE_GATEWAY = "STRIPE";
 export const EEXWALLET_GATEWAY = "EEXWALLET";
@@ -108,6 +109,7 @@ export default function Form({ onSuccess, ongoing }) {
       {!ongoing && <Swift />}
       {!ongoing && <Sepa />}
       {!ongoing && <Ach />}
+      {!ongoing && <UAH />}
       {ongoing && (
         <div
           className={generateClasses(styles.unsubscribe, "no-select")}

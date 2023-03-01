@@ -1,0 +1,83 @@
+.accordionUAH {
+   background-color: #10a6f9;
+   font-family: "Montserrat600";
+   color: #fff;
+   text-align: center;
+   cursor: pointer;
+   margin-top: 15px;
+   padding: 12px 17px;
+   width: 100%;
+   position: relative;
+   border: none;
+   outline: none;
+   border-radius: 12px;
+
+   .imgArrow{
+      position: absolute;
+      right: 20px;
+      top: 30%;
+      width: 20px;
+   }
+}
+ 
+.active, .accordionUAH:hover {
+   background-color: #37b6fa;
+}
+.active{
+   border-bottom-left-radius: 0;
+   border-bottom-right-radius: 0;
+}
+ 
+.panelUAH {
+   text-align: left;
+   max-height: 0;
+   font-family: "Montserrat500";
+   padding: 0px;
+   background-color: #fff;
+   border: none;
+   overflow: hidden;
+   transition: all .4s;
+   margin: 0;
+
+   p{
+      margin-bottom: 0;
+      color: #000;
+      font-size: 14px;
+
+      &.fat{
+         font-size: 16px;
+         font-family: "Montserrat600";
+      }
+
+      input, button{
+         border: none;
+         font-family: "Montserrat500";
+         background-color: unset;
+         padding: 0;
+      }
+
+      button{
+         display: flex;
+         align-items: flex-start;
+       text-align: start;
+
+         .imgCopy{
+            width: 12px;
+            margin-left: 6px;
+            opacity: .6;
+            margin-top: 4px;
+         }
+      }
+   }
+}
+
+.activePanel{
+   padding: 12px 20px;
+   border-bottom-left-radius: 12px;
+   border: 1.5px solid #10a6f9;
+   border-bottom-right-radius: 12px;
+   overflow: hidden;
+   position: relative;
+   transition: max-height 650ms;
+   max-height: 20rem;
+}
