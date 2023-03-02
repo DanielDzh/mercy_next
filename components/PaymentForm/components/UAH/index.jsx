@@ -36,7 +36,7 @@ export default function UAH({ disabled, onClick }) {
             )}
             onClick={() => setActive(!active)}
          >
-            UAH
+            {trans("uah")}
             {active ? <img className={styles.imgArrow} src="images/icons/arrowTop.png" /> : <img className={styles.imgArrow} src="images/icons/arrowDown.png" />}
          </button>
 
