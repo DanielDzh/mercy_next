@@ -36,9 +36,9 @@ export default function CurrentProjects({ projectsRef }) {
       done: true,
       label: "proj_label_done",
       title: "finished_proj_desc_title",
-      desc1: "finished_proj_desc_1",
-      desc2: "finished_proj_desc_3",
-      desc3: "finished_proj_desc_2",
+      desc1: "proj_desc_1_1",
+      desc2: "proj_desc_1_2",
+      desc3: "proj_desc_1_3",
       gallery: ["images/project1/project1-hero-1.png", "images/project1/project1-hero-2.png"],
       allGallery: [
         "images/project1/1.png",
@@ -56,48 +56,64 @@ export default function CurrentProjects({ projectsRef }) {
         "images/project1/14.jpg",
         "images/project1/15.jpg",
       ],
-      popup_details_subtitle: "popup_details_subtitle",
-      popup_details_text_above_photo: "popup_details_text_above_photo",
-      popup_details_text_under_photo_normal: "popup_details_text_under_photo_normal",
-      popup_details_text_bottom: "popup_details_text_bottom",
+      popup_details_subtitle: "popup_details_subtitle_1",
+      popup_details_text_above_photo: "popup_details_text_above_photo_1",
+      popup_details_text_under_photo_normal: "popup_details_text_under_photo_normal_1",
+      popup_details_text_bottom: "popup_details_text_bottom_1",
     },
     {
       done: true,
       label: "proj_label_done",
       title: "finished_proj_desc_title",
-      desc1: "finished_proj_desc_3_1",
-      desc2: "finished_proj_desc_3_3",
-      desc3: "finished_proj_desc_3_2",
-      gallery: ["images/project3/project3-hero-1.jpg", "images/project3/project3-hero-2.jpg"],
+      desc1: "proj_desc_2_1",
+      desc2: "proj_desc_2_2",
+      desc3: "proj_desc_2_3",
+      gallery: ["images/project2/project3-hero-1.jpg", "images/project2/project3-hero-2.jpg"],
       allGallery: [
+        "images/project2/1.jpg",
+        "images/project2/2.jpg",
+        "images/project2/3.jpg",
+        "images/project2/4.jpg",
+        "images/project2/5.jpg",
+
+        "images/project2/6.jpg",
+        "images/project2/8.jpg",
+        "images/project2/9.jpg",
+        "images/project2/10.jpg",
+        "images/project2/11.jpg",
+        "images/project2/12.jpg",
+        "images/project2/13.jpg",
+      ],
+      popup_details_subtitle: "popup_details_subtitle_2",
+      popup_details_text_above_photo: "popup_details_text_above_photo_2",
+      popup_details_text_under_photo_normal: "popup_details_text_under_photo_normal_2",
+      popup_details_text_bottom: "popup_details_text_bottom_2",
+    },
+    {
+      done: true,
+      label: "proj_label_done",
+      title: "finished_proj_desc_title",
+      desc1: "proj_desc_3_1",
+      desc2: "proj_desc_3_2",
+      desc3: "proj_desc_3_3",
+      gallery: ["images/project3/hero-1.jpg", "images/project3/2.png"],
+      allGallery: [
+        "images/project3/7.jpg",
         "images/project3/1.jpg",
         "images/project3/2.jpg",
         "images/project3/3.jpg",
+        "images/project3/10.jpg",
         "images/project3/4.jpg",
         "images/project3/5.jpg",
-
         "images/project3/6.jpg",
         "images/project3/8.jpg",
         "images/project3/9.jpg",
-        "images/project3/10.jpg",
         "images/project3/11.jpg",
-        "images/project3/12.jpg",
-        "images/project3/13.jpg",
       ],
       popup_details_subtitle: "popup_details_subtitle_3",
       popup_details_text_above_photo: "popup_details_text_above_photo_3",
       popup_details_text_under_photo_normal: "popup_details_text_under_photo_normal_3",
-      popup_details_text_bottom: "popup_details_text_bottom_3",
-    },
-    {
-      done: false,
-      label: "proj_label_in_process",
-      title: "current_proj_desc_title",
-      desc1: "current_proj_desc_1",
-      desc2: "current_proj_desc_3",
-      desc3: "",
-      gallery: ["images/project2/project2-hero-1.jpg", "images/project2/project2-hero-2.png"],
-      allGallery: [],
+      popup_details_text_bottom: "popup_details_text_bottom_2",
     },
   ];
 
@@ -150,8 +166,8 @@ export default function CurrentProjects({ projectsRef }) {
                         dangerouslySetInnerHTML={{ __html: trans(project.desc1) }} />
                     {project.done && <>
                       {project.desc3 &&
-                      <p className={styles["current_desc3"]}
-                         dangerouslySetInnerHTML={{ __html: trans(project.desc3) }} />}
+                        <p className={styles["current_desc3"]}
+                           dangerouslySetInnerHTML={{ __html: trans(project.desc3) }} />}
                       <div className={styles["current_progress"]} />
                     </>}
                     <p className={styles["current_desc3"]} dangerouslySetInnerHTML={{ __html: trans(project.desc2) }} />
