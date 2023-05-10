@@ -115,6 +115,33 @@ export default function CurrentProjects({ projectsRef }) {
       popup_details_text_under_photo_normal: "popup_details_text_under_photo_normal_3",
       popup_details_text_bottom: "popup_details_text_bottom_2",
     },
+    {
+      done: true,
+      label: "proj_label_done",
+      title: "finished_proj_desc_title",
+      desc1: "proj_desc_4_1",
+      desc2: "proj_desc_4_2",
+      desc3: "proj_desc_4_3",
+      gallery: ["images/project4/hero-1.jpg", "images/project4/1.jpg"],
+      allGallery: [
+        "images/project4/1.jpg",
+        "images/project4/2.jpg",
+        "images/project4/3.jpg",
+        "images/project4/4.jpg",
+        "images/project4/5.jpg",
+        "images/project4/6.jpg",
+        "images/project4/7.jpg",
+        "images/project4/8.jpg",
+        "images/project4/9.jpg",
+        "images/project4/10.jpg",
+        "images/project4/11.jpg",
+        "images/project4/12.jpg",
+      ],
+      popup_details_subtitle: "popup_details_subtitle_4",
+      popup_details_text_above_photo: "popup_details_text_above_photo_4",
+      popup_details_text_under_photo_normal: "",
+      popup_details_text_bottom: "",
+    },
   ];
 
   const settings = {
@@ -200,11 +227,12 @@ export default function CurrentProjects({ projectsRef }) {
               {projects[detailPopup - 1].allGallery.slice(0, 4).map((project, index) =>
                 <img key={index} src={project} alt="" className={styles["popup_image"]} />)}
             </div>
-            <div
+            {projects[detailPopup - 1].popup_details_text_under_photo_normal && <div
               className={styles["detail_text_under_st"]}
-              dangerouslySetInnerHTML={{ __html: trans(projects[detailPopup - 1].popup_details_text_under_photo_normal) }} />
-            <div className={styles["detail_under_text"]}
-                 dangerouslySetInnerHTML={{ __html: trans(projects[detailPopup - 1].popup_details_text_bottom) }} />
+              dangerouslySetInnerHTML={{ __html: trans(projects[detailPopup - 1].popup_details_text_under_photo_normal) }} />}
+            {projects[detailPopup - 1].popup_details_text_bottom &&
+              <div className={styles["detail_under_text"]}
+                   dangerouslySetInnerHTML={{ __html: trans(projects[detailPopup - 1].popup_details_text_bottom) }} />}
           </div>
         </PopupWithTitle>}
         {galleryPopup && <PopupWithTitle
