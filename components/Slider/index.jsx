@@ -31,13 +31,13 @@ const getProgressPercent = (total, expected) => {
   return value;
 };
 
-export default function HeroSlider({totalAmount, expectedAmount, projectsRef}) {
-  const {trans} = useTrans();
+export default function HeroSlider({ totalAmount, expectedAmount, projectsRef }) {
+  const { trans } = useTrans();
 
-  const {openedOneTimePayment, onOpenOneTimePayment, onClosePayment} =
+  const { openedOneTimePayment, onOpenOneTimePayment, onClosePayment } =
     usePaymentPopup();
 
-  const {isOpened: isUnsibscribeOpen, onClose: onUnsubscribeClose} =
+  const { isOpened: isUnsibscribeOpen, onClose: onUnsubscribeClose } =
     useQueryHandlers(PAYMENT_POPUP, UNSUBSCRIBE);
 
   const [width, setWidth] = useState(0);
@@ -86,8 +86,7 @@ export default function HeroSlider({totalAmount, expectedAmount, projectsRef}) {
               <div className={styles["hero-text"]}>
                 <h1>{trans("slider_title")}</h1>
                 <h2>
-                  {trans("slider_desc_1")} <span>1000</span>{" "}
-                  <span>{trans("slider_desc_2")}</span>
+                  {trans("slider_desc_1")} <span>{trans("slider_desc_2")}</span>
                   {trans("slider_desc_3")}
                 </h2>
                 <p>
@@ -95,7 +94,7 @@ export default function HeroSlider({totalAmount, expectedAmount, projectsRef}) {
                   {trans("slider_p_2")}
                   <span> {trans("slider_p_3")}</span>
                 </p>
-                 <p className={styles['slider-collected']}>{trans('collected_assistance')}</p>
+                <p className={styles['slider-collected']}>{trans('collected_assistance')}</p>
               </div>
               <div className={styles["hero-progress"]}>
                 <div id={styles.myProgress}>
@@ -143,7 +142,7 @@ export default function HeroSlider({totalAmount, expectedAmount, projectsRef}) {
                   activeClass="active"
                   spy={false}
                   offset={5}
-                  style={{width: '100%'}}
+                  style={{ width: '100%' }}
                 >
                   <ButtonBlueBorder
                     className="details"

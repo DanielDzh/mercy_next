@@ -64,7 +64,7 @@ export default function OurTeam() {
       name: trans("Sirobaba_Mariia"),
       profession: trans("Sirobaba_Mariia_spec"),
       telegram: "",
-      instagram: "",
+      instagram: "https://instagram.com/mariiaaa.sss?igshid=OGQ5ZDc2ODk2ZA==",
       facebook: "",
       period: `${trans("team_period_now")} 2022`,
       active: true,
