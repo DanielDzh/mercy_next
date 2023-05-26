@@ -86,7 +86,7 @@ export default function HeroSlider({ totalAmount, expectedAmount, projectsRef })
               <div className={styles["hero-text"]}>
                 <h1>{trans("slider_title")}</h1>
                 <h2>
-                  {trans("slider_desc_1")} <span>{trans("slider_desc_2")}</span>
+                  {trans("slider_desc_1")} <span>{trans("slider_desc_2")}</span> <br />
                   {trans("slider_desc_3")}
                 </h2>
                 <p>
