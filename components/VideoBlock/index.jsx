@@ -1,9 +1,16 @@
 import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
+import { Pagination } from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react';
 
 import { useTrans } from "../../hooks/useTrans";
 
 import styles from "./VideoBlock.module.scss";
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
 export default function VideoBlock() {
   const [visibleVideo, setVisibleVideo] = useState(false);
@@ -44,12 +51,33 @@ export default function VideoBlock() {
         {visibleVideo ?
           <div className={styles["video_container"]}>
             <div className={styles["close_video"]} onClick={() => setVisibleVideo(false)}></div>
-            <iframe width="560" height="415" className={styles.video}
-                    src={`https://www.youtube.com/embed/Z6oAxqEjzjs?&cc_lang_pref=${currentLang === 'en' ? 'en' : 'uk'};cc_load_policy=1`}
-                    title="YouTube video player" frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen>
-            </iframe>
+            <Swiper
+              modules={[Pagination]}
+              spaceBetween={20}
+              slidesPerView={1}
+              slideToClickedSlide={true}
+              pagination={{ clickable: true }}
+            >
+              <SwiperSlide>
+                <iframe width="560" height="315"
+                        className={styles.video}
+                        src={`https://www.youtube.com/embed/SVJlVQOfqXw?&cc_lang_pref=${currentLang === 'en' ? 'en' : 'uk'};cc_load_policy=1`}
+                        title="YouTube video player"
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowFullScreen />
+              </SwiperSlide>
+              <SwiperSlide>
+                <iframe width="560"
+                        height="415"
+                        className={styles.video}
+                        src={`https://www.youtube.com/embed/Z6oAxqEjzjs?&cc_lang_pref=${currentLang === 'en' ? 'en' : 'uk'};cc_load_policy=1`}
+                        title="YouTube video player"
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen />
+              </SwiperSlide>
+            </Swiper>
           </div>
           : ""}
       </div>
