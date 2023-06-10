@@ -42,7 +42,7 @@ export default function VideoBlock() {
           </div>
           <div className={styles["video_image_wrapper"]}
                style={{ background: `url("images/backVideo.png") no-repeat 100% 100%/contain` }}>
-            <img className={styles["image_video"]} src={"images/imageVideo.png"} alt="" />
+            <img className={styles["image_video"]} src={"images/video-poster.jpg"} alt="" />
             <img className={styles["button_play"]} src={"images/buttonPlay.png"} alt=""
                  onClick={() => setVisibleVideo(true)} />
           </div>

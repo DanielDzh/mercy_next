@@ -128,8 +128,12 @@
       }
 
       .image_video {
-        transform: scale(.9) translate(2.5%, -.7%);
-        width:     100%;
+        transform:     scale(.9) translate(2.5%, -.7%);
+        width:         100%;
+        border-radius: 12px;
+        @media screen and (max-width: 1440px) {
+          border-radius: 6px;
+        }
       }
       .button_play {
         position:   absolute;
