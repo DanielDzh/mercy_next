@@ -142,6 +142,43 @@ export default function CurrentProjects({ projectsRef }) {
       popup_details_text_under_photo_normal: "",
       popup_details_text_bottom: "",
     },
+    {
+      done: true,
+      label: "proj_label_done",
+      title: "finished_proj_desc_title",
+      desc1: "proj_desc_5_1",
+      desc2: "proj_desc_5_2",
+      desc3: "proj_desc_5_3",
+      gallery: ["images/project5/hero-1.jpg", "images/project5/1.jpg"],
+      allGallery: [
+        "images/project5/1.jpg",
+        "images/project5/2.jpg",
+        "images/project5/3.jpg",
+        "images/project5/4.jpg",
+        "images/project5/5.jpg",
+        "images/project5/6.jpg",
+        "images/project5/7.jpg",
+        "images/project5/8.jpg",
+        "images/project5/9.jpg",
+        "images/project5/10.jpg",
+        "images/project5/11.jpg",
+        "images/project5/12.jpg",
+        "images/project5/13.jpg",
+        "images/project5/14.jpg",
+        "images/project5/15.jpg",
+        "images/project5/16.jpg",
+        "images/project5/17.jpg",
+        "images/project5/18.jpg",
+        "images/project5/19.jpg",
+        "images/project5/20.jpg",
+        "images/project5/21.jpg",
+        "images/project5/22.jpg",
+      ],
+      popup_details_subtitle: "popup_details_subtitle_5",
+      popup_details_text_above_photo: "popup_details_text_above_photo_5",
+      popup_details_text_under_photo_normal: "",
+      popup_details_text_bottom: "",
+    },
   ];
 
   const settings = {
@@ -166,7 +203,7 @@ export default function CurrentProjects({ projectsRef }) {
   };
 
   useEffect(() => {
-    projectsRef.current.slickGoTo(2)
+    projectsRef.current.slickGoTo(4)
   }, [])
 
   return (
