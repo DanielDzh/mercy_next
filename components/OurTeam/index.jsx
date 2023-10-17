@@ -46,7 +46,7 @@ export default function OurTeam() {
       telegram: "",
       instagram: "https://instagram.com/oldmian?igshid=MzRlODBiNWFlZA==",
       facebook: "",
-      period: `${trans("team_period_now")} 2022`,
+      period: `${trans("team_period_now")} 2023`,
       active: true,
     },
     {
@@ -86,7 +86,7 @@ export default function OurTeam() {
       telegram: "https://t.me/+380731110010",
       instagram: "",
       facebook: "",
-      period: `${trans("team_period_now")} 2022`,
+      period: `${trans("team_period_now")} 2023`,
       active: true,
     },
     {
