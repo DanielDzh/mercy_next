@@ -179,6 +179,41 @@ export default function CurrentProjects({ projectsRef }) {
       popup_details_text_under_photo_normal: "",
       popup_details_text_bottom: "",
     },
+    {
+      done: true,
+      label: "proj_label_done",
+      title: "finished_proj_desc_title",
+      desc1: "proj_desc_6_1",
+      desc2: "proj_desc_6_2",
+      desc3: "proj_desc_6_3",
+      gallery: ["images/project6/1.jpg", "images/project6/2.jpg"],
+      allGallery: [
+        "images/project6/1.jpg",
+        "images/project6/2.jpg",
+        "images/project6/3.jpg",
+        "images/project6/4.jpg",
+        "images/project6/5.jpg",
+        "images/project6/6.jpg",
+        "images/project6/7.jpg",
+        "images/project6/8.jpg",
+        "images/project6/9.jpg",
+        "images/project6/10.jpg",
+        "images/project6/11.jpg",
+        "images/project6/12.jpg",
+        "images/project6/13.jpg",
+        "images/project6/14.jpg",
+        "images/project6/15.jpg",
+        "images/project6/16.jpg",
+        "images/project6/17.jpg",
+        "images/project6/18.jpg",
+        "images/project6/19.jpg",
+        "images/project6/20.jpg",
+      ],
+      popup_details_subtitle: "popup_details_subtitle_6",
+      popup_details_text_above_photo: "popup_details_text_above_photo_6",
+      popup_details_text_under_photo_normal: "",
+      popup_details_text_bottom: "",
+    },
   ];
 
   const settings = {
@@ -203,7 +238,7 @@ export default function CurrentProjects({ projectsRef }) {
   };
 
   useEffect(() => {
-    projectsRef.current.slickGoTo(4)
+    projectsRef.current.slickGoTo(5)
   }, [])
 
   return (
