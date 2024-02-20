@@ -59,7 +59,8 @@ export default function VideoBlock() {
               pagination={{ clickable: true }}
             >
               <SwiperSlide>
-                <iframe width="560" height="315"
+                <iframe width="560"
+                        height="315"
                         className={styles.video}
                         src={`https://www.youtube.com/embed/SVJlVQOfqXw?&cc_lang_pref=${currentLang === 'en' ? 'en' : 'uk'};cc_load_policy=1`}
                         title="YouTube video player"
@@ -75,6 +76,16 @@ export default function VideoBlock() {
                         title="YouTube video player"
                         frameBorder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen />
+              </SwiperSlide>
+              <SwiperSlide>
+                <iframe width="560"
+                        height="315"
+                        className={styles.video}
+                        src="https://www.youtube.com/embed/rZEc3xAGkP8?si=FDwVW63Y9ui0LXIa"
+                        title="YouTube video player"
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         allowFullScreen />
               </SwiperSlide>
             </Swiper>
