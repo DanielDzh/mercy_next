@@ -1,5 +1,22 @@
 .currentProject_container {
   padding: 4.5vw 15vw;
+  :global {
+    .slick-dots {
+      max-width:          78px;
+      overflow:           auto;
+      margin:             0 auto;
+      justify-content:    flex-start;
+      -ms-overflow-style: none; /* for Internet Explorer, Edge */
+      scrollbar-width:    none; /* for Firefox */
+      &::-webkit-scrollbar {
+        display: none; /* for Chrome, Safari, and Opera */
+      }
+      li {
+        position: relative;
+        z-index: -1;
+      }
+    }
+  }
   @media screen and (max-width: 600px) {
     margin:  70px 0;
     padding: 0 40px;
