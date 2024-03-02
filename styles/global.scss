@@ -28,11 +28,11 @@
     width:           100%;
     justify-content: center;
     align-items:     center;
-    padding: .8vw;
+    padding: 14px 10px;
     li {
       list-style:       none;
-      width:            1vw;
-      height:           1vw;
+      width:            14px;
+      height:           14px;
       margin:           0 5px;
       border-radius:    50px;
       cursor:           pointer;
@@ -44,8 +44,8 @@
       button {
         opacity: 0;
         padding: 0;
-        width:            1vw;
-        height:           1vw;
+        width:            14px;
+        height:           14px;
       }
     }
   }

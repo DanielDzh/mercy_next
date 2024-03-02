@@ -1,5 +1,7 @@
 import React from "react";
 
+import styles from "./SamplePrevArrow.module.scss";
+
 export const SamplePrevArrow = (props) => {
   const {className, style, onClick} = props;
   return (
@@ -14,9 +16,9 @@ export const SamplePrevArrow = (props) => {
         position: 'absolute',
         left: '40%',
         bottom: '0%',
-        width: '3vw',
-        height: '3vw',
-        padding: '.8vw',
+        width: '42px',
+        height: '42px',
+        padding: '12px',
         borderRadius: '50px',
         backgroundColor: 'unset',
         opacity: .5,
@@ -24,7 +26,7 @@ export const SamplePrevArrow = (props) => {
       }}
       onClick={onClick}
     >
-      <img loading="lazy" style={{width: '100%', height: '100%'}} src={"images/icons/back.png"} alt="" />
+      <img loading="lazy" className={styles.arrow} src={"images/icons/back.png"} alt="" />
     </div>
   );
 };

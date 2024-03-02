@@ -1,0 +1,8 @@
+.arrow {
+  width:      100%;
+  height:     100%;
+  transition: .3s linear;
+  &:hover, &:active {
+    transform: scale(1.2);
+  }
+}

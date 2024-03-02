@@ -214,6 +214,33 @@ export default function CurrentProjects({ projectsRef }) {
       popup_details_text_under_photo_normal: "",
       popup_details_text_bottom: "",
     },
+    {
+      done: true,
+      label: "proj_label_done",
+      title: "finished_proj_desc_title",
+      desc1: "proj_desc_7_1",
+      desc2: "proj_desc_7_2",
+      desc3: "proj_desc_7_3",
+      gallery: ["images/project7/1.jpg", "images/project7/2.jpg"],
+      allGallery: [
+        "images/project7/1.jpg",
+        "images/project7/2.jpg",
+        "images/project7/3.jpg",
+        "images/project7/4.jpg",
+        "images/project7/5.jpg",
+        "images/project7/6.jpg",
+        "images/project7/7.jpg",
+        "images/project7/8.jpg",
+        "images/project7/9.jpg",
+        "images/project7/10.jpg",
+        "images/project7/11.jpg",
+        "images/project7/12.jpg",
+      ],
+      popup_details_subtitle: "popup_details_subtitle_7",
+      popup_details_text_above_photo: "popup_details_text_above_photo_7",
+      popup_details_text_under_photo_normal: "",
+      popup_details_text_bottom: "",
+    },
   ];
 
   const settings = {
@@ -235,6 +262,11 @@ export default function CurrentProjects({ projectsRef }) {
         }
       },
     ],
+    afterChange: () => {
+      const element = document.getElementsByClassName('project-slider')[0];
+      const activeDotEl = element.querySelector('.slick-dots li.slick-active');
+      activeDotEl.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+    }
   };
 
   useEffect(() => {
@@ -246,7 +278,7 @@ export default function CurrentProjects({ projectsRef }) {
       <div className={styles["currentProject_container"]}>
         <h1 className={styles["currentProject_title"]}>{trans("current_proj_title")}</h1>
         <div className={styles["projects-wrapper"]}>
-          <Slider {...settings} ref={projectsRef}>
+          <Slider {...settings} ref={projectsRef} on className="project-slider">
             {projects.map((project, index) => (
               <div key={index}>
                 <div className={styles["block-projects"]}>
