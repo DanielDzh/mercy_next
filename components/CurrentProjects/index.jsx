@@ -270,7 +270,7 @@ export default function CurrentProjects({ projectsRef }) {
   };
 
   useEffect(() => {
-    projectsRef.current.slickGoTo(5)
+    projectsRef.current.slickGoTo(6)
   }, [])
 
   return (
