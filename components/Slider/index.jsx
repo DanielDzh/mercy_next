@@ -14,6 +14,7 @@ import UnsubscribePopup, { UNSUBSCRIBE } from "../UnsubscribePopup";
 import Slide from "./Slide";
 import styles from "./Slider.module.scss";
 import CountUp from "react-countup";
+import { projects } from "../../utils/projects";
 
 
 const sliderPaths = [
@@ -162,7 +163,7 @@ export default function HeroSlider({ totalAmount, expectedAmount, projectsRef })
                 duration={2000}
                 spy={false}
                 offset={5}
-                onClick={() => projectsRef.current.slickGoTo(7)}>
+                onClick={() => projectsRef.current.slickGoTo(projects.length-1)}>
                 <a className={styles["hero-before"]}>
                   {trans('slider_p_before')}
                   <img src={"images/icons/long-arrow.svg"} alt='' />
