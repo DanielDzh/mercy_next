@@ -24,7 +24,7 @@ const Footer = () => {
                      </a>
                   </div>
                   <span>Privacy Police</span>
-                  <span>© 2022 | Mercy Chain</span>
+                  <span>© {new Date().getFullYear()} | Mercy Chain</span>
                </div>
             </div>
             <div className={styles["footer_under"]}>

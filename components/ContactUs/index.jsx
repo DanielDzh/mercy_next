@@ -28,8 +28,8 @@ const contacts = [
   {
     icon: "images/iconMail.png",
     name: "mail",
-    url: "mailto:m.chain.adm@gmail.com",
-    desc: "m.chain.adm@gmail.com",
+    url: "mailto:admin@mercychain.org",
+    desc: "admin@mercychain.org",
   },
   // {
   //    icon: "images/iconInstYellow.png",
