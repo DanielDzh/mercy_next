@@ -2,6 +2,19 @@
 
 Multilingual website for a charity/donation initiative, built with Next.js.
 
+**Live demo:** [mercy-next.vercel.app](https://mercy-next.vercel.app)
+
+## Screenshots
+
+<!-- Add images to docs/screenshots/ and uncomment this block.
+<p align="center">
+  <img src="docs/screenshots/home.png" alt="Home page" width="400" />
+  <img src="docs/screenshots/donate.png" alt="Donation with PayPal" width="400" />
+</p>
+-->
+
+_Screenshots coming soon._
+
 ## Features
 
 - Internationalization (react-intl, react-i18next) — multi-language support
